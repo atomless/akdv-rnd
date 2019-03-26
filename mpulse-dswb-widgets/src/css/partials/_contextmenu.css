@@ -1,0 +1,36 @@
+/* CONTEXTMENU */
+
+.annotation-layer .contextmenu.component {
+  padding: 1rem 0;
+  pointer-events: all;
+}
+
+.annotation-layer .contextmenu dl {
+  margin: 0;
+  padding: 0;
+}
+
+.annotation-layer .contextmenu .title {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.annotation-layer .contextmenu dd {
+  position: relative;
+  font-style: normal;
+  height: 2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.annotation-layer .contextmenu dd:hover {
+  background: var(--prime_button_hover);
+  color: var(--prime_button_txt_active);
+}
+
+.annotation-layer .contextmenu {
+  animation: slide-up 150ms ease-in-out forwards;
+}

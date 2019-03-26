@@ -1,0 +1,182 @@
+.chart {
+  overflow: hidden;
+}
+
+g path.domain {
+  stroke: var(--prime_chart_axis);
+}
+
+.chart .color-axis path {
+  stroke: var(--color_none);
+}
+
+g.tick line {
+  stroke: var(--prime_chart_axis_ticks);
+  shape-rendering: crispEdges;
+}
+
+.color-axis .tick line {
+  stroke: var(--prime_bg_0);
+}
+
+.axis text,
+.chart text {
+  font-size: 0.8rem;
+  font-weight: 200;
+  fill: var(--prime_chart_axis_tick_text);
+  cursor: pointer;
+}
+
+.axis-x-top .tick text,
+.axis-x-bottom .tick text {
+  font-size: 0.7rem;
+}
+
+.axis .tick.over text,
+.axis text:hover {
+  fill: var(--prime_chart_axis_tick_text_strong);
+}
+
+text.label {
+  font-size: 0.65rem;
+  text-anchor: middle;
+  fill: var(--prime_txt_body);
+}
+
+.dashed-line {
+  stroke: var(--prime_outline_trans_3);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  pointer-events: none;
+}
+
+.draggable-x {
+  cursor: ew-resize;
+}
+.draggable-y {
+  cursor: ns-resize;
+}
+
+.slider-group {
+  position: absolute;
+  height: 2.5rem;
+  width: 100%;
+  margin: 0;
+}
+
+.slider-group ~ div {
+  top: 2.75rem !important;
+}
+
+.axis.left {
+  border-right: 1px solid var(--prime_outline_trans_1);
+}
+
+input.chart-toggle {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+}
+
+polygon {
+  fill: var(--prime_txt_body_faint);
+}
+
+polygon.difference-arrow-head {
+  fill: var(--prime_outline_trans_6);
+}
+
+svg *:not(.d3-transitioning),
+svg *:not(.d3-transitioning) * {
+  shape-rendering: geometricPrecision;
+}
+
+svg *.d3-transitioning,
+svg *.d3-transitioning * {
+  shape-rendering: auto;
+}
+
+.muted {
+  opacity: 0.3;
+}
+
+.axis {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.axis-x-bottom-container > div:not(.slider-group) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.axis-x-top-container > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.no-diff {
+  opacity: 0;
+  stroke-opacity: 0;
+  fill-opacity: 0;
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.bar {
+  fill: var(--series_1);
+}
+.bar:not(.non-selectable):hover {
+  fill: var(--series_1_hover);
+}
+
+
+.bar.non-selectable {
+  fill: var(--series_1_noninteractive);
+}
+
+.bar.selectable {
+  cursor: pointer;
+}
+
+.selected {
+  fill: var(--series_1_selected);
+}
+
+.filtered {
+  /* the delay allows for any movement or other transition to complete */
+  transition: 0.3s opacity ease-in-out 0.1s;
+  opacity: 0 !important;
+}
+
+[data-hide-filtered="false"] .filtered {
+  transition: 0.3s opacity ease-in-out 0s;
+  opacity: 0.4 !important;
+}
+
+.tick.filtered {
+  opacity: 0.5 !important;
+}
+
+@media only screen and (max-height: 250px) {
+  .axis text,
+  .chart text {
+    font-size: 0.6rem;
+  }
+  
+  .axis-x-top .tick text,
+  .axis-x-bottom .tick text {
+    font-size: 0.5rem;
+  }
+  
+  text.label {
+    font-size: 0.45rem;
+  }
+}

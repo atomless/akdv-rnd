@@ -1,0 +1,354 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v4.json",
+    "width": 1000,
+    "height": 120,
+    "padding": 10,
+    "autosize": "fit",
+    "resize": "true",
+    "signals": [
+        {
+            "name": "height",
+            "update": "120"
+        },
+        {
+            "name": "width",
+            "update": "width - 20"
+        },
+        {
+            "name": "interpolate",
+            "value": "linear"
+        },
+        {
+            "name": "maxSessionsVal",
+            "value": "1000000",
+            "update": "max(sessions_extent[1],predicted_sessions_extent[1])"
+        },
+        {
+            "name": "maxConversionRateVal",
+            "value": "1",
+            "update": "min(1,max(conversionRate_extent[1]*1.5,predicted_conversionRate_extent[1]*1.5))"
+        },
+        {
+            "name": "showConversion",
+            "value": true,
+            "update": "data('state')[0].conversionAvailable"
+        }
+    ],
+    "data": [
+        {
+            "name": "metrics"
+        },
+        {
+            "name": "data",
+            "transform": [
+                {"type": "extent", "field": "sessions", "signal": "sessions_extent"},
+                {"type": "extent", "field": "predicted_sessions", "signal": "predicted_sessions_extent"},
+                {"type": "extent", "field": "conversionRate", "signal": "conversionRate_extent"},
+                {"type": "extent", "field": "predicted_conversionRate", "signal": "predicted_conversionRate_extent"}
+            ]
+        },
+        {
+            "name": "state",
+            "values": [
+                { "conversionAvailable": true }
+            ]
+        }
+    ],
+    "scales": [
+        {
+            "name": "bucketScale",
+            "type": "linear",
+            "range": "width",
+            "domain": {
+                "data": "data",
+                "field": "buckets"
+            }
+        },
+        {
+            "name": "sessionScale",
+            "type": "linear",
+            "range": "height",
+            "nice": true,
+            "zero": true,
+            "domain": {
+                "signal": "[0,maxSessionsVal]"
+            },
+            "domainMax": {
+                "signal": "maxSessionsVal"
+            }
+        },
+        {
+            "name": "conversionScale",
+            "type": "linear",
+            "range": "height",
+            "domain": {
+                "signal": "[0,(showConversion ? maxConversionRateVal : 0)]"
+            }
+        },
+        {
+            "name": "color",
+            "type": "ordinal",
+            "range": {
+                "signal": "showConversion ? ['url(#ChartGradient)','hsl(140,100%,45%)'] : ['url(#ChartGradient)']"
+            },
+            "domain": {
+                "signal": "showConversion ? ['Session Count','Conversion Rate'] : ['Session Count']"
+            }
+        }
+    ],
+    "axes": [
+        {
+            "orient": "bottom",
+            "scale": "bucketScale",
+            "format": ",.2r",
+            "encode": {
+                "labels": {
+                    "name": "legendLabel"
+                }
+            }
+        },
+        {
+            "orient": "left",
+            "scale": "sessionScale",
+            "title": "Sessions",
+            "format": ".0s"
+        },
+        {
+            "orient": "right",
+            "scale": "conversionScale",
+            "title": "Conversion Rate",
+            "format": ".1%",
+            "labelBound": true,
+            "tickCount": 3,
+            "domainOpacity": {
+                "signal": "showConversion ? 1 : 0"
+            },
+            "titleOpacity": {
+                "signal": "showConversion ? 1 : 0"
+            },
+            "titlePadding": {
+                "signal": "showConversion ? 10 : 0"
+            },
+            "labelPadding": {
+                "signal": "showConversion ? 5 : 0"
+            }
+        }
+    ],
+    "marks": [
+        {
+            "name": "currentSpeedMarker",
+            "type": "rule",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "value": 0 },
+                    "y2": { "signal": "height" },
+                    "stroke": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": { "scale": "bucketScale", "field": "speed" }
+                }
+            }
+        },
+        {
+            "name": "currentSpeedText",
+            "type": "text",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "angle": { "value": 90 },
+                    "fill": { "value": "var(--prime_chart_axis_tick_text)"},
+                    "fontSize": { "value": 10 }
+                },
+                "update": {
+                    "x": { "scale": "bucketScale", "field": "speed" },
+                    "text": { "signal": "round(datum.speed/10)/100+'s'" }
+                }
+            }
+        },
+        {
+            "name": "goalSpeedMarker",
+            "type": "rule",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "value": 0 },
+                    "y2": { "signal": "height" },
+                    "stroke": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": { "scale": "bucketScale", "field": "goal_speed" }
+                }
+            }
+        },
+        {
+            "name": "goalSpeedText",
+            "type": "text",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "angle": { "value": 90 },
+                    "fill": { "value": "var(--prime_chart_axis_tick_text)"},
+                    "fontSize": { "value": 10 }
+                },
+                "update": {
+                    "x": { "signal": "scale('bucketScale',datum.goal_speed)-8" },
+                    "text": { "signal": "round(datum.goal_speed/10)/100+'s'" }
+                }
+            }
+        },
+        {
+          "type":"group",
+          "marks": [
+                {
+                    "type": "rule",
+                    "from": {
+                        "data": "metrics"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "speed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "area",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "y": {
+                                "scale": "sessionScale",
+                                "field": "sessions"
+                            },
+                            "y2": {
+                                "scale": "sessionScale",
+                                "value": 0
+                            },
+                            "fill": {
+                                "value": "url(#ChartGradient)"
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            },
+                            "fillOpacity": {
+                                "value": 0.2
+                            }
+                        },
+                        "update": {
+                        }
+                    }
+                },
+                {
+                    "type": "line",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "stroke": {
+                                "value": "hsl(140,100%,45%)"
+                            },
+                            "strokeWidth": {
+                                "value": 2
+                            },
+                            "opacity": {
+                                "value": 0.2
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            }
+                        },
+                        "update": {
+                            "y": {
+                                "signal": "scale('conversionScale', datum.conversionRate)"
+                            },
+                            "opacity": {
+                                "signal": "showConversion ? 0.2 : 0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "area",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "y": {
+                                "scale": "sessionScale",
+                                "field": "predicted_sessions"
+                            },
+                            "y2": {
+                                "scale": "sessionScale",
+                                "value": 0
+                            },
+                            "fill": {
+                                "value": "url(#ChartGradient)"
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            },
+                            "fillOpacity": {
+                                "value": 0.7
+                            }
+                        },
+                        "update": {
+                        }
+                    }
+                },
+                {
+                    "type": "line",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "stroke": {
+                                "value": "hsl(140,100%,45%)"
+                            },
+                            "strokeWidth": {
+                                "value": 2
+                            },
+                            "opacity": {
+                                "value": 0.9
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            }
+                        },
+                        "update": {
+                            "y": {
+                                "signal": "scale('conversionScale', datum.predicted_conversionRate)"
+                            },
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

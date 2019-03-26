@@ -1,0 +1,85 @@
+/* _grid_chart_layout.css */
+.chart-grid {
+  display: -ms-grid;
+}
+
+.chart-grid-axis-x-top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.chart-grid-main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.chart-grid-axis-x-bottom {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+
+
+.grs-1 {
+  -ms-grid-row: 1;
+}
+
+.gre-1 {
+  -ms-grid-row-span: 1;
+}
+
+.grs-2 {
+  -ms-grid-row: 2;
+}
+.gre-2 {
+  -ms-grid-row-span: 1;
+}
+
+.grs-3 {
+  -ms-grid-row: 3;
+}
+.gre-3 {
+  -ms-grid-row-span: 1;
+}
+
+.gre-all {
+  -ms-grid-row-span: 3;
+}
+
+.gcs-1 {
+  -ms-grid-column: 1;
+}
+.gce-1 {
+  -ms-grid-column-span: 1;
+}
+
+.gcs-2 {
+  -ms-grid-column: 2;
+}
+.gce-2 {
+  -ms-grid-column-span: 1;
+}
+
+.gcs-3 {
+  -ms-grid-column: 3;
+}
+
+/* aggregate_resource_waterfall.css */
+#resource-aggregate-waterfall-wrapper.chart-grid {
+  -ms-grid-columns:14rem 1fr 14rem;
+  -ms-grid-rows: 0 1fr 4.5rem;
+}
+/* central scrolling flex box columns  */
+/* [axis-y-left] chart axis-y-right */
+#resource-aggregate-waterfall-wrapper .chart-row-flex > div:nth-child(1) {
+  -ms-flex: 0 0 14rem;
+}
+/* axis-y-left [chart] axis-y-right */
+#resource-aggregate-waterfall-wrapper .chart-row-flex > div:nth-child(2) {
+  -ms-flex: 1 1 100%;
+}
+/* axis-y-left chart [axis-y-right] */
+#resource-aggregate-waterfall-wrapper .chart-row-flex > div:nth-child(3) {
+  -ms-flex: 0 0 14rem;
+}

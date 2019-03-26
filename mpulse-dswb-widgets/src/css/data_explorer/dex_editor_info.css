@@ -1,0 +1,129 @@
+
+.dex_info.status-message-info {
+  color: var(--prime_status_txt_info);
+}
+.dex_info.status-message-warning {
+  color: var(--prime_status_txt_warning);
+}
+.dex_info.status-message-error {
+  color: var(--prime_status_txt_error);
+}
+
+.dex_info em {
+  color: var(--prime_txt_body_semi_strong);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.dex_info strong {
+  color: var(--prime_txt_body_strong);
+  font-weight: 500;
+}
+
+.dex_info a {
+  color: var(--url_link);
+  font-weight: 400;
+}
+
+.dex_info code {
+  font-family: monospace;
+  font-style: normal;
+  font-size: inherit;
+}
+
+.dex_info .keyword-info-syntax,
+.dex_info .column-info-syntax,
+.dex_info .func-info-syntax,
+.dex_info .datetime-info-syntax {
+  font-weight: 400;
+  background: var(--prime_bg_4_overlay);
+  border-radius: 0.3rem;
+  padding: 0 0.6rem 0.2rem 0.6rem;
+  margin: 0;
+}
+.dex_info .func-info-syntax {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+.dex_info .keyword-info-syntax .generic,
+.dex_info .func-info-syntax .generic,
+.dex_info .datetime-info-syntax .generic {
+  font-weight: 300;
+  font-style: italic;
+  text-transform: lowercase;
+  background: var(--color_transparent);
+}
+
+.dex_info .func-info-return-type {
+  font-weight: 200;
+  background: var(--prime_bg_4_overlay);
+  border-radius: 0 0.3rem 0.3rem 0;
+  padding: 0 0.5rem 0.2rem 0.5rem;
+  margin: 0 0 0 0.05rem;
+}
+
+#query_editor_hints.dex_info .keyword-info-description,
+#query_editor_hints.dex_info .func-info-description,
+#query_editor_hints.dex_info .column-info-description,
+#query_editor_hints.dex_info .datetime-info-description {
+  font-weight: 200;
+  background: var(--prime_bg_4_overlay);
+  border-radius: 0.2rem;
+  padding: 0 0.7rem 0.2rem 0.7rem;
+  margin: 0 0 0 0.6rem;
+}
+
+.dex_info .keyword-info-description,
+.dex_info .func-info-description,
+.dex_info .column-info-description,
+.dex_info .datetime-info-description {
+  font-weight: 200;
+}
+
+
+
+#CodeMirror_Picker_Info_Container .func-info-description,
+#CodeMirror_Picker_Info_Container .column-info-description,
+#CodeMirror_Picker_Info_Container .datetime-info-description {
+  padding-left: 0;
+}
+  
+  
+.dex_info .column-info-table {
+  font-family: monospace;
+  color: var(--prime_txt_body_semi_strong);
+  font-style: normal;
+  font-weight: 200;
+  padding-left: 0;
+}
+.dex_info .column-info-column {
+  font-family: monospace;
+  color: var(--prime_txt_body_strong);
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 1rem;
+}
+.dex_info .column-info-type {
+  color: var(--prime_txt_body_semi_strong);
+  font-style: normal;
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+/* ----- MPQL Status Message Types --- */
+.dex_info .mpql-warning,
+.dex_info .mpql-error {
+  padding: 0 0.5rem 0.15rem 0.5rem;
+  margin: 0 0.3rem 0 0;
+  border-radius: 0.15rem;
+  font-weight: 500;
+}
+
+.dex_info .mpql-warning {
+  color: var(--mpql_status_warning_text);
+  background-color: var(--mpql_status_warning_bg);
+}
+
+.dex_info .mpql-error {
+  color: var(--mpql_status_error_text);
+  background-color: var(--mpql_status_error_bg);
+}

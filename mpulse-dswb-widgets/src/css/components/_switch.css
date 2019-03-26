@@ -1,0 +1,172 @@
+.switch {
+  display: block;
+  position: absolute;
+  right: 0;
+  padding-right: 2.75rem;
+  font-size: 0.8rem;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1rem;
+  fill: var(--prime_txt_body_semi_strong);
+  pointer-events: all;
+  min-width: 2.5rem;
+  min-height: 1rem;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.switch.chunky {
+  min-width: 8.5rem;
+  min-height: 2rem;
+  line-height: 2.5rem;
+  padding-right: 4.25rem;
+}
+
+.switch span {
+  display: block;
+  width: 2.5rem;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.switch.chunky span {
+  width: 4rem;
+  height: 2rem;
+  top: 0.3rem;
+}
+
+.switch span::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 1rem;
+  border-radius: 0.55rem;
+  cursor: pointer;
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1rem;
+  background: var(--prime_button);
+  transition: background 0.5s ease-in-out;
+}
+
+.switch.chunky span::before {
+  width: 4rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.65rem;
+}
+
+.switch.chunky:not(.square) span::before {
+  border-radius: 0.95rem;
+}
+
+.switch.square span::before {
+  border-radius: 0.25rem;
+}
+
+.switch.square:not(.chunky) span::before {
+  border-radius: 0.15rem;
+}
+
+.switch input:checked + span::before {
+  content: 'ON';
+  background: var(--prime_button);
+  color: var(--prime_button_txt_hover);
+  padding-left: 0.3rem;
+}
+
+.switch.chunky input:checked + span::before {
+  padding-left: 0.5rem;
+}
+
+.switch:hover input:checked + span::before {
+  content: 'ON';
+  background: var(--prime_button_active);
+  color: var(--prime_button_txt_active);
+}
+
+.switch input:not(:checked) + span::before {
+  content: 'OFF';
+  background: var(--prime_button_not_current);
+  color: var(--prime_button_txt);
+  text-align: right;
+  padding-right: 0.3rem;
+}
+
+.switch.chunky input:not(:checked) + span::before {
+  padding-right: 0.5rem;
+}
+
+.switch:hover input:not(:checked) + span::before {
+  background: var(--prime_button_disabled);
+  color: var(--prime_button_txt_hover);
+}
+
+.switch span::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0.097rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--prime_button_txt_hover);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.switch.chunky span::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.26rem;
+}
+
+.switch.square:not(.chunky) span::after {
+  top: 0.12rem;
+  height: 0.79rem;
+}
+
+.switch.chunky span::after {
+  border-radius: 0.75rem;
+}
+
+.switch.square span::after {
+  border-radius: 0.15rem;
+}
+
+.switch.square:not(.chunky) span::after {
+  border-radius: 0.1rem;
+}
+
+.switch input:checked + span::after {
+  left: 1.6rem;
+  transition: left 0.5s ease-out;
+}
+
+.switch.chunky input:checked + span::after {
+  left: 2.25rem;
+}
+
+.switch input:not(:checked) + span::after {
+  left: 0.1rem;
+  transition: left 0.3s ease-out;
+}
+
+.switch.chunky input:not(:checked) + span::after {
+  left: 0.25rem;
+  transition: left 0.3s ease-out;
+}
+
+.switch:hover span::after {
+  background: var(--prime_button_txt_active);
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+}

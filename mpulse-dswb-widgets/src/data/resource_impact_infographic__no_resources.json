@@ -1,0 +1,304 @@
+{
+    "charts": [{
+        "chart_group": "column-one-ci-vs-lt",
+        "data_info": {
+            "end_datetime": 1530144000000,
+            "timing_metric": "DOM Ready",
+            "ris_min": 0.01,
+            "sessions": 680357,
+            "median_pageload": 3669.0,
+            "impact_score": "conversion",
+            "start_datetime": 1530057600000
+        },
+        "data": [{
+            "Page Group": "CATALOG_ARTICLE",
+            "Resources": [],
+            "Requests": 2202388,
+            "Included": 1,
+            "page_timer": 2715.0,
+            "Ranked Correlation": -0.7415940821,
+            "Relative Conversion Impact Score": -0.3136274350789446,
+            "Proportion": 0.4229098406379322
+        }, {
+            "Page Group": "CATALOG_CATEGORY",
+            "Resources": [],
+            "Requests": 1553154,
+            "Included": 1,
+            "page_timer": 2796.0,
+            "Ranked Correlation": -0.7038736087,
+            "Relative Conversion Impact Score": -0.20992451579820728,
+            "Proportion": 0.29824177693765447
+        }, {
+            "Page Group": "GENDER_HOME",
+            "Resources": [],
+            "Requests": 215312,
+            "Included": 1,
+            "page_timer": 3554.0,
+            "Ranked Correlation": -0.7817695333,
+            "Relative Conversion Impact Score": -0.03232220163060237,
+            "Proportion": 0.041344923604484975
+        }, {
+            "Page Group": "CHECKOUT_CART",
+            "Resources": [],
+            "Requests": 194205,
+            "Included": 1,
+            "page_timer": 1656.0,
+            "Ranked Correlation": -0.7502232014,
+            "Relative Conversion Impact Score": -0.027977239251617363,
+            "Proportion": 0.037291887533481664
+        }, {
+            "Page Group": "CUSTOMER_ORDERS",
+            "Resources": [],
+            "Requests": 192604,
+            "Included": 1,
+            "page_timer": 1449.0,
+            "Ranked Correlation": -0.6861464955,
+            "Relative Conversion Impact Score": -0.025376756388141714,
+            "Proportion": 0.03698445820910225
+        }, {
+            "Page Group": "DEFAULT",
+            "Resources": [],
+            "Requests": 158123,
+            "Included": 1,
+            "page_timer": 1703.0,
+            "Ranked Correlation": -0.704411464,
+            "Relative Conversion Impact Score": -0.021388258258696495,
+            "Proportion": 0.030363302347811445
+        }, {
+            "Page Group": "HOME",
+            "Resources": [],
+            "Requests": 115438,
+            "Included": 1,
+            "page_timer": 2005.0,
+            "Ranked Correlation": -0.756730123,
+            "Relative Conversion Impact Score": -0.016774275623518707,
+            "Proportion": 0.02216678722530345
+        }, {
+            "Page Group": "CHECKOUT_CONFIRM",
+            "Resources": [],
+            "Requests": 103722,
+            "Included": 1,
+            "page_timer": 3666.0,
+            "Ranked Correlation": -0.7990086466,
+            "Relative Conversion Impact Score": -0.015913888843204556,
+            "Proportion": 0.01991704208824585
+        }, {
+            "Page Group": "CMS_CM",
+            "Resources": [],
+            "Requests": 101418,
+            "Included": 1,
+            "page_timer": 2986.0,
+            "Ranked Correlation": -0.7330947296,
+            "Relative Conversion Impact Score": -0.014276741557661012,
+            "Proportion": 0.01947462037471045
+        }, {
+            "Page Group": "CUSTOMER_WISHLIST",
+            "Resources": [],
+            "Requests": 85381,
+            "Included": 1,
+            "page_timer": 1764.0,
+            "Ranked Correlation": -0.7471418514,
+            "Relative Conversion Impact Score": -0.012249497122508262,
+            "Proportion": 0.01639514250146082
+        }, {
+            "Page Group": "CUSTOMER_ACCOUNT",
+            "Resources": [],
+            "Requests": 71571,
+            "Included": 1,
+            "page_timer": 1679.0,
+            "Ranked Correlation": -0.768963114,
+            "Relative Conversion Impact Score": -0.010568091184976633,
+            "Proportion": 0.013743300546632765
+        }, {
+            "Page Group": "RECOMMENDATION_PAGE",
+            "Resources": [],
+            "Requests": 61857,
+            "Included": 0,
+            "page_timer": 2106.0,
+            "Ranked Correlation": -0.8081530057,
+            "Relative Conversion Impact Score": -0.00959923015426287,
+            "Proportion": 0.011877986082534308
+        }, {
+            "Page Group": "CMS_BRANDSHOP",
+            "Resources": [],
+            "Requests": 26660,
+            "Included": 0,
+            "page_timer": 3517.0,
+            "Ranked Correlation": -0.7944316931,
+            "Relative Conversion Impact Score": -0.004066967158453606,
+            "Proportion": 0.0051193415290163545
+        }, {
+            "Page Group": "CMS_FAQ",
+            "Resources": [],
+            "Requests": 25298,
+            "Included": 0,
+            "page_timer": 3141.0,
+            "Ranked Correlation": -0.729682205,
+            "Relative Conversion Impact Score": -0.0035446544304463716,
+            "Proportion": 0.004857805776483711
+        }, {
+            "Page Group": "CMS_LANDING_PAGE",
+            "Resources": [],
+            "Requests": 18439,
+            "Included": 0,
+            "page_timer": 2911.0,
+            "Ranked Correlation": -0.7413788216,
+            "Relative Conversion Impact Score": -0.002625013243172448,
+            "Proportion": 0.00354071787147534
+        }, {
+            "Page Group": "CHECKOUT_ADDRESSES",
+            "Resources": [],
+            "Requests": 15289,
+            "Included": 0,
+            "page_timer": 1052.0,
+            "Ranked Correlation": -0.8373895847,
+            "Relative Conversion Impact Score": -0.0024584455521694313,
+            "Proportion": 0.002935844435001165
+        }, {
+            "Page Group": "CUSTOMER_RETURN_ORDER",
+            "Resources": [],
+            "Requests": 14430,
+            "Included": 0,
+            "page_timer": 1126.0,
+            "Ranked Correlation": -0.7355044181,
+            "Relative Conversion Impact Score": -0.002038006550910469,
+            "Proportion": 0.002770896408991223
+        }, {
+            "Page Group": "OUTFIT_HUB",
+            "Resources": [],
+            "Requests": 11851,
+            "Included": 0,
+            "page_timer": 1780.0,
+            "Ranked Correlation": -0.6918560448,
+            "Relative Conversion Impact Score": -0.0015744348584768595,
+            "Proportion": 0.0022756682843350644
+        }, {
+            "Page Group": "CMS_EDITORIAL_ASSORTMENT_ENTRY",
+            "Resources": [],
+            "Requests": 11542,
+            "Included": 0,
+            "page_timer": 3608.5,
+            "Ranked Correlation": -0.7731773079,
+            "Relative Conversion Impact Score": -0.0017136184446422326,
+            "Proportion": 0.0022163330805666454
+        }, {
+            "Page Group": "CMS_CAMPAIGN",
+            "Resources": [],
+            "Requests": 6417,
+            "Included": 0,
+            "page_timer": 2913.0,
+            "Ranked Correlation": -0.7018643363,
+            "Relative Conversion Impact Score": -0.0008648467809571057,
+            "Proportion": 0.0012322136005888202
+        }, {
+            "Page Group": "CUSTOMER_LOGIN",
+            "Resources": [],
+            "Requests": 5051,
+            "Included": 0,
+            "page_timer": 1952.0,
+            "Ranked Correlation": -0.7914074347,
+            "Relative Conversion Impact Score": -0.0007675937909395527,
+            "Proportion": 0.0009699097548035112
+        }, {
+            "Page Group": "CUSTOMER_ADDRESSES",
+            "Resources": [],
+            "Requests": 4078,
+            "Included": 0,
+            "page_timer": 1193.0,
+            "Ranked Correlation": -0.6321127527,
+            "Relative Conversion Impact Score": -0.0004949892103080803,
+            "Proportion": 0.0007830710710925992
+        }, {
+            "Page Group": "CUSTOMER_RETURNED_ORDERS",
+            "Resources": [],
+            "Requests": 3507,
+            "Included": 0,
+            "page_timer": 1317.0,
+            "Ranked Correlation": -0.6710933793,
+            "Relative Conversion Impact Score": -0.00045193156849924755,
+            "Proportion": 0.000673425759274582
+        }, {
+            "Page Group": "CUSTOMER_ACCOUNT_DATA",
+            "Resources": [],
+            "Requests": 2197,
+            "Included": 0,
+            "page_timer": 1173.0,
+            "Ranked Correlation": -0.7028557126,
+            "Relative Conversion Impact Score": -0.0002965174076972161,
+            "Proportion": 0.00042187521902659156
+        }, {
+            "Page Group": "CUSTOMER_GIFTVOUCHER",
+            "Resources": [],
+            "Requests": 1972,
+            "Included": 0,
+            "page_timer": 1057.5,
+            "Ranked Correlation": -0.8726282278,
+            "Relative Conversion Impact Score": -0.0003304381079523575,
+            "Proportion": 0.00037866997356415046
+        }, {
+            "Page Group": "TRACKING_FALLBACK",
+            "Resources": [],
+            "Requests": 1812,
+            "Included": 0,
+            "page_timer": 6052.5,
+            "Ranked Correlation": -0.09518976077,
+            "Relative Conversion Impact Score": -3.312091967554205e-5,
+            "Proportion": 0.0003479462434575257
+        }, {
+            "Page Group": "CMS_DEFAULT",
+            "Resources": [],
+            "Requests": 1434,
+            "Included": 0,
+            "page_timer": 2212.0,
+            "Ranked Correlation": -0.4134048363,
+            "Relative Conversion Impact Score": -0.00011383574733921937,
+            "Proportion": 0.00027536143108062466
+        }, {
+            "Page Group": "CMS_NEWS_AND_STYLE",
+            "Resources": [],
+            "Requests": 1293,
+            "Included": 0,
+            "page_timer": 2956.0,
+            "Ranked Correlation": -0.3989643513,
+            "Relative Conversion Impact Score": -9.905732034748154e-5,
+            "Proportion": 0.00024828614392416156
+        }, {
+            "Page Group": "CUSTOMER_NEWSLETTERS",
+            "Resources": [],
+            "Requests": 630,
+            "Included": 0,
+            "page_timer": 1091.5,
+            "Ranked Correlation": -0.7598156058,
+            "Relative Conversion Impact Score": -9.191845531339068e-5,
+            "Proportion": 0.0001209746872948351
+        }, {
+            "Page Group": "CMS_HOME",
+            "Resources": [],
+            "Requests": 379,
+            "Included": 0,
+            "page_timer": 3192.0,
+            "Ranked Correlation": -0.34298529,
+            "Relative Conversion Impact Score": -2.496138409444014e-5,
+            "Proportion": 7.277683569006746e-5
+        }, {
+            "Page Group": "CUSTOMER_ZET",
+            "Resources": [],
+            "Requests": 190,
+            "Included": 0,
+            "page_timer": 1315.0,
+            "Ranked Correlation": -0.185331187,
+            "Relative Conversion Impact Score": -6.761702626552484e-6,
+            "Proportion": 3.6484429501616935e-5
+        }, {
+            "Page Group": "CUSTOMER_RETURN_PICK_UP",
+            "Resources": [],
+            "Requests": 59,
+            "Included": 0,
+            "page_timer": 1663.0,
+            "Ranked Correlation": -0.301232038,
+            "Relative Conversion Impact Score": -3.4127708641490743e-6,
+            "Proportion": 1.1329375476817889e-5
+        }],
+        "version": 1.0
+    }]
+}

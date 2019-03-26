@@ -1,0 +1,44 @@
+.add-tooltip {
+  cursor: pointer;
+}
+
+.add-tooltip::after {
+  content: 'i';
+  display: inline-block;
+  margin: 0 0 0 0.5rem;
+  height: 1rem;
+  width: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-style: italic;
+  font-family: serif;
+  font-weight: bold;
+  vertical-align: super;
+  line-height: 1rem;
+  color: var(--prime_button_txt);
+  background: var(--prime_button);
+  border-radius: 0.5rem;
+  opacity: 0.6;
+}
+
+.add-tooltip:hover::after {
+  color: var(--prime_button_txt_active);
+  background: var(--prime_button_active);
+  opacity: 1;
+}
+
+
+.annotation-layer .tooltip {
+  padding: 0.5rem 0;
+}
+
+.annotation-layer .tooltip .title {
+  margin: 0 0 0.5rem 0;
+  padding: 0 0.5rem;
+  border-bottom: 0;
+}
+
+.annotation-layer .tooltip p {
+  margin: 0;
+  padding: 0 0.5rem;
+}

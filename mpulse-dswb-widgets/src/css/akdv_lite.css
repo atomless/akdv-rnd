@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+@font-face {
+  font-family: "LatoLatinWeb";
+  src: url("../fonts/lato-latin/LatoLatin-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/lato-latin/LatoLatin-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/lato-latin/LatoLatin-Regular.woff2") format("woff2"), /* Modern Browsers */
+       url("../fonts/lato-latin/LatoLatin-Regular.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/lato-latin/LatoLatin-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF;
+  text-rendering: optimizeLegibility;
+}
+
+@import "modules/_variables.css";
+@import "partials/_typography.css";
+@import "partials/_akdv_lite_base.css";
+@import "partials/_annotations.css";
+@import "partials/_annotation_bubble.css";
+@import "partials/_loading_spinner.css";
+@import "partials/_status.css";
+@import "partials/_z_index.css";
+@import "partials/_akdv_transitions.css";
+@import "partials/_akdv_datastory.css";

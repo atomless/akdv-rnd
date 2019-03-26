@@ -1,0 +1,27 @@
+body {
+  box-sizing: border-box;
+}
+
+body[data-akdv-datastory] {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.akdv-chart {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.annotation-layer,
+.status-wrapper[data-modal="true"] {
+  position: absolute;
+}

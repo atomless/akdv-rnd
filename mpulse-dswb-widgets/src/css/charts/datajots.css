@@ -1,0 +1,213 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 360px;
+  overflow: hidden;
+  position: fixed;
+  background-color: var(--prime_bg_0);
+  color: var(--prime_txt_body_semi_strong);
+}
+
+.fixed-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: var(--color_transparent);
+}
+
+.fixed-header hgroup {
+  margin-bottom: -7px;
+  padding: 0.5rem 0 0.5rem 0;
+  background-color: var(--prime_bg_0_overlay);
+}
+
+#datajots-chart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.datajots-axis-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  pointer-events: none;
+}
+
+.datajots-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px solid green; */
+}
+
+#datajots-stages-scrolling-container {
+  height: 100vh;
+}
+
+section.datajots-stage {
+  position: relative;
+  left: 0;
+  top: 0;
+  min-height: 30rem;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  float: left;
+  padding: 0 0 3rem 0;
+  transition: top 1s ease-in-out;
+  /* border: 1px solid red; */
+}
+
+/* section:not(:target) {
+  position: absolute;
+  top: 200%;
+  opacity: 0;
+} */
+
+section > * {
+  margin: 0 auto;
+}
+
+section header {
+  padding: 0 1rem;
+}
+
+section hgroup {
+  margin-bottom: 1rem;
+}
+
+header.datajots-stage-title {
+  position: absolute;
+  width: fit-content;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: var(--prime_bg_2_overlay);
+  color: var(--prime_txt_heading_strong);
+  border-radius: 0.15rem;
+}
+
+.stages-anchors-list {
+  position: relative;
+  padding: 1.5rem 0 0 0;
+  margin: 0;
+  height: 4rem;
+  text-align: center;
+  background-color: var(--color_transparent);
+}
+
+.stages-anchors-list li {
+  counter-increment: step-counter;
+  position: relative;
+  display: inline-block;
+  line-height: 0.9rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.075rem;
+  transition: background 0.25s ease-in-out;
+}
+
+.stages-anchor {
+  counter-increment: step-counter;
+  margin: 0 0.55rem;
+}
+
+.stages-anchors-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.stages-anchor a:link,
+.stages-anchor a:visited {
+  /* color: hsl(var(--dswb_dark_theme_hue), 90%, 85%); */
+}
+
+.stages-anchor:nth-child(3)::before,
+.stages-anchor:nth-child(4)::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 0;
+  height: 0;
+  /* border: 1rem solid hsl(var(--dswb_dark_theme_hue), 40%, 30%); */
+  border-left-color: var(--color_transparent);
+  border-right-color: var(--color_transparent);
+  transition: border-color 0.25s ease-in-out;
+}
+
+.stages-anchor:nth-child(2)::after,
+.stages-anchor:nth-child(3)::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  right: -1.935rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 0;
+  height: 0;
+  border: 1rem solid var(--color_transparent);
+  /* border-left-color: hsl(var(--dswb_dark_theme_hue), 40%, 30%); */
+  transition: border-color 0.25s ease-in-out;
+}
+
+/* .stages-anchor.current,
+.stages-anchors-list li:hover,
+.stages-anchors-list li:hover a,
+.stages-anchor.current a,
+.stages-anchors-list a:focus,
+.stages-anchors-list a:hover,
+.stages-anchors-list a:active {
+  color: hsl(var(--dswb_dark_theme_hue), 90%, 95%);
+}
+
+.stages-anchor.current::before,
+.stages-anchor:hover::before {
+  border-top-color: hsl(var(--dswb_dark_theme_hue), 48%, 48%);
+  border-bottom-color: hsl(var(--dswb_dark_theme_hue), 48%, 48%);
+}
+
+.stages-anchor.current::after,
+.stages-anchor:hover::after {
+  border-left-color: hsl(var(--dswb_dark_theme_hue), 48%, 48%);
+} */
+
+.stages-anchor:nth-last-of-type(1)::after {
+  display: none;
+}
+
+.stages-anchors-list .supplemental-controls:first-child {
+  margin-right: 1rem;
+}
+
+.stages-anchors-list .supplemental-controls:last-child {
+  margin-left: 1rem;
+}
+
+.axis text {
+  font-size: 0.8rem;
+}
+
+.axis-y-left .domain {
+  stroke: var(--prime_bg_1_overlay);
+}
+
+.axis-y-left .tick text {
+  text-anchor: end;
+}

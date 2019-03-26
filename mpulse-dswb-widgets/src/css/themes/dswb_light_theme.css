@@ -1,0 +1,470 @@
+/*
+IMPORTANT - THE HUES AND COLORS DEFINED BELOW
+ARE GENERIC TO ALL AKDV THEMES. THIS AVOIDS SLOW
+DEEPLY NESTED CSS RULES WITH THEME CLASSES.
+*/
+
+:root {
+  /*
+  CURRENT HUE VARS.
+  NOTE, HUE VARS SHOULD NOT BE USED DIRECTLY
+  IN YOUR CSS. USE THE COLOR VARS INSTEAD.
+  */
+  --hue_bg1: 195;
+  --hue_bg2: 195;
+  
+  --hue_mt1: 200;
+  --hue_mt2: 204;
+  
+  --hue_hl1: 200;
+  --hue_hl2: 195;
+  
+  --hue_info: 205;
+  --hue_warning: 90;
+  --hue_error: 0;
+}
+
+:root {
+  /*
+  CURRENT HUE VARS.
+  NOTE, HUE VARS SHOULD NOT BE USED DIRECTLY
+  IN YOUR CSS. USE THE COLOR VARS INSTEAD.
+  */
+  --hue_1: 195;
+  --hue_2: 30;
+  
+  --chart_series_1: 195;
+  --chart_series_2: 140;
+  --chart_series_3: 30;
+  --chart_series_4: 230;
+  --chart_series_5: 70;
+  --chart_series_6: 160;
+  --chart_series_7: 300;
+  --chart_series_8: 90;
+}
+
+:root {
+  /* SATURATION VARS */
+  
+  /** Primary */
+  --sat_prime_sat: 100%;
+  --sat_prime_semi_sat: 50%;
+  --sat_prime: 20%;
+  --sat_prime_semi_desat: 10%;
+  --sat_prime_desat: 5%;
+  
+  --sat_prime_txt_heading_sat: 100%;
+  --sat_prime_txt_heading_semi_sat: 50%;
+  --sat_prime_txt_heading: 20%;
+  --sat_prime_txt_semi_desat: 25%;
+  --sat_prime_txt_desat: 15%;
+  
+  --sat_prime_txt_body_sat: 80%;
+  --sat_prime_txt_body_semi_sat: 40%;
+  --sat_prime_txt_body: 20%;
+  
+  
+  /** Secondary */
+  --sat_sec_sat: 100%;
+  --sat_sec_semi_sat: 70%;
+  --sat_sec: 40%;
+  --sat_sec_semi_desat: 30%;
+  --sat_sec_desat: 20%;
+  
+  --sat_sec_txt_heading_sat: 100%;
+  --sat_sec_txt_heading_semi_sat: 50%;
+  --sat_sec_txt_heading: 20%;
+  
+  --sat_sec_txt_body_sat: 80%;
+  --sat_sec_txt_body_semi_sat: 40%;
+  --sat_sec_txt_body: 20%;
+}
+
+:root {
+  /* OPACITY VARS */
+  
+  --overlay: 0.7;
+  --overlay2: 0.9;
+}
+
+
+/*
+IMPORTANT
+These colors are designed to use the same naming conventions across all themes.
+Care has been taken to choose names that are theme agnostic. For this reason,
+terms like LIGHTER, DARKER, or specific color names such as RED have been 
+avoided. Var names should reflect their function, rather than their specific
+implementation in a SPECIFIC theme...
+*/
+
+:root {
+  /** ---------- Akamai Logo --=------ */
+  --logo_1: hsl(var(--hue_1), var(--sat_prime_sat), 45%);
+  --logo_2: hsl(var(--hue_2), var(--sat_prime_sat), 45%);
+  
+  
+  
+  /** ----- PRIME ~ main content ------*/
+  
+  /** Background */
+  --prime_bg_0: hsl(var(--hue_1), var(--sat_prime), 98%);
+  --prime_bg_1: hsl(var(--hue_1), var(--sat_prime), 96%);
+  --prime_bg_2: hsl(var(--hue_1), var(--sat_prime), 92%);
+  --prime_bg_3: hsl(var(--hue_1), var(--sat_prime), 88%);
+  --prime_bg_4: hsl(var(--hue_1), var(--sat_prime), 84%);
+  --prime_bg_5: hsl(var(--hue_1), var(--sat_prime), 80%);
+  --prime_bg_6: hsl(var(--hue_1), var(--sat_prime), 76%);
+  --prime_bg_7: hsl(var(--hue_1), var(--sat_prime), 72%);
+  --prime_bg_8: hsl(var(--hue_1), var(--sat_prime), 68%);
+  --prime_bg_9: hsl(var(--hue_1), var(--sat_prime), 64%);
+  
+  --prime_bg_0_overlay: hsla(var(--hue_1), var(--sat_prime), 100%, var(--overlay));
+  --prime_bg_1_overlay: hsla(var(--hue_1), var(--sat_prime), 96%, var(--overlay));
+  --prime_bg_2_overlay: hsla(var(--hue_1), var(--sat_prime), 92%, var(--overlay));
+  --prime_bg_3_overlay: hsla(var(--hue_1), var(--sat_prime), 88%, var(--overlay));
+  --prime_bg_4_overlay: hsla(var(--hue_1), var(--sat_prime), 84%, var(--overlay));
+  --prime_bg_5_overlay: hsla(var(--hue_1), var(--sat_prime), 80%, var(--overlay));
+  --prime_bg_6_overlay: hsla(var(--hue_1), var(--sat_prime), 76%, var(--overlay));
+  --prime_bg_7_overlay: hsla(var(--hue_1), var(--sat_prime), 72%, var(--overlay));
+  --prime_bg_8_overlay: hsla(var(--hue_1), var(--sat_prime), 68%, var(--overlay));
+  --prime_bg_9_overlay: hsla(var(--hue_1), var(--sat_prime), 90%, var(--overlay2));
+  --prime_bg_10_overlay: hsla(var(--hue_1), var(--sat_prime), 96%, var(--overlay2));
+ 
+ 
+  /** Outline */
+  --prime_outline: hsla(var(--hue_1), var(--sat_prime_sat), 15%, 1);
+  --prime_outline_trans_0: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.05);
+  --prime_outline_trans_1: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.1);
+  --prime_outline_trans_2: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.2);
+  --prime_outline_trans_3: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.3);
+  --prime_outline_trans_4: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.4);
+  --prime_outline_trans_5: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.5);
+  --prime_outline_trans_6: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.6);
+  --prime_outline_trans_7: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.7);
+  --prime_outline_trans_8: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.8);
+  --prime_outline_trans_9: hsla(var(--hue_1), var(--sat_prime_sat), 20%, 0.9);
+  
+  
+  /** Shadow */
+  --prime_shadow_0: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.05);
+  --prime_shadow_1: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.1);
+  --prime_shadow_2: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.15);
+  --prime_shadow_3: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.3);
+  --prime_shadow_4: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.4);
+  --prime_shadow_5: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.5);
+  --prime_shadow_6: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.6);
+  --prime_shadow_7: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.7);
+  --prime_shadow_8: hsla(var(--hue_1), var(--sat_prime_sat), 10%, 0.8);
+  
+  
+  /** Buttons *******/
+  --prime_button_not_current: hsl(var(--hue_1), var(--sat_sec_sat), 37%);
+  --prime_button_disabled: hsl(var(--hue_1), var(--sat_sec_semi_sat), 48%);
+  --prime_button: hsl(var(--hue_1), var(--sat_sec_sat), 44%);
+  --prime_button_hover: hsl(var(--hue_1), var(--sat_sec_sat), 38%);
+  --prime_button_active: hsl(var(--hue_1), var(--sat_sec_sat), 38%);
+  --prime_button_active_glow: hsla(var(--hue_1), var(--sat_sec_semi_sat), 38%, 0.23);
+  --prime_button_txt_disabled: hsl(var(--hue_1), var(--sat_sec_semi_sat), 74%);
+  --prime_button_txt: hsl(var(--hue_1), var(--sat_sec), 88%);
+  --prime_button_txt_hover: hsl(var(--hue_1), var(--sat_sec), 92%);
+  --prime_button_txt_active: hsl(var(--hue_1), var(--sat_sec), 99%);
+  
+  
+  /** Checkbox */
+  --prime_checkbox_field: hsl(var(--hue_1), var(--sat_sec_semi_sat), 94%);
+  --prime_checkbox_border: hsl(var(--hue_1), var(--sat_sec_semi_sat), 50%);
+  --prime_checkbox_tick: hsl(var(--hue_1), var(--sat_sec_semi_sat), 40%);
+
+  
+  /** Drag-handle */
+  --prime_draghandle_field: hsla(var(--hue_1), var(--sat_sec_sat), 50%, 0.5);
+  --prime_draghandle_border: hsl(var(--hue_1), var(--sat_sec_sat), 40%);
+  --prime_draghandle_alt_field: hsla(var(--hue_1), var(--sat_sec_sat), 70%, 0.5);
+  --prime_draghandle_alt_border: hsl(var(--hue_1), var(--sat_sec_sat), 95%);
+  
+  
+  /** body text */
+  --prime_txt_body_faint: hsl(var(--hue_1), var(--sat_prime_txt_body), 69%);
+  --prime_txt_body_semi_faint: hsl(var(--hue_1), var(--sat_prime_txt_body), 62%);
+  --prime_txt_body: hsl(var(--hue_1), var(--sat_prime_txt_body), 50%);
+  --prime_txt_body_semi_strong: hsl(var(--hue_1), var(--sat_prime_txt_body_sat), 37%);
+  --prime_txt_body_strong: hsl(var(--hue_1), var(--sat_prime_txt_body_sat), 28%);
+  --prime_txt_body_very_strong: hsl(var(--hue_1), var(--sat_prime_txt_body_sat), 25%);
+
+  --prime_txt_body_italic: hsl(var(--hue_1), var(--sat_prime_txt_body), 28%);
+  --prime_txt_body_underline: hsl(var(--hue_1), var(--sat_prime_txt_body_sat), 75%);
+  --prime_txt_body_error: hsl(var(--hue_error), 100%, 40%);
+  
+    
+  /** status messages */
+  --prime_status_txt_info: hsl(var(--hue_info), var(--sat_prime_txt_body), 44%);
+  --prime_status_txt_warning: hsl(var(--hue_warning), var(--sat_prime_semi_desat), 40%);
+  --prime_status_txt_error: hsl(var(--hue_error), var(--sat_prime_semi_desat), 40%);
+  
+  
+  /** main-heading */
+  --prime_txt_heading_main: hsl(var(--hue_1), var(--sat_prime_txt_heading_sat), 40%);
+  
+  
+  /** heading */
+  --prime_txt_heading_faint: hsl(var(--hue_1), var(--sat_prime_txt_heading_semi_sat), 50%);
+  --prime_txt_heading_semi_faint: hsl(var(--hue_1), var(--sat_prime_txt_heading_semi_sat), 46%);
+  --prime_txt_heading: hsl(var(--hue_1), var(--sat_prime_txt_heading_sat), 42%);
+  --prime_txt_heading_semi_strong: hsl(var(--hue_1), var(--sat_prime_txt_heading_sat), 38%);
+  --prime_txt_heading_strong: hsl(var(--hue_1), var(--sat_prime_txt_heading_sat), 27%);
+  
+  /** heading-impact */
+  --prime_txt_heading_impact: hsl(var(--hue_2), var(--sat_prime_sat), 45%);
+  
+  
+  /** sub-heading */
+  --prime_txt_heading_sub: hsl(var(--hue_1), var(--sat_prime_semi_sat), 55%);
+  --prime_txt_heading_sub_semi_strong: hsl(var(--hue_1), var(--sat_prime_semi_sat), 45%);
+  --prime_txt_heading_sub_strong: hsl(var(--hue_1), var(--sat_prime_semi_sat), 40%);
+  --prime_txt_heading_sub_very_strong: hsl(var(--hue_1), var(--sat_prime_sat), 35%);
+  
+  
+  /** item-heading */
+  --prime_txt_heading_item: hsl(var(--hue_1), var(--sat_prime_desat), 34%);
+  --prime_txt_heading_item_semi_strong: hsl(var(--hue_1), var(--sat_prime_desat), 30%);
+  --prime_txt_heading_item_strong: hsl(var(--hue_1), var(--sat_prime_desat), 28%);
+  
+  
+  /** input - slider */
+  --prime_input_track: hsl(var(--hue_1), var(--sat_prime), 99%);
+  --prime_input_shadow: hsla(var(--hue_1), var(--sat_prime), 10%, 0.15);
+  --prime_input_thumb: hsl(var(--hue_1), var(--sat_prime_sat), 85%);
+  --prime_input_thumb_border: hsl(var(--hue_1), var(--sat_prime_sat), 50%);
+  
+  --prime_interactive: hsla(286, 97%, 57%, 100%);
+
+  /** Charts - Structure */
+  --prime_chart_axis: hsl(var(--hue_1), var(--sat_prime_semi_desat), 64%);
+  --prime_chart_axis_ticks: hsl(var(--hue_1), var(--sat_prime_semi_desat), 64%);
+  --prime_chart_axis_tick_text: hsl(var(--hue_1), var(--sat_prime), 55%);
+  --prime_chart_axis_tick_text_strong: hsl(var(--hue_1), var(--sat_prime_sat), 28%);
+  --prime_chart_axis_label: hsl(var(--hue_1), var(--sat_prime_txt_heading_semi_sat), 43%);
+  --prime_chart_axis_label_strong: hsl(var(--hue_1), var(--sat_prime_txt_heading_sat), 30%);
+  --prime_chart_axis_sub_label: hsl(var(--hue_1), var(--sat_prime_txt_heading), 70%);
+  
+  
+  /** Charts Content */
+  --series_1: hsl(var(--chart_series_1), var(--sat_prime_sat), 40%);
+  --series_1_outline: hsl(var(--chart_series_1), var(--sat_prime_sat), 30%);
+  --series_1_hover: hsl(var(--chart_series_1), var(--sat_prime_sat), 60%);
+  --series_1_selected: hsl(var(--chart_series_1), var(--sat_prime_sat), 65%);
+  --series_1_noninteractive: hsl(var(--chart_series_1), var(--sat_prime_semi_sat), 85%);
+  --series_1_disabled: hsl(var(--chart_series_1), var(--sat_prime_desat), 88%);
+  --series_1_axis_label: hsl(var(--chart_series_1), var(--sat_prime_sat), 40%);
+  
+  --series_2: hsl(var(--chart_series_2), var(--sat_prime_sat), 45%);
+  --series_2_outline: hsl(var(--chart_series_2), var(--sat_prime_sat), 35%);
+  --series_2_hover: hsl(var(--chart_series_2), var(--sat_prime_sat), 60%);
+  --series_2_selected: hsl(var(--chart_series_2), var(--sat_prime_sat), 65%);
+  --series_2_noninteractive: hsl(var(--chart_series_2), var(--sat_prime_semi_sat), 85%);
+  --series_2_disabled: hsl(var(--chart_series_2), var(--sat_prime_desat), 88%);
+  --series_2_axis_label: hsl(var(--chart_series_2), var(--sat_prime_sat), 40%);
+  
+  --series_3: hsl(var(--chart_series_3), var(--sat_prime_sat), 60%);
+  
+  --series_4: hsl(var(--chart_series_4), var(--sat_prime_sat), 65%);
+  
+  --series_5: hsl(var(--chart_series_5), var(--sat_prime_sat), 40%);
+  
+  --series_6: hsl(var(--chart_series_6), var(--sat_prime_sat), 40%);
+  
+  --series_7: hsl(var(--chart_series_7), var(--sat_prime_sat), 50%);
+  
+  --series_8: hsl(var(--chart_series_8), var(--sat_prime_sat), 50%);
+  
+  
+  /** URL LINKS */
+  --url_link: hsl(200, var(--sat_prime_txt_heading_sat), 40%);
+  
+  
+  /** ---------- SECONDARY ~ Menus & Title-bars -----------*/
+  
+  /** Background */
+  --sec_bg_0: hsl(var(--hue_1), var(--sat_sec_sat), 30%);
+  --sec_bg_1: hsl(var(--hue_1), var(--sat_sec_sat), 35%);
+  --sec_bg_2: hsl(var(--hue_1), var(--sat_sec_sat), 40%);
+  --sec_bg_3: hsl(var(--hue_1), var(--sat_sec_sat), 45%);
+  --sec_bg_4: hsl(var(--hue_1), var(--sat_sec_sat), 50%);
+  --sec_bg_5: hsl(var(--hue_1), var(--sat_sec_sat), 55%);
+  --sec_bg_6: hsl(var(--hue_1), var(--sat_sec_sat), 60%);
+  --sec_bg_7: hsl(var(--hue_1), var(--sat_sec_sat), 65%);
+  --sec_bg_8: hsl(var(--hue_1), var(--sat_sec_sat), 70%);
+  --sec_bg_9: hsl(var(--hue_1), var(--sat_sec_sat), 75%);
+  
+  
+  /** main-heading */
+  --sec_txt_heading_main: hsl(var(--hue_1), var(--sat_sec_txt_heading_sat), 98%);
+  
+  /** sub-heading */
+  --sec_txt_heading_sub: hsl(var(--hue_1), var(--sat_sec), 77%);
+  --sec_txt_heading_sub_semi_strong: hsl(var(--hue_1), var(--sat_sec), 92%);
+  --sec_txt_heading_sub_strong: hsl(var(--hue_1), var(--sat_sec), 98%);
+  
+  /** body text */
+  --sec_txt_body_faint: hsl(var(--hue_1), var(--sat_sec_txt_body_semi_sat), 60%);
+  --sec_txt_body_semi_faint: hsl(var(--hue_1), var(--sat_sec_txt_body_semi_sat), 70%);
+  --sec_txt_body: hsl(var(--hue_1), var(--sat_sec_txt_body_semi_sat), 80%);
+  --sec_txt_body_semi_strong: hsl(var(--hue_1), var(--sat_sec_txt_body_sat), 90%);
+  --sec_txt_body_strong: hsl(var(--hue_1), var(--sat_sec_txt_body_sat), 99%);
+
+  --sec_txt_body_italic: hsl(var(--hue_1), var(--sat_sec_txt_body), 69%);
+  --sec_txt_body_underline: hsl(var(--hue_1), var(--sat_sec_txt_body_sat), 75%);
+  --sec_txt_body_error: hsl(var(--hue_error), 100%, 40%);
+ 
+ 
+ 
+  /** ---------------------- General ----------------------*/
+
+  /** Tooltips */
+  --tooltip_field: hsl(var(--hue_1), var(--sat_sec_sat), 30%);
+  --tooltip_border: hsl(var(--hue_1), var(--sat_sec_sat), 70%);
+  
+  
+  /** Help System */
+  --help_overlay: hsla(var(--hue_1), var(--sat_sec_sat), 30%, 0.4);
+  --help_infobox_field: hsl(var(--hue_1), var(--sat_sec_sat), 25%);
+  --help_infobox_border: hsl(var(--hue_1), var(--sat_sec), 90%);
+  
+  --help_connector_line: hsl(var(--hue_1), var(--sat_sec), 95%);
+  --help_connector_outline: hsl(var(--hue_1), var(--sat_sec), 100%);
+  --help_connector_highlight: hsl(var(--hue_2), var(--sat_sec_sat), 50%);
+  
+  --help_txt: hsl(var(--hue_1), var(--sat_sec), 75%);
+  --help_txt_semi_strong: hsl(var(--hue_1), var(--sat_sec_semi_sat), 89%);
+  --help_txt_strong: hsl(var(--hue_1), var(--sat_sec_sat), 98%);
+  
+  /** Perfomance Indication */
+  --performance_very_good: hsl(140, 100%, 45%);
+  --performance_good: hsl(100, 100%, 45%);
+  --performance_neutral: hsl(var(--hue_1), var(--sat_prime_txt_body), 65%);
+  --performance_poor: hsl(30, 100%, 45%);
+  --performance_very_poor: hsl(0, 100%, 45%);
+  
+  /** Color Spectrum */
+  --color_red: hsl(0, 100%, 50%);
+  --color_orange: hsl(30, 100%, 50%);
+  --color_yellow: hsl(60, 100%, 50%);
+  --color_yellow_green: hsl(90, 100%, 50%);
+  --color_green: hsl(120, 100%, 50%);
+  --color_green_cyan: hsl(150, 100%, 50%);
+  --color_cyan: hsl(180, 100%, 50%);
+  --color_blue: hsl(210, 100%, 50%);
+  --color_blue_indigo: hsl(240, 100%, 50%);
+  --color_indigo: hsl(270, 100%, 50%);
+  --color_magenta: hsl(300, 100%, 50%);
+  --color_cerise: hsl(330, 100%, 50%);
+  
+  
+  /** Media */
+  --color_html: hsl(210, 100%, 44%);
+  --color_html_faint: hsl(205, 100%, 58%);
+  --color_html_outline: hsl(210, 92%, 34%);
+  
+  --color_script: hsl(27, 100%, 55%);
+  --color_script_faint: hsl(27, 100%, 60%);
+  --color_script_outline: hsl(27, 92%, 35%);
+  
+  --color_css: hsl(102, 100%, 42%);
+  --color_css_faint: hsl(102, 70%, 50%);
+  --color_css_outline: hsl(102, 100%, 26%);
+  
+  --color_text: hsl(54, 90%, 50%);
+  --color_text_faint: hsl(54, 100%, 60%);
+  --color_text_outline: hsl(54, 100%, 60%);
+  
+  --color_image: hsl(292, 100%, 60%);
+  --color_image_faint: hsl(292, 100%, 80%);
+  --color_image_outline: hsl(292, 100%, 50%);
+  
+  --color_flash: hsl(182, 100%, 39%);
+  --color_flash_faint: hsl(182, 100%, 59%);
+  --color_flash_outline: hsl(182, 100%, 29%);
+  
+  --color_font: hsl(6, 100%, 48%);
+  --color_font_faint: hsl(6, 100%, 64%);
+  --color_font_outline: hsl(6, 100%, 38%);
+  
+  --color_video: hsl(166, 100%, 36%);
+  --color_video_faint: hsl(166, 100%, 56%);
+  --color_video_outline: hsl(166, 100%, 26%);
+  
+  --color_xhr: hsl(192, 100%, 52%);
+  --color_xhr_faint: hsl(192, 100%, 62%);
+  --color_xhr_outline: hsl(192, 100%, 32%);
+  
+  --color_other: hsl(0, 0%, 49%);
+  --color_other_faint: hsl(0, 0%, 69%);
+  --color_other_outline: hsl(0, 0%, 39%);
+  
+  --color_unknown: hsl(0, 0%, 79%);
+  --color_unknown_faint: hsl(0, 0%, 89%);
+  --color_unknown_outline: hsl(0, 0%, 39%);
+  
+  
+  
+  --color_value_change_positive: hsl(140, 100%, 40%);
+  --color_value_change_negative: hsl(15, 100%, 50%);
+  
+  --color_none: none;
+  --color_transparent: hsla(var(--hue_1), 50%, 50%, 0);
+
+  /*---------heatmap-----------------------*/
+
+  --color_hm_coolest: hsl(202, 100%, 36%);
+  --color_hm_cooler: hsl(143, 100%, 30%);
+  --color_hm_cool: hsl(123, 100%, 36%);
+  --color_hm_warm: hsl(52, 100%, 48%);
+  --color_hm_warmer: hsl(359, 98%, 40%);
+  --color_hm_warmest: hsl(340, 100%, 23%);
+
+  --color_hm_coolest_faint: hsl(202, 70%, 42%);
+  --color_hm_cooler_faint: hsl(143, 99%, 24%);
+  --color_hm_cool_faint: hsl(123, 90%, 36%);
+  --color_hm_warm_faint: hsl(52, 92%, 45%);
+  --color_hm_warmer_faint: hsl(359, 80%, 52%);
+  --color_hm_warmest_faint: hsl(350, 80%, 36%);
+  
+  /** ---------------------- CodeMirror ----------------------*/
+  --color_cm_keyword: hsl(215, 100%, 45%);
+  --color_cm_table: hsl(290, 100%, 45%);
+  --color_cm_column: hsl(330, 100%, 45%);
+  --color_cm_meta: #FF1717;
+  --color_cm_atom: hsl(260, 60%, 65%);
+  --color_cm_number: hsl(120, 100%, 30%);
+  --color_cm_def: #00f;
+  --color_cm_variable: hsl(30, 100%, 45%);
+  --color_cm_variable_2: hsl(40, 100%, 45%);
+  --color_cm_variable_3: hsl(50, 100%, 45%);
+  --color_cm_property: black;
+  --color_cm_operator: hsl(180, 30%, 65%);
+  --color_cm_comment: hsl(100, 30%, 70%);
+  --color_cm_string: hsl(180, 80%, 45%);
+  --color_cm_string_2: hsl(170, 80%, 45%);
+  --color_cm_qualifier: #555;
+  --color_cm_builtin: hsl(0, 100%, 60%);
+  --color_cm_bracket: hsl(30, 40%, 50%);
+  --color_cm_tag: #170;
+  --color_cm_attribute: #00c;
+  --color_cm_link: #219;
+  --color_cm_error: hsl(0, 100%, 50%);
+  --color_cm_mpql_function: hsl(0, 60%, 50%);
+  --color_cm_mpql_forbidden: hsl(0, 100%, 50%);
+  --color_cm_mpql_datetime_values: hsl(50, 70%, 45%);
+  
+  --color_cm_no_classification: hsl(190, 10%, 65%);
+  
+  --color_CodeMirror_activeline_background: #e8f2ff;
+  --color_CodeMirror_matchingbracket_outline: grey;
+  --color_CodeMirror_matchingbracket_text: black;
+  
+  /** ---------------------- DataExplorer / CodeMirror ----------------------*/
+  --mpql_status_warning_text: hsl(30, 10%, 95%);
+  --mpql_status_warning_bg: hsl(30, 50%, 50%);
+  --mpql_status_error_text: hsl(0, 10%, 95%);
+  --mpql_status_error_bg: hsl(0, 50%, 50%);
+}

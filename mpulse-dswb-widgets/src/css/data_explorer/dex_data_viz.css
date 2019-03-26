@@ -1,0 +1,154 @@
+
+
+/* ====================== QUERY VISUALISATION ========================= */
+#query_datavis {
+  height: auto;
+  margin: 0.75vw 0 0 0;
+  border-radius: var(--corner_radius);
+  overflow: hidden;
+  background-color: var(--prime_bg_0);
+}
+
+#query_datavis_bar {
+  height: var(--title_bar_height);
+  width: 100%;
+  background-color: var(--prime_bg_4);
+}
+
+#query_datavis_title {
+  height: 100%;
+  width: auto;
+  float: left;
+}
+#query_datavis_title .text {
+  color: var(--prime_txt_body_very_strong);
+  font-size: 1.3rem;
+  line-height: var(--title_bar_height);
+  padding: 0 1rem 0 1rem;
+}
+
+
+#query_datavis_bar_actions {
+  height: 100%;
+  width: auto;
+  float: right;
+  padding: 0.82rem 1.8rem 0 0;
+}
+
+#query_datavis button.button_export {
+  position: relative;
+}
+
+#query_datavis [data-data-present=true].dex-button.button_export,
+#query_datavis [data-data-present=true].dex-button.button_export:active,
+#query_datavis [data-data-present=true].dex-button.button_export:active {
+  color: var(--prime_button_txt);
+  background-color: var(--prime_button);
+}
+
+
+
+/* ========== Button Drop-Down List =========== */
+#query_datavis button:focus {
+  outline: none;
+}
+
+#query_datavis button .button-dropdown-list {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  background: var(--prime_bg_3);
+  z-index: 10;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+#query_datavis button[data-data-present=true]:hover .button-dropdown-list {
+  height: auto;
+}
+
+#query_datavis button .button-dropdown-list li {
+  width: 100%;
+  height: auto;
+  color: var(--prime_txt_body);
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  text-align: left;
+  padding: 0.3rem 0 0.3rem 0.8rem;
+  cursor: pointer;
+}
+#query_datavis button .button-dropdown-list li:nth-child(1) {
+  padding-top: 0.7rem;
+}
+#query_datavis button .button-dropdown-list li:nth-last-child(1) {
+  padding-bottom: 0.9rem;
+}
+
+#query_datavis button .button-dropdown-list li:hover {
+  color: var(--prime_txt_body_very_strong);
+}
+#query_datavis button .button-dropdown-list li:active {
+  color: var(--prime_txt_body_semi_weak);
+}
+
+
+
+/* ========== Table =========== */
+#query_datavis .query-datavis-table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  border: 0.1rem solid var(--prime_bg_5);
+  border-width: 0;
+  margin: 0;
+  padding: 0;
+}
+#query_datavis .query-datavis-table[data-data-present=false] {
+  height: 0;
+  border-width: 0;
+}
+
+#query_datavis .query-datavis-table-container {
+  width: 100%;
+  height: auto;
+  max-height: calc(var(--dataviz_height) - var(--title_bar_height));
+  position: relative;
+  overflow: auto;
+}
+
+#query_datavis .dex-table {
+  width: 100%;
+  height: auto;
+  background: var(--prime_bg_0);
+  border-collapse: separate;
+  border-spacing: 0.15rem;
+}
+
+#query_datavis .dex-table thead tr {
+  background: var(--prime_bg_4_overlay);
+}
+
+#query_datavis .dex-table thead tr th {
+  color: var(--prime_txt_body_strong);
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+}
+
+#query_datavis .dex-table tbody tr:nth-child(odd) {
+  background: var(--prime_bg_1_overlay);
+}
+  
+#query_datavis .dex-table tbody tr td {
+  max-width: 9rem;
+  color: var(--prime_txt_body);
+  font-size: 0.75rem;
+  line-height: 1.35rem;
+  text-overflow: ellipsis;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  overflow: hidden;
+}
+

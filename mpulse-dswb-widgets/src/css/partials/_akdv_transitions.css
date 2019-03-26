@@ -1,0 +1,4 @@
+
+body [data-transition-type] > :not([data-transition-active="true"]) {
+  visibility: hidden;
+}

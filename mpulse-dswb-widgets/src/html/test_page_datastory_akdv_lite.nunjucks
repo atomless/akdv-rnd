@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <style>
+        h1 {
+            font-size: 2.5rem;
+            color: var(--prime_txt_heading);
+        }
+        .akdv-chart {
+            background-color: white;
+        }
+        </style>
+
+        <script>
+        window.akdv_lite_host = location.host;
+        window.akdv_manifest = {
+            charts: [{
+                    container_id: '#akdv-chart1A',
+                    namespace: 'DONUT',
+                    chart: {
+                        type: 'donut'
+                    },
+                    datasource: {
+                        type: 'FILE',
+                        uri: `../data/donut.json`
+                    }
+                },
+                {
+                    container_id: '#akdv-chart1B',
+                    namespace: 'BOXPLOTS',
+                    chart: {
+                        type: 'boxplots'
+                    },
+                    datasource: {
+                        type: 'FILE',
+                        uri: `../data/boxplots.json`
+                    }
+                },
+                {
+                    container_id: '#akdv-chart2',
+                    namespace: 'BOXPLOTS',
+                    chart: {
+                        type: 'boxplots'
+                    },
+                    datasource: {
+                        type: 'FILE',
+                        uri: `../data/boxplots.json`
+                    }
+                },
+                {
+                    container_id: '#akdv-chart3',
+                    namespace: 'DONUT2',
+                    chart: {
+                        type: 'donut'
+                    },
+                    datasource: {
+                        type: 'FILE',
+                        uri: `../data/donut.json`
+                    }
+                }
+            ],
+            datastory: {
+                orient: 'left',  // left, center, right
+                container_id: '#akdv-datastory-content',
+                trigger_threshold: 0.5,
+                trigger_once: false,
+                header_padding: true,
+                footer_padding: true,
+                onEnter: e => console.log('Entering: ' + e.detail.id),
+                onExit: e => console.log('Exiting: ' + e.detail.id),
+                onProgress: e => console.log('Progress: ' + e.detail.getAttribute('data-scroll-progress')),
+            }
+        };
+        </script>
+        <script src="../javascript/lib/akdv-lite-core.js"></script>
+    <head>
+
+    <body data-akdv-datastory="true">
+        <article id="akdv-datastory-content">
+            <section>
+                <h1>In the beginning there was...</h1>
+            </section>
+
+            <section id="section1">
+                <figure data-transition-type="fade">
+                    <figure id="akdv-chart1A" data-datasource-FILE="true"></figure>
+                    <figure id="akdv-chart1B" data-datasource-DSWB="true"></figure>
+                </figure>
+                <article>
+                    <article id="article1A" data-enter-event="akdv_multiselect, akdv_clicked, akdv_clicked" data-enter-value='[true, "Configuration", "Car Lineup"]'>
+                        <p>Step Content 1A</p>
+                        <p>Step Content 2A</p>
+                        <p>Step Content 3A</p>
+                        <p>Step Content 4A</p>
+                    </article>
+                    <article id="article1B" data-enter-event="akdv_multiselect, akdv_clicked" data-enter-value='[false, "Car Lineup"]'>
+                        <p>Step Content 1B</p>
+                        <p>Step Content 2B</p>
+                        <p>Step Content 3B</p>
+                        <p>Step Content 4B</p>
+                    </article>
+                    <article id="article1C" data-enter-event="akdv_clicked" data-enter-value="Odekake">
+                        <p>Step Content 1C</p>
+                        <p>Step Content 2C</p>
+                        <p>Step Content 3C</p>
+                        <p>Step Content 4C</p>
+                    </article>
+                </article>
+            </section>
+
+            <section id="section2">
+                <figure id="akdv-chart2" data-datasource-DSWB="true"></figure>
+                <article id="article2" data-enter-event="map" data-enter-value="[51.003,45656]" data-progress-event="map" data-progress-value="[[51.003,4.5656],[52.003,4.3656]]">
+                    <p>Step Content 5</p>
+                    <p>Step Content 6</p>
+                    <p>Step Content 7</p>
+                </article>
+            </section>
+
+            <section id="section3">
+                <figure id="akdv-chart3" data-datasource-GQL="true"></figure>
+                <article id="article3" data-progress-event="filter-value-change" data-progress-value="['DataTime','1 Jan 2017'],['DataTime','1 Jan 2018','PageGroup','Desktop']">
+                    <p>Step Content 8</p>
+                    <p>Step Content 9</p>
+                    <p>Step Content 10</p>
+                </article>
+            </section>
+            <section>
+                <h1>...In the end...it was a shower scene</h1>
+            </section>
+        </article>
+    </body>
+</html>

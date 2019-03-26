@@ -1,0 +1,174 @@
+{
+  "definitions": {}, 
+  "$schema": "http://json-schema.org/draft-06/schema#", 
+  "$id": "http://example.com/example.json", 
+  "type": "array", 
+  "additionalItems": true, 
+  "uniqueItems": true, 
+  "items": {
+    "type": "object", 
+    "additionalProperties": true, 
+    "properties": {
+      "SESSIONSTART": {
+        "type": "integer", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          1511193615213
+        ]
+      }, 
+      "HOUR_OF_DAY": {
+        "type": "integer", 
+        "title": "The Hour of day Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          1,19 
+        ]
+      }, 
+      "DAY_OF_WEEK": {
+        "type": "integer", 
+        "title": "The Day of week Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          0,6
+        ]
+      }, 
+      "COUNTRYCODE": {
+        "type": "string", 
+        "title": "The Countrycode Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          "US"
+        ]
+      },
+      "OPERATINGSYSTEMNAME": {
+        "type": "string", 
+        "title": "The Operatingsystemname Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          "Windows"
+        ]
+      }, 
+      "DEVICETYPENAME": {
+        "type": "string", 
+        "title": "The Devicetypename Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          "Desktop"
+        ]
+      }, 
+      "DEVICENAME": {
+        "type": "string", 
+        "title": "The Devicename Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "NULL", 
+        "examples": [
+          "iPad"
+        ]
+      }, 
+      "DEVICEMANUFACTURERNAME": {
+        "type": "string", 
+        "title": "The Devicemanufacturername Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "NULL", 
+        "examples": [
+          "Apple"
+        ]
+      }, 
+      "PAGELOADTIME": {
+        "type": "number", 
+        "title": "The Pageloadtime Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0.0, 
+        "examples": [
+          6169.5
+        ]
+      }, 
+      "DOMLOADTIME": {
+        "type": "number", 
+        "title": "The Domloadtime Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0.0, 
+        "examples": [
+          1302.0
+        ]
+      }, 
+      "CONVERSION": {
+        "type": "integer", 
+        "title": "The Conversion Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          0
+        ]
+      }, 
+      "MAXREVENUE": {
+        "type": "integer", 
+        "title": "The Maxrevenue Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          0
+        ]
+      }, 
+      "SESSIONLENGTH": {
+        "type": "integer", 
+        "title": "The Sessionlength Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 1, 
+        "examples": [
+          2
+        ]
+      },
+      "SESSIONPAGES": {
+        "type": "integer", 
+        "title": "The Session Page Count Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 1, 
+        "examples": [
+          2
+        ]
+      }, 
+      "SESSIONTOTALLOADTIME": {
+        "type": "integer", 
+        "title": "The Sessiontotalloadtime Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          12339
+        ]
+      }, 
+      "SESSIONDURATION": {
+        "type": "integer", 
+        "title": "The Sessionduration Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": 0, 
+        "examples": [
+          0
+        ]
+      }
+    }, 
+    "required": [
+      "SESSIONSTART", 
+      "HOUR_OF_DAY",
+      "DAY_OF_WEEK",
+      "COUNTRYCODE",
+      "OPERATINGSYSTEMNAME", 
+      "DEVICETYPENAME", 
+      "DEVICENAME", 
+      "DEVICEMANUFACTURERNAME", 
+      "PAGELOADTIME", 
+      "DOMLOADTIME", 
+      "CONVERSION", 
+      "MAXREVENUE", 
+      "SESSIONLENGTH", 
+      "SESSIONTOTALLOADTIME"
+    ]
+  }
+}

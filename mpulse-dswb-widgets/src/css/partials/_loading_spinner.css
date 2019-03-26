@@ -1,0 +1,28 @@
+[data-show-spinner="true"] .loading-spinner-path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation:
+    loading-spinner-dash 2.5s ease-in-out infinite,
+    loading-spinner-color 10s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke-width: 4.2;
+  pointer-events: none;
+}
+
+.status-wrapper .loading-spinner-path-bg {
+  stroke: var(--prime_bg_6_overlay);
+  stroke-width: 4.2;
+}
+
+[data-show-spinner="true"] .loading-spinner {
+  width: 3rem;
+  pointer-events: none;
+  transform-origin: center;
+  animation: rotate 1.7s linear infinite;
+}
+
+[data-show-spinner="false"] .loading-spinner,
+[data-show-spinner="false"] .loading-spinner-path {
+  animation: none;
+  pointer-events: none;
+}

@@ -1,0 +1,126 @@
+{
+    "name": "Demo Session Data",
+    "description": "Session data over one day for an ecommerce client",
+    "theme": "default",
+    "data_format": "tsv",
+    "stages": [
+        {
+            "id": 1,
+            "anchortext": "start",
+            "description": "shows all available data in a cloud",
+            "displaytext": "{{count(*)}} sessions detected on {{appname}} on the day of {{date}}.",
+            "dimensions": []
+        },
+        {
+            "id": 2,
+            "anchortext": "alloptions",
+            "hide": true,
+            "description": "shows all available options",
+            "filters": [
+                {
+                    "DEVICETYPENAME": "desktop"
+                }
+            ],
+            "dimensions": [
+                { 
+                    "name": "cluster",
+                    "properties" : {
+                        "by": "COUNTRYCODE"
+                    }
+                },
+                {
+                    "name": "radius",
+                    "properties" : {
+                        "by": "PAGELOADTIME"
+                    }
+                },
+                { 
+                    "name": "color",
+                    "properties" : {
+                        "by": "DEVICETYPENAME",
+                        "pallette": "greyscale"
+                    }
+                },
+                { 
+                    "name": "opacity",
+                    "properties" : {
+                        "by": "SESSIONPAGES",
+                        "reverse": false
+                    }
+                },
+                { 
+                    "name": "axis-x-top",
+                    "properties" : {
+                        "by": "COUNTRYCODE"
+                    }
+                },
+                { 
+                    "name": "axis-x-bottom"
+                },
+                { 
+                    "name": "axis-y-left",
+                    "properties" : {
+                        "by": "PAGELOADTIME",
+                        "reverse": true
+                    }
+                },
+                { 
+                    "name": "axis-y-right"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "anchortext": "devicetypes",
+            "hide": true,
+            "description": "cluster all sessions by device type name",
+            "displaytext": "{{}}% of sessions were on {{DEVICETYPENAMES[0].name}} devices, {{}}% of sessions were {{DEVICETYPENAMES[1].name}} and {{}}% were DEVICETYPENAMES[2].name}}.",
+            "dimensions": [
+                {
+                    "name": "cluster",
+                    "properties": {
+                        "by": "DEVICETYPENAME"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "anchortext": "countries",
+            "hide": true,
+            "description": "cluster all sessions by countries",
+            "displaytext": "{{}}% of sessions were from {{countryCodeToCountryName(COUNTRYCODES[0])}}.",
+            "dimensions": [
+                {
+                    "name": "cluster",
+                    "properties": {
+                        "by": "COUNTRYCODE"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "anchortext": "countries",
+            "hide": true,
+            "description": "vertical distribution of performance, with #1 country highlighted",
+            "displaytext": "Sessions from {{countryCodeToCountryName(COUNTRYCODE[0])}} average {{SESSIONLOADTIME where COUNTRYCODE == COUNTRYCODES[0]}}",
+            "dimensions": [
+                {   
+                    "name": "color",
+                    "properties": {
+                        "by": "COUNTRYCODE",
+                        "highlight": "{{COUNTRYCODE[0]}}",
+                        "comment": "can we highlight one value using a `key` object, or similar?"
+                    }
+                },
+                {
+                    "name": "axis-y-left",
+                    "properties": {
+                        "by": "PAGELOADTIME"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+.draggable-marker-xvalue-label {
+  font-size: 0.65rem !important;
+  text-anchor: start;
+  transform: translate(0.65rem, 0.25rem);
+}
+
+.draggable-marker-xvalue-label-value {
+  fill: var(--prime_txt_body);
+}
+
+.draggable-marker.active .draggable-marker-xvalue-label-value {
+  fill: var(--prime_txt_heading_strong);
+}
+
+.draggable-marker circle {
+  stroke-opacity: 0;
+  paint-order: stroke;
+}
+
+.draggable-marker line {
+  stroke-opacity: 0.7;
+}
+
+.draggable-marker:not(.active) line {
+  stroke-opacity: 0;
+}
+
+.draggable-marker.active circle,
+.draggable-marker:hover circle {
+  stroke-opacity: 0.5;
+}
+
+.drag-x-enabled {
+  cursor: ew-resize;
+}
+
+.drag-y-enabled {
+  cursor: ns-resize;
+}
+
+.drag-x-enabled.drag-y-enabled {
+  cursor: nwse-resize;
+}

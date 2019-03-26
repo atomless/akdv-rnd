@@ -1,0 +1,435 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v4.json",
+  "width": 400,
+  "height": 400,
+  "padding": 20,
+  "autosize": "fit",
+  "signals": [
+    {
+      "name": "width",
+      "update": "width - 40"
+    },
+    {
+      "name": "height",
+      "update": "height - 40"
+    },
+    {
+      "name": "data_ready",
+      "value": false,
+      "update": "data('boxPlotData').length > 0"
+    },
+    {
+      "name": "show_legend",
+      "value": true,
+      "update": "height > 300"
+    },
+    {
+      "name": "clicked",
+      "value": false,
+      "on": [
+        {
+          "events": "@legendGradient:click, @legendLabel:click, @donutSegmentMark:click",
+          "update": "invert('color', scale('color', datum.value))"
+        },
+        {
+          "events": "mouseup[!event.item]",
+          "update": "false",
+          "force": true
+        }
+      ]
+    },
+    {
+      "name": "hover",
+      "value": false,
+      "on": [
+        {
+          "events": "@legendGradient:mouseover, @legendLabel:mouseover, @donutSegmentMark:mouseover",
+          "update": "invert('color', scale('color', datum.value))",
+          "force": true
+        },
+        {
+          "events": "@legendGradient:mouseout, @legendLabel:mouseout, @donutSegmentMark:mouseout",
+          "update": "false",
+          "force": true
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "yAxisLabel"
+    },
+    {
+      "name": "legend_label"
+    },
+    {
+      "name": "boxPlotData",
+      "values": [
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "band",
+      "range": "width",
+      "domain": {
+        "data": "boxPlotData",
+        "field": "box_name"
+      }
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "range": "height",
+      "round": true,
+      "domain": {
+        "data": "boxPlotData",
+        "fields": [
+          "min",
+          "max"
+        ]
+      },
+      "zero": true,
+      "nice": true
+    },
+    {
+      "name": "color",
+      "type": "quantize",
+      "range": ["#29B6F6","#2196F3","#0277BD"],
+      "domain": {
+        "data": "boxPlotData",
+        "field": "iqr"
+      }
+    }
+  ],
+  "axes": [
+    {
+      "orient": "left",
+      "scale": "yscale",
+      "labelOverlap": "greedy",
+      "zindex": 1,
+      "domainColor": "var(--prime_chart_axis_tick_text)",
+      "labelColor": "var(--prime_txt_body)",
+      "tickColor": "var(--prime_chart_axis_tick_text)",
+      "title": {"signal": "data('yAxisLabel')[0].data"},
+      "titleColor": "var(--prime_txt_body)",
+      "titlePadding": 20,
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    {
+      "orient": "bottom",
+      "scale": "xscale",
+      "labelOverlap": {
+        "signal": "((domain('xscale').length * 40) / width) > 1  ? 'greedy' : false"
+      },
+      "zindex": 1,
+      "domainColor": "var(--prime_chart_axis_tick_text)",
+      "labelColor": "var(--prime_txt_body)",
+      "tickColor": "var(--prime_chart_axis_tick_text)",
+      "labelAngle": 30,
+      "labelAlign": "left",
+      "labelPadding": 5,
+      "labelFontSize": 12
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "orient": "top-right",
+      "title": {"signal": "data('legend_label')[0].data"},
+      "direction": "horizontal",
+      "type": "gradient",
+      "encode": {
+        "title": {
+          "enter": {
+            "fill": {
+              "value": "var(--prime_txt_heading)"
+            }
+          },
+          "update": {
+            "opacity": {
+              "signal": "show_legend ? 1 : 0"
+            }
+          }
+        },
+        "labels": {
+          "name": "legendLabel",
+          "interactive": true,
+          "enter": {
+            "dy": {
+              "value": 4
+            }
+          },
+          "update": {
+            "align": {
+              "value": "left"
+            },
+            "text": {
+              "signal": "show_legend ? round(invert('color', scale('color', datum.value))[0]) + '-' + round(invert('color', scale('color', datum.value))[1]) : ''"
+            },
+            "fill": [
+              {
+                "test": "(hover && invert('color', scale('color', datum.value))[0] == hover[0]) || clicked && invert('color', scale('color', datum.value))[0] == clicked[0]",
+                "value": "var(--prime_txt_body_strong)"
+              },
+              {
+                "value": "var(--prime_txt_body)"
+              }
+            ]
+          }
+        },
+        "gradient": {
+          "name": "legendGradient",
+          "interactive": true,
+          "update": {
+            "fillOpacity": [
+              {
+                "test": "show_legend && (clicked && invert('color', scale('color', datum.value))[0] == clicked[0])",
+                "value": 1
+              },              
+              {
+                "test": "show_legend && (!hover && !clicked) || (hover && invert('color', scale('color', datum.value))[0] == hover[0])",
+                "value": 1
+              },
+              {
+                "test": "show_legend",
+                "value": 0.05
+              },
+              {
+                "value": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "from": {
+        "data": "boxPlotData"
+      },
+      "type": "rect",
+      "encode": {
+        "enter": {
+          "tooltip": [
+            {
+              "signal": "{'title': datum.box_name, 'Minimum': format(datum.min, ',d'), 'Lower Quartile': format(datum.lower_quartile, ',d'), 'Median': format(datum.median, ',d'), 'Upper Quartile': format(datum.upper_quartile, ',d'), 'Maximum': format(datum.max, ',d'), 'IQR': format(datum.iqr, ',d'), 'Count': format(datum.count, ',')}"
+            }
+          ]
+        },
+        "update": {
+          "fill": {
+            "scale": "color",
+            "field": "iqr"
+          },
+          "width": {
+            "scale": "xscale",
+            "band": 0.7
+          },
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.15
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "lower_quartile"
+          },
+          "y2": {
+            "scale": "yscale",
+            "field": "upper_quartile"
+          },
+          "fillOpacity": [
+            {
+              "test": "(!clicked && !hover)",
+              "value": 1
+            },                   
+            {
+              "test": "(clicked && datum.iqr >= clicked[0] && datum.iqr <= clicked[1])",
+              "value": 1
+            },              
+            {
+              "test": "(hover && datum.iqr >= hover[0] && datum.iqr <= hover[1])",
+              "value": 1
+            },
+            {
+              "value": 0.05
+            }
+          ],
+          "zindex": {"value": 0}
+        },
+        "hover": {
+          "fill": {"value": "firebrick"},
+          "fillOpacity": {"value": 1},
+          "zindex": {"value": 1}
+        }
+      }
+    },
+    {
+      "name": "median",
+      "type": "rule",
+      "from": {
+        "data": "boxPlotData"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 4
+          },
+          "stroke": {
+            "value": "var(--prime_outline_trans_8)"
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.15
+          },
+          "x2": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.85
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "median"
+          }
+        }
+      }
+    },
+    {
+      "name": "topCenterLine",
+      "type": "rule",
+      "from": {
+        "data": "boxPlotData"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 1
+          },
+          "stroke": {
+            "value": "#999"
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "upper_quartile"
+          },
+          "y2": {
+            "scale": "yscale",
+            "field": "max"
+          }
+        }
+      }
+    },
+    {
+      "name": "bottomCenterLine",
+      "type": "rule",
+      "from": {
+        "data": "boxPlotData"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 1
+          },
+          "stroke": {
+            "value": "#999"
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.5
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "min"
+          },
+          "y2": {
+            "scale": "yscale",
+            "field": "lower_quartile"
+          }
+        }
+      }
+    },
+    {
+      "name": "topWhisker",
+      "type": "rule",
+      "from": {
+        "data": "boxPlotData"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 2
+          },
+          "stroke": {
+            "value": "#999"
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.15
+          },
+          "x2": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.85
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "max"
+          }
+        }
+      }
+    },
+    {
+      "name": "bottomWhisker",
+      "type": "rule",
+      "from": {
+        "data": "boxPlotData"
+      },
+      "encode": {
+        "enter": {
+          "strokeWidth": {
+            "value": 2
+          },
+          "stroke": {
+            "value": "#999"
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.15
+          },
+          "x2": {
+            "scale": "xscale",
+            "field": "box_name",
+            "band": 0.85
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "min"
+          }
+        }
+      }
+    }
+  ]
+}

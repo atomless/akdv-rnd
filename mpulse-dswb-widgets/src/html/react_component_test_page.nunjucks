@@ -1,0 +1,16 @@
+{% extends "base_template.nunjucks" %}
+
+{% block chart %}<div id="react-container" style="margin:4rem auto; width:20rem;"></div>{% endblock %}
+
+
+{% block additional_vendor_scripts %}
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+{% endblock %}
+
+{% block chart_scripts %}
+<script src="../javascript/components_react/step_button_component.js"></script>
+<script src="../javascript/components_react/number_input_component.js"></script>
+<script src="../javascript/components_react/tests.js"></script>
+{% endblock %}

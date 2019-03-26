@@ -1,0 +1,195 @@
+country	geo4	income	life_expectancy	population
+Andorra	europe	46577	84.8	78014
+United Arab Emirates	asia	60749	75.4	9154302
+Afghanistan	asia	1925	53.8	33736494
+Antigua and Barbuda	americas	21049	76.4	99923
+Albania	europe	10620	78	2923352
+Armenia	europe	7763	74.7	2916950
+Angola	africa	7615	59.6	27859305
+Argentina	americas	17344	76.5	43417765
+Austria	europe	44401	81.3	8678657
+Australia	asia	44056	82.3	23799556
+Azerbaijan	europe	16986	72.9	9617484
+Bosnia and Herzegovina	europe	9833	78.9	3535961
+Barbados	americas	12984	75.7	284217
+Bangladesh	asia	3161	70.4	161200886
+Belgium	europe	41240	80.5	11287940
+Burkina Faso	africa	1654	60.9	18110624
+Bulgaria	europe	16371	74.8	7177396
+Bahrain	asia	44138	79.1	1371855
+Burundi	africa	777	61.4	10199270
+Benin	africa	1830	62.3	10575952
+Brunei	asia	73003	77.1	417542
+Bolivia	americas	6295	73.2	10724705
+Brazil	americas	15441	74.4	205962108
+Bahamas	americas	22818	73.7	386838
+Bhutan	asia	7983	72.7	787386
+Botswana	africa	17196	58.7	2209197
+Belarus	europe	17415	71	9485772
+Belize	americas	8501	71.7	359288
+Canada	americas	43294	81.7	35949709
+Congo (Dem. Rep.)	africa	809	60.8	76196619
+Central African Republic	africa	599	49.6	4546100
+Congo (Rep.)	africa	6220	61.5	4995648
+Switzerland	europe	56118	83	8319769
+Cote d'Ivoire	africa	3491	59.1	23108472
+Chile	americas	22465	79.4	17762681
+Cameroon	africa	2897	59.4	22834522
+China	asia	13334	76.2	1397028553
+Colombia	americas	12761	78	48228697
+Costa Rica	americas	14132	80.3	4807852
+Cuba	americas	20122	78.2	11461432
+Cape Verde	africa	6514	72.9	532913
+Cyprus	europe	29797	81.8	1160985
+Czech Republic	europe	29437	78.8	10603762
+Germany	europe	44053	80.8	81707789
+Djibouti	africa	3139	63.8	927414
+Denmark	europe	43495	80.4	5688695
+Dominica	americas	10503	73.1	73162
+Dominican Republic	americas	12837	75.3	10528394
+Algeria	africa	13434	76.4	39871528
+Ecuador	americas	10996	75.9	16144368
+Estonia	europe	26812	77.8	1315321
+Egypt	africa	11031	71.5	93778172
+Eritrea	africa	1129	60.7	4846976
+Spain	europe	32979	82.6	46397664
+Ethiopia	africa	1520	65.2	99873033
+Finland	europe	38923	80.9	5481966
+Fiji	asia	7925	65.8	892149
+Micronesia	asia	3510	68.9	104433
+France	europe	37599	81.8	64457201
+Gabon	africa	18627	65.9	1930175
+United Kingdom	europe	38225	81	65397080
+Grenada	americas	11593	71.5	106823
+Ghana	africa	4099	65.3	27582821
+Gambia	africa	1644	68.1	1977590
+Guinea	africa	1225	59.1	12091533
+Equatorial Guinea	africa	31087	61	1175389
+Greece	europe	25430	81	11217800
+Guatemala	americas	7279	72.6	16252429
+Guinea-Bissau	africa	1386	55.6	1770526
+Guyana	americas	6816	66.8	768514
+Honduras	americas	4270	73	8960829
+Croatia	europe	20260	77.8	4236016
+Haiti	americas	1710	64.3	10711061
+Hungary	europe	24200	76.7	9783925
+Indonesia	asia	10504	71.1	258162113
+Ireland	europe	47758	81.7	4700107
+Israel	asia	31590	82.1	8064547
+India	asia	5903	67.2	1309053980
+Iraq	asia	14646	67.4	36115649
+Iran	asia	15573	74.6	79360487
+Iceland	europe	42182	83.3	330243
+Italy	europe	33297	82.2	59504212
+Jamaica	americas	8606	75	2871934
+Jordan	asia	11752	78.5	9159302
+Japan	asia	36162	83.2	127974958
+Kenya	africa	2898	65.1	47236259
+Kyrgyzstan	asia	3245	69.8	5865401
+Cambodia	asia	3267	69.4	15517635
+Kiribati	asia	1824	63	112407
+Comoros	africa	1472	68.1	777424
+Saint Kitts and Nevis	americas	21896	null	54288
+North Korea	asia	1390	72.1	25243917
+South Korea	asia	34644	81	50593662
+Kuwait	asia	82633	80.3	3935794
+Kazakhstan	asia	23468	70.2	17749648
+Lao	asia	5212	67.1	6663967
+Lebanon	asia	17050	78.9	5851479
+Saint Lucia	americas	9997	74.8	177206
+Liechtenstein	europe	null	null	37403
+Sri Lanka	asia	10624	77.6	20714040
+Liberia	africa	958	63.2	4499621
+Lesotho	africa	2598	47.1	2174645
+Lithuania	europe	26665	75.2	2931926
+Luxembourg	europe	88314	82.2	566741
+Latvia	europe	23282	75.4	1992663
+Libya	africa	17261	74.1	6234955
+Morocco	africa	7319	74.6	34803322
+Monaco	europe	63472	null	38307
+Moldova	europe	4896	73.9	4065980
+Montenegro	europe	14833	77.2	628178
+Madagascar	africa	1400	63.5	24234088
+Marshall Islands	asia	3661	66.9	52994
+Macedonia	europe	12547	76.5	2079308
+Mali	africa	1684	60.2	17467905
+Myanmar	asia	4012	68	52403669
+Mongolia	asia	11819	67.1	2976877
+Mauritania	africa	3877	69.7	4182341
+Malta	europe	30265	82.1	427616
+Mauritius	africa	18350	74.5	1259456
+Maldives	asia	14408	80	418403
+Malawi	africa	799	60.5	17573607
+Mexico	americas	16850	75.9	125890949
+Malaysia	asia	24320	75.3	30723155
+Mozambique	africa	1176	57.1	28010691
+Namibia	africa	10040	64.2	2425561
+Niger	africa	943	61	19896965
+Nigeria	africa	5727	64.6	181181744
+Nicaragua	americas	4712	78	6082035
+Netherlands	europe	45784	81.3	16938499
+Norway	europe	64304	82	5199836
+Nepal	asia	2352	69.7	28656282
+Nauru	asia	16686	null	11260
+New Zealand	asia	34186	81.4	4614532
+Oman	asia	48226	77.2	4199810
+Panama	americas	20485	78.2	3969249
+Peru	americas	11903	79.5	31376671
+Papua New Guinea	asia	2529	60.9	7919825
+Philippines	asia	6876	71	101716359
+Pakistan	asia	4743	65.9	189380513
+Poland	europe	24787	77.6	38265226
+Palestine	asia	4319	74.6	4662884
+Portugal	europe	26437	80.8	10418473
+Palau	asia	14315	null	21288
+Paraguay	americas	8219	74.4	6639119
+Qatar	asia	132877	79.7	2481539
+Romania	europe	19203	75.2	19876621
+Serbia	europe	12908	76.2	8851280
+Russia	europe	23038	71	143888004
+Rwanda	africa	1549	65.9	11629553
+Saudi Arabia	asia	52469	79.5	31557144
+Solomon Islands	asia	2047	64	587482
+Seychelles	africa	25684	74.1	93742
+Sudan	africa	3975	67.5	38647803
+Sudan	africa	3047	56.1	11882136
+Sweden	europe	44892	82.1	9763565
+Singapore	asia	80794	82	5535262
+Slovenia	europe	28550	80.9	2074788
+Slovakia	europe	27204	77.6	5439318
+Sierra Leone	africa	2085	57.1	7237025
+San Marino	europe	40075	null	32960
+Senegal	africa	2251	65.3	14976994
+Somalia	africa	624	54.2	13908129
+Suriname	americas	17125	72	553208
+Sao Tome and Principe	africa	3003	68	195553
+El Salvador	americas	7776	74.9	6312478
+Syria	asia	3500	68.2	18734987
+Swaziland	africa	6095	51.8	1319011
+Chad	africa	2191	57.4	14009413
+Togo	africa	1433	61.5	7416802
+Thailand	asia	14512	74.7	68657600
+Tajikistan	asia	2582	72.4	8548651
+Timor-Leste	asia	2086	72.4	1240977
+Turkmenistan	asia	15865	70	5565284
+Tunisia	africa	11126	77.6	11273661
+Tonga	asia	5069	71.5	106364
+Turkey	europe	19360	79.2	78271472
+Trinidad and Tobago	americas	30113	72.4	1360092
+Tuvalu	asia	3622	null	11001
+Tanzania	africa	2571	64.1	53879957
+Ukraine	europe	8449	71.5	44657704
+Uganda	africa	1680	61.3	40144870
+United States	americas	53354	79.1	319929162
+Uruguay	americas	20438	76.8	3431552
+Uzbekistan	asia	5598	71.8	30976021
+Holy See	europe	null	null	803
+St. Vincent and the Grenadines	americas	10435	71.2	109455
+Venezuela	americas	15753	74.8	31155134
+Vietnam	asia	5623	75.4	93571567
+Vanuatu	asia	2912	64.9	264603
+Samoa	asia	5558	73.2	193759
+Yemen	asia	3887	66	26916207
+South Africa	africa	12509	61.3	55291225
+Zambia	africa	4034	56.7	16100587
+Zimbabwe	africa	1801	59.3	15777451

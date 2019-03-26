@@ -1,0 +1,82 @@
+  	/** body text */
+	.prime_txt_body_faint{color: var(--prime_txt_body_faint);}
+	.prime_txt_body{color: var(--prime_txt_body);}
+	.prime_txt_body_strong{color: var(--prime_txt_body_strong);}
+
+	.prime_status_txt_info{color: var(--prime_status_txt_info);}
+	.prime_status_txt_warning{color: var(--prime_status_txt_warning);}
+	.prime_status_txt_error{color: var(--prime_status_txt_error);}
+	  
+  	/** heading */
+	.prime_txt_heading_faint{color: var(--prime_txt_heading_faint);}
+	.prime_txt_heading{color: var(--prime_txt_heading);}
+	.prime_txt_heading_strong{color: var(--prime_txt_heading_strong);}
+	  
+  	/** heading-impact */
+	.prime_txt_heading_impact{color: var(--prime_txt_heading_impact);}
+
+  .prime_bg_0{color: var(--prime_bg_0);}
+  .prime_bg_1{color: var(--prime_bg_1);}
+  .prime_bg_2{color: var(--prime_bg_2);}
+  .prime_bg_3{color: var(--prime_bg_3);}
+  .prime_bg_4{color: var(--prime_bg_4);}
+  .prime_bg_5{color: var(--prime_bg_5);}
+  .prime_bg_6{color: var(--prime_bg_6);}
+  .prime_bg_7{color: var(--prime_bg_7);}
+  .prime_bg_8{color: var(--prime_bg_8);}
+  .prime_bg_9{color: var(--prime_bg_9);}
+  .prime_bg_10{color: var(--prime_bg_10);}
+
+  .prime_bg_0_overlay{color: var(--prime_bg_0_overlay);}
+  .prime_bg_1_overlay{color: var(--prime_bg_1_overlay);}
+  .prime_bg_2_overlay{color: var(--prime_bg_2_overlay);}
+  .prime_bg_3_overlay{color: var(--prime_bg_3_overlay);}
+  .prime_bg_4_overlay{color: var(--prime_bg_4_overlay);}
+  .prime_bg_5_overlay{color: var(--prime_bg_5_overlay);}
+  .prime_bg_6_overlay{color: var(--prime_bg_6_overlay);}
+  .prime_bg_7_overlay{color: var(--prime_bg_7_overlay);}
+  .prime_bg_8_overlay{color: var(--prime_bg_8_overlay);}
+  .prime_bg_9_overlay{color: var(--prime_bg_9_overlay);}
+  .prime_bg_10_overlay{color: var(--prime_bg_10_overlay);}
+  
+  .prime_outline{color: var(--prime_outline);}
+  .prime_outline_6{color: var(--prime_outline_6);}
+  .prime_outline_trans_0{color: var(--prime_outline_trans_0);}
+  .prime_outline_trans_1{color: var(--prime_outline_trans_1);}
+  .prime_outline_trans_2{color: var(--prime_outline_trans_2);}
+  .prime_outline_trans_3{color: var(--prime_outline_trans_3);}
+  .prime_outline_trans_4{color: var(--prime_outline_trans_4);}
+  .prime_outline_trans_5{color: var(--prime_outline_trans_5);}
+  .prime_outline_trans_6{color: var(--prime_outline_trans_6);}
+  .prime_outline_trans_7{color: var(--prime_outline_trans_7);}
+  .prime_outline_trans_8{color: var(--prime_outline_trans_8);}
+  .prime_outline_trans_9{color: var(--prime_outline_trans_9);}
+
+  .prime_shadow_0{color: var(--prime_shadow_0);}
+  .prime_shadow_1{color: var(--prime_shadow_1);}
+  .prime_shadow_2{color: var(--prime_shadow_2);}
+  .prime_shadow_3{color: var(--prime_shadow_3);}
+  .prime_shadow_4{color: var(--prime_shadow_4);}
+  .prime_shadow_5{color: var(--prime_shadow_5);}
+  .prime_shadow_6{color: var(--prime_shadow_6);}
+  .prime_shadow_7{color: var(--prime_shadow_7);}
+  .prime_shadow_8{color: var(--prime_shadow_8);}
+
+  .prime_button_not_current{color: var(--prime_button_not_current);}
+  .prime_button_disabled{color: var(--prime_button_disabled);}
+  .prime_button{color: var(--prime_button);}
+  .prime_button_hover{color: var(--prime_button_hover);}
+  .prime_button_active{color: var(--prime_button_active);}
+  .prime_button_txt_disabled{color: var(--prime_button_txt_disabled);}
+  .prime_button_txt{color: var(--prime_button_txt);}
+  .prime_button_txt_hover{color: var(--prime_button_txt_hover);}
+  .prime_button_txt_active{color: var(--prime_button_txt_active);}
+	  
+	.color_hm_coolest_faint{color: var(--color_hm_coolest_faint);}
+	.color_hm_cooler_faint{color: var(--color_hm_cooler_faint);}
+	.color_hm_cool_faint{color: var(--color_hm_cool_faint);}
+	.color_hm_warm_faint{color: var(--color_hm_warm_faint);}
+	.color_hm_warmer_faint{color: var(--color_hm_warmer_faint);}
+	.color_hm_warmest_faint{color: var(--color_hm_warmest_faint);}
+
+	.color_transparent{color: var(--color_transparent);}

@@ -1,0 +1,41 @@
+{
+    "charts": [
+        {
+            "transform_schema": "Alpha",
+            "chart_group": "resource-aggregate-treemap",
+            "meta": {
+                "timestamp_end": "1508371200000",
+                "timestamp_start": "1508284800000",
+                "url": "https://www.store.com/",
+                "pageviews": 170639,
+                "pageloadtime": 2074
+            },
+            "columns_units": {
+              "cachehitratio": "%",
+              "load_time": "ms",
+              "avg_transfer_size": "kB"
+            },
+            "columns": [
+                [0.63, 0.2, 0.1],
+                ["html", "image", "image"],
+                ["/", "/rp/s/is/image/store/IndustryTrends_IMG", "/rp/s/is/image/store/IndustryTrends_IMG_BIG"],
+                ["www.store.com", "static.store.com", "static.store.com"],
+                [[3,0,0,0,0], [3,0,0,0,0], [0,0,0,0,3]],
+                [49152, 5383, 5499],
+                [162047, 93713, 9998713]
+            ],
+            "columns_index":[
+              "cachehitratio",
+              "mediatype",
+              "path",
+              "host",
+              "load_time",
+              "avg_transfer_size",
+              "hits"
+            ],
+            "columns_buckets": { 
+                "load_time": [ 50, 150, 225, 275, 325 ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+body {
+  min-width: 510px;
+}
+
+body[data-render-complete="false"] article * {
+  opacity: 0 !important;
+}
+
+/* 
+MAIN LAYOUT
+*/
+
+.fixed-header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: var(--color_transparent);
+}
+
+.fixed-header hgroup {
+  margin-bottom: 0;
+  padding: 0.5rem 0 1rem 0;
+  background: var(--prime_bg_0);
+}
+
+section {
+  left: 0;
+  top: 0;
+  min-height: calc(100vh - 14rem);
+  width: 100vw;
+  float: left;
+  padding: 0 0 3rem 0;
+  transition: top 1s ease-in-out;
+}
+
+section > * {
+  /* max-width: 75rem; */
+  margin: 0 auto;
+}
+
+section header {
+  padding: 0 1rem;
+}
+
+section hgroup {
+  margin-bottom: 1.5rem;
+}
+
+/* GENERIC CHARTS */
+
+path.domain,
+g.tick line {
+  opacity: 0.7;
+  stroke: var(--prime_chart_axis);
+}
+
+.axis-container {
+  cursor: pointer;
+}
+
+.axis-container:hover .domain {
+  opacity: 1;
+}
+
+.axis-y-right .tick line,
+.axis-y-right .domain,
+.axis-y-left .tick line,
+.axis-y-left .domain {
+  stroke: var(--color_none);
+}
+
+.axis-y-left-container {
+  border-right: 1px solid var(--prime_chart_axis);
+}
+
+.axis text {
+  font-size: 0.8rem;
+  fill: var(--prime_chart_axis_tick_text);
+}
+
+.axis .tick.over text,
+.axis .tick:hover text {
+  fill: var(--prime_chart_axis_tick_text_strong) !important;
+}
+
+.axis-container text.label {
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 100;
+  fill: var(--prime_chart_axis_label);
+}

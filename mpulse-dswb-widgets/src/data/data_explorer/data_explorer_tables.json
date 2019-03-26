@@ -1,0 +1,2015 @@
+{
+	"charts": [{
+		"chart_group": "data-explorer-column-data",
+		"data": [{
+			"name": "ID",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "ID",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PAGEID",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "PAGEID",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "SESSIONID",
+			"friendlytype": "String",
+			"examples": "`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxnnnnnn`",
+			"friendlyname": "SESSIONID",
+			"table": "beacon",
+			"description": "The boomerang Session ID (matches session_id above) for this user session"
+		}, {
+			"name": "TIMESTAMP",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "TIMESTAMP",
+			"table": "beacon",
+			"description": "The server timestamp when this beacon got to our collectors"
+		}, {
+			"name": "REMAINDERTS",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "REMAINDERTS",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PAGELOADTIME",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PAGELOADTIME",
+			"table": "beacon",
+			"description": "Time from navigation start to [onload](https://developer.mozilla.org/enUS/docs/Web/API/GlobalEventHandlers/onload) (or whenever the page is considered ready)"
+		}, {
+			"name": "DNSTIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "DNSTIMER",
+			"table": "beacon",
+			"description": "`domainLookupEnd  domainLookupStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "TCPTIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TCPTIMER",
+			"table": "beacon",
+			"description": "`connectEnd  connectStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "SSLTIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "SSLTIMER",
+			"table": "beacon",
+			"description": "`connectEnd  secureConnectionStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "FIRSTBYTETIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "FIRSTBYTETIMER",
+			"table": "beacon",
+			"description": "Time from navigation start to first byte"
+		}, {
+			"name": "FIRSTLASTBYTETIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "FIRSTLASTBYTETIMER",
+			"table": "beacon",
+			"description": "Time from first byte to [onload](https://developer.mozilla.org/enUS/docs/Web/API/GlobalEventHandlers/onload) (or whenever the page is considered ready)"
+		}, {
+			"name": "DOMLOADTIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "DOMLOADTIMER",
+			"table": "beacon",
+			"description": "`domLoading  navigationStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "DOMREADYTIMER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "DOMREADYTIMER",
+			"table": "beacon",
+			"description": "`domComplete  navigationStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "CUSTOMTIMER0",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "MainProductImg",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER1",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "BazaarVoiceCSS",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER2",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CombBottomJS",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER3",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SiteSpectRT",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER4",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "BedBathBackEnd",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER5",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "UX1VerifyDest",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER6",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "UX4Sec.Cont",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER7",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "UX2Prm.Cont",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER8",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PerceivedRender",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMTIMER9",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "UX3Prm.Action",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC0",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "OrderConversion",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC1",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "Orders",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC2",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "OrderValue",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC3",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "Error404",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC4",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SiteSpect",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC5",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SiteSpectRT",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC6",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CUSTOMMETRIC6",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC7",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CUSTOMMETRIC7",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC8",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CUSTOMMETRIC8",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMMETRIC9",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CUSTOMMETRIC9",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "NEXTHOPPROTOCOL",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "NEXTHOPPROTOCOL",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "REMOTEIP",
+			"friendlytype": "String",
+			"examples": "`1.2.3.4`",
+			"friendlyname": "REMOTEIP",
+			"table": "beacon",
+			"description": "IP Address of the end user (or the proxy they are connected through)"
+		}, {
+			"name": "URL",
+			"friendlytype": "String",
+			"examples": "`http://www.example.com/api/call`",
+			"friendlyname": "URL",
+			"table": "beacon",
+			"description": "The URL of the resource"
+		}, {
+			"name": "ISP",
+			"friendlytype": "String",
+			"examples": "`AT&T` `Verizon`",
+			"friendlyname": "ISP",
+			"table": "beacon",
+			"description": "For mobile apps, this is the mobile service provider if the page was requested over a mobile data connection. In all other cases, this field is empty."
+		}, {
+			"name": "WARNINGS",
+			"friendlytype": "String",
+			"examples": "`[\"clock:askew\"]`",
+			"friendlyname": "WARNINGS",
+			"table": "beacon",
+			"description": "Array of warnings added by the collector when parsing this beacon"
+		}, {
+			"name": "SSL",
+			"friendlytype": "Number",
+			"examples": "`true`",
+			"friendlyname": "SSL",
+			"table": "beacon",
+			"description": "Set to true if the page was served using SSL"
+		}, {
+			"name": "IPV6",
+			"friendlytype": "Number",
+			"examples": "`true`",
+			"friendlyname": "IPV6",
+			"table": "beacon",
+			"description": "Set to true if the beacon was sent using IPv6 (for internal use only)"
+		}, {
+			"name": "TIMERSTDOMLOADED",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTDOMLOADED",
+			"table": "beacon",
+			"description": "Time from navigation start to when the [DOMContentLoaded](https://developer.mozilla.org/enUS/docs/Web/Events/DOMContentLoaded) event fired"
+		}, {
+			"name": "TIMERSTCONFIGFB",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTCONFIGFB",
+			"table": "beacon",
+			"description": "Time from `config.js` request to `config.js` first byte"
+		}, {
+			"name": "TIMERSTCONFIGJS",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTCONFIGJS",
+			"table": "beacon",
+			"description": "Time from `config.js` request to `config.js` load complete"
+		}, {
+			"name": "TIMERSBOOMRLD",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBOOMRLD",
+			"table": "beacon",
+			"description": "Time from navigation start to when the Boomerang loader initiates Boomerang download"
+		}, {
+			"name": "TIMERSBOOMRFB",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBOOMRFB",
+			"table": "beacon",
+			"description": "Time from navigation start to first byte of Boomerang"
+		}, {
+			"name": "TIMERSBOOMRLAT",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBOOMRLAT",
+			"table": "beacon",
+			"description": "Time from Boomerang request to Boomerang first byte"
+		}, {
+			"name": "TIMERSBOOMERANG",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBOOMERANG",
+			"table": "beacon",
+			"description": "Time from first byte of Boomerang until Boomerang completes initialization"
+		}, {
+			"name": "TIMERSTLOAD",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTLOAD",
+			"table": "beacon",
+			"description": "Time from navigation start to [onload](https://developer.mozilla.org/enUS/docs/Web/API/GlobalEventHandlers/onload), if the page was in a prerendered state when onload fired"
+		}, {
+			"name": "TIMERSTPRERENDER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTPRERENDER",
+			"table": "beacon",
+			"description": "Time from navigation start to page becoming visible, if it went through a prerendered state first"
+		}, {
+			"name": "TIMERSTPOSTRENDER",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSTPOSTRENDER",
+			"table": "beacon",
+			"description": "Time from [onload](https://developer.mozilla.org/enUS/docs/Web/API/GlobalEventHandlers/onload) in a prerendered state to page becoming visible"
+		}, {
+			"name": "TIMERSNAVSTTOBOOMR",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSNAVSTTOBOOMR",
+			"table": "beacon",
+			"description": "Time from navigation start to when the Boomerang loader initiates Boomerang download"
+		}, {
+			"name": "TIMERSFBTOBOOMR",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSFBTOBOOMR",
+			"table": "beacon",
+			"description": "Time from the first byte of the page to Boomerang's request initiation.<br>This is used by FirstByteEstimator for beacons without a valid load time."
+		}, {
+			"name": "TIMERSBOOMRTOEND",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBOOMRTOEND",
+			"table": "beacon",
+			"description": "Time from Boomerang's request initiation to page load.<br>This is used by FirstByteEstimator for beacons without a valid load time."
+		}, {
+			"name": "TIMERSBEFOREDNS",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSBEFOREDNS",
+			"table": "beacon",
+			"description": "`domainLookupStart  navigationStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "TIMERSRENDERSTART",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSRENDERSTART",
+			"table": "beacon",
+			"description": "`firstPaint  navigationStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/)"
+		}, {
+			"name": "TIMERSLOADED",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "TIMERSLOADED",
+			"table": "beacon",
+			"description": "`loadEventEnd  navigationStart` from [NavigationTiming](https://www.w3.org/TR/navigationtiming/) "
+		}, {
+			"name": "HEADERSHOST",
+			"friendlytype": "String",
+			"examples": "`abc123.akstat.io`",
+			"friendlyname": "HEADERSHOST",
+			"table": "beacon",
+			"description": "The beacon server where the beacon was sent. This is required by the HTTP specification."
+		}, {
+			"name": "HEADERSACCEPTENCODING",
+			"friendlytype": "String",
+			"examples": "`gzip` `deflate` `sdch` `br`",
+			"friendlyname": "HEADERSACCEPTENCODING",
+			"table": "beacon",
+			"description": "List of encoding (compression) types supported by the user's browser"
+		}, {
+			"name": "HEADERSACCEPT",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "HEADERSACCEPT",
+			"table": "beacon",
+			"description": "Content types supported by the browser, along with their priorities"
+		}, {
+			"name": "HEADERSCONTENTLENGTH",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "HEADERSCONTENTLENGTH",
+			"table": "beacon",
+			"description": "This is only used for POST beacons and is the number of bytes in the POSTed beacon"
+		}, {
+			"name": "HEADERSVARIOUS",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "HEADERSVARIOUS",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "BANDWIDTHKBPS",
+			"friendlytype": "String",
+			"examples": "`1000`",
+			"friendlyname": "BANDWIDTHKBPS",
+			"table": "beacon",
+			"description": "Bandwidth (in kbps) as measured by the bandwidth test"
+		}, {
+			"name": "BANDWIDTHERRORPC",
+			"friendlytype": "String",
+			"examples": "`10`",
+			"friendlyname": "BANDWIDTHERRORPC",
+			"table": "beacon",
+			"description": "Error in measuring the bandwidth based on standard deviation"
+		}, {
+			"name": "SESSIONSTART",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "SESSIONSTART",
+			"table": "beacon",
+			"description": "The start time for the boomerang session (matches session_start above)"
+		}, {
+			"name": "SESSIONLATEST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "SESSIONLATEST",
+			"table": "beacon",
+			"description": "The timestamp ([Unix epoch](https://en.wikipedia.org/wiki/Unix_time)) of the current beacon based on the user's browser's clock.<br><br>It is not the timestamp of the latest beacon in the session.<br><br>To find out actual session duration, look at `MAX(latest)  MIN(start)` across all beacons grouped by Session ID."
+		}, {
+			"name": "SESSIONPAGES",
+			"friendlytype": "Number",
+			"examples": "`10`",
+			"friendlyname": "SESSIONPAGES",
+			"table": "beacon",
+			"description": "The number of pages the user viewed in this session up to and including the current page, but not including any pages viewed after this page in the same session.<br><br>To find out actual Session Length in pages, look at `MAX(pages)` across all beacons grouped by Session ID.<br><br>If `MAX(pages) == 1`, then the session is considered a bounce."
+		}, {
+			"name": "SESSIONOBOPAGES",
+			"friendlytype": "Number",
+			"examples": "`0`",
+			"friendlyname": "SESSIONOBOPAGES",
+			"table": "beacon",
+			"description": "The number of pages in the session for which we were unable to calculate a load time.<br><br>We need this to get a closer estimate of the actual average load time of all pages in the session."
+		}, {
+			"name": "SESSIONTOTALLOADTIME",
+			"friendlytype": "Number",
+			"examples": "`2000`",
+			"friendlyname": "SESSIONTOTALLOADTIME",
+			"table": "beacon",
+			"description": "The sum of load times (in milliseconds) of all pages within the session where we calculated load time.<br><br>The average load time of a session is `MAX(totalLoadTime) / (MAX(pages)  MAX(oboPages))`."
+		}, {
+			"name": "SESSIONISUNLOAD",
+			"friendlytype": "Number",
+			"examples": "`true` or missing",
+			"friendlyname": "SESSIONISUNLOAD",
+			"table": "beacon",
+			"description": "This field specifies if the beacon was part of the unload event of the page or not.<br><br>Unload beacons give us a better idea of how long a session actually lasted."
+		}, {
+			"name": "PARAMSBATLVL",
+			"friendlytype": "Number",
+			"examples": "`1`",
+			"friendlyname": "PARAMSBATLVL",
+			"table": "beacon",
+			"description": "Battery charge level (between `0` &amp; `1`)"
+		}, {
+			"name": "PARAMSBWTIME",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSBWTIME",
+			"table": "beacon",
+			"description": "Timestamp ([Unix epoch](https://en.wikipedia.org/wiki/Unix_time)) on the user's browser when the bandwidth and latency was measured"
+		}, {
+			"name": "PARAMSCO",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCO",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCPUCNC",
+			"friendlytype": "Number",
+			"examples": "`4`",
+			"friendlyname": "PARAMSCPUCNC",
+			"table": "beacon",
+			"description": "Hardware concurrency (number of CPU cores) available to the browser"
+		}, {
+			"name": "PARAMSDOMDOMS",
+			"friendlytype": "Number",
+			"examples": "`10`",
+			"friendlyname": "PARAMSDOMDOMS",
+			"table": "beacon",
+			"description": "Number of domains referenced from page"
+		}, {
+			"name": "PARAMSDOMIMG",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PARAMSDOMIMG",
+			"table": "beacon",
+			"description": "Number of image nodes on the page"
+		}, {
+			"name": "PARAMSDOMIMGEXT",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PARAMSDOMIMGEXT",
+			"table": "beacon",
+			"description": "Number of image nodes on the page that referenced external URLs"
+		}, {
+			"name": "PARAMSDOMLN",
+			"friendlytype": "Number",
+			"examples": "`1000`",
+			"friendlyname": "PARAMSDOMLN",
+			"table": "beacon",
+			"description": "Number of DOM nodes on the page"
+		}, {
+			"name": "PARAMSDOMRES",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PARAMSDOMRES",
+			"table": "beacon",
+			"description": "Number of resources in Resource Timing"
+		}, {
+			"name": "PARAMSDOMRESSLOWEST",
+			"friendlytype": "String",
+			"examples": "`http://slowest.com/api/`",
+			"friendlyname": "PARAMSDOMRESSLOWEST",
+			"table": "beacon",
+			"description": "Slowest resource on page (if configured) "
+		}, {
+			"name": "PARAMSDOMSCRIPT",
+			"friendlytype": "Number",
+			"examples": "`10`",
+			"friendlyname": "PARAMSDOMSCRIPT",
+			"table": "beacon",
+			"description": "Number of script nodes on the page"
+		}, {
+			"name": "PARAMSDOMSCRIPTEXT",
+			"friendlytype": "Number",
+			"examples": "`10`",
+			"friendlyname": "PARAMSDOMSCRIPTEXT",
+			"table": "beacon",
+			"description": "Number of script nodes on the page that referenced external URLs"
+		}, {
+			"name": "PARAMSDOMSZ",
+			"friendlytype": "Number",
+			"examples": "`100000`",
+			"friendlyname": "PARAMSDOMSZ",
+			"table": "beacon",
+			"description": "Rendered bytes of base page. This may not be what was sent on the network."
+		}, {
+			"name": "PARAMSHT",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSHT",
+			"table": "beacon",
+			"description": "Server timestamp when the AntiCSRF token was generated (note the token is removed from the beacon)"
+		}, {
+			"name": "PARAMSHTTPINITIATOR",
+			"friendlytype": "String",
+			"examples": "`xhr` `spa` `spa_hard`",
+			"friendlyname": "PARAMSHTTPINITIATOR",
+			"table": "beacon",
+			"description": "Typeof beacon: XHR, SPA hard or soft navigation, etc"
+		}, {
+			"name": "PARAMSHTTPMETHOD",
+			"friendlytype": "String",
+			"examples": "`POST`",
+			"friendlyname": "PARAMSHTTPMETHOD",
+			"table": "beacon",
+			"description": "HTTP method used for XHR request (if not set, `GET`)"
+		}, {
+			"name": "PARAMSIF",
+			"friendlytype": "Number",
+			"examples": "(existence implies true)",
+			"friendlyname": "PARAMSIF",
+			"table": "beacon",
+			"description": "If this parameter exists, then Boomerang was loaded via the IFRAME loader technique"
+		}, {
+			"name": "PARAMSLAT",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PARAMSLAT",
+			"table": "beacon",
+			"description": "User's measured HTTP latency (in milliseconds)"
+		}, {
+			"name": "PARAMSLATERR",
+			"friendlytype": "Number",
+			"examples": "`5`",
+			"friendlyname": "PARAMSLATERR",
+			"table": "beacon",
+			"description": "Error in measuring HTTP latency based on standard deviation "
+		}, {
+			"name": "PARAMSMEMTOTAL",
+			"friendlytype": "Number",
+			"examples": "`72200000`",
+			"friendlyname": "PARAMSMEMTOTAL",
+			"table": "beacon",
+			"description": "Total Memory available to the browser"
+		}, {
+			"name": "PARAMSMEMUSED",
+			"friendlytype": "Number",
+			"examples": "`64000000`",
+			"friendlyname": "PARAMSMEMUSED",
+			"table": "beacon",
+			"description": "Total Memory used by the browser"
+		}, {
+			"name": "PARAMSMOBBW",
+			"friendlytype": "String",
+			"examples": "`10`",
+			"friendlyname": "PARAMSMOBBW",
+			"table": "beacon",
+			"description": "Advertised bandwidth of mobile connection (MB/s)"
+		}, {
+			"name": "PARAMSMOBCT",
+			"friendlytype": "String",
+			"examples": "`Ethernet` `WiFi` `2G` `3G` `4G` `LTE`",
+			"friendlyname": "PARAMSMOBCT",
+			"table": "beacon",
+			"description": "Mobile connection type"
+		}, {
+			"name": "PARAMSMOBMT",
+			"friendlytype": "Number",
+			"examples": "`true`",
+			"friendlyname": "PARAMSMOBMT",
+			"table": "beacon",
+			"description": "Whether this mobile connection metered or not"
+		}, {
+			"name": "PARAMSNTCONEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTCONEND",
+			"table": "beacon",
+			"description": "TCP End: `performance.timing.connectEnd`"
+		}, {
+			"name": "PARAMSNTCONST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTCONST",
+			"table": "beacon",
+			"description": "TCP Start: `performance.timing.connectStart`"
+		}, {
+			"name": "PARAMSNTDNSEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDNSEND",
+			"table": "beacon",
+			"description": "DNS End: `performance.timing.domainLookupEnd`"
+		}, {
+			"name": "PARAMSNTDNSST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDNSST",
+			"table": "beacon",
+			"description": "DNS Start: `performance.timing.domainLookupStart`"
+		}, {
+			"name": "PARAMSNTDOMCOMP",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMCOMP",
+			"table": "beacon",
+			"description": "DOM Complete: `performance.timing.domComplete`"
+		}, {
+			"name": "PARAMSNTDOMCONTLOADEDST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMCONTLOADEDST",
+			"table": "beacon",
+			"description": "DOMContentLoaded Start: `performance.timing.domContentLoadedEventStart`"
+		}, {
+			"name": "PARAMSNTDOMCONTLOADEDE",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMCONTLOADEDE",
+			"table": "beacon",
+			"description": "DOMContentLoaded End: `performance.timing.domContentLoadedEventEnd`"
+		}, {
+			"name": "PARAMSNTDOMINT",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMINT",
+			"table": "beacon",
+			"description": "DOM Interactive: `performance.timing.domInteractive`"
+		}, {
+			"name": "PARAMSNTDOMLOADING",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMLOADING",
+			"table": "beacon",
+			"description": "DOM Loading: `performance.timing.domLoading`"
+		}, {
+			"name": "PARAMSNTFETST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTFETST",
+			"table": "beacon",
+			"description": "Fetch Start: `performance.timing.fetchStart`"
+		}, {
+			"name": "PARAMSNTFIRSTPAINT",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTFIRSTPAINT",
+			"table": "beacon",
+			"description": "note that this is milliseconds on IE, but seconds.microseconds on Chrome. Not supported on other browsers."
+		}, {
+			"name": "PARAMSNTLOADEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTLOADEND",
+			"table": "beacon",
+			"description": "Load Event End: `performance.timing.loadEventEnd`"
+		}, {
+			"name": "PARAMSNTLOADST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTLOADST",
+			"table": "beacon",
+			"description": "Load Event Start: `performance.timing.loadEventStart`"
+		}, {
+			"name": "PARAMSNTNAVST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTNAVST",
+			"table": "beacon",
+			"description": "Navigation Start: `performance.timing.navigationStart`"
+		}, {
+			"name": "PARAMSNTNAVTYPE",
+			"friendlytype": "Number",
+			"examples": "`0` `1` `2`",
+			"friendlyname": "PARAMSNTNAVTYPE",
+			"table": "beacon",
+			"description": "Navigation Type: `performance.navigation.type`"
+		}, {
+			"name": "PARAMSNTREDCNT",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTREDCNT",
+			"table": "beacon",
+			"description": "Redirect Count: `performance.navigation.redirectCount`"
+		}, {
+			"name": "PARAMSNTREDEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTREDEND",
+			"table": "beacon",
+			"description": "Redirect End: `performance.timing.redirectEnd`"
+		}, {
+			"name": "PARAMSNTREDST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTREDST",
+			"table": "beacon",
+			"description": "Redirect Start: `performance.timing.redirectStart`"
+		}, {
+			"name": "PARAMSNTREQST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTREQST",
+			"table": "beacon",
+			"description": "Request Start: `performance.timing.requestStart`"
+		}, {
+			"name": "PARAMSNTRESEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTRESEND",
+			"table": "beacon",
+			"description": "Response End: `performance.timing.responseEnd`"
+		}, {
+			"name": "PARAMSNTRESST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSNTRESST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSNTSPDY",
+			"friendlytype": "Number",
+			"examples": "`1` or `0`",
+			"friendlyname": "PARAMSNTSPDY",
+			"table": "beacon",
+			"description": "Whether the page was served using SPDY"
+		}, {
+			"name": "PARAMSNTSSLST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTSSLST",
+			"table": "beacon",
+			"description": "SSL Start: `performance.timing.secureConnectionStart`"
+		}, {
+			"name": "PARAMSNTUNLOADEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTUNLOADEND",
+			"table": "beacon",
+			"description": "Unload Event End: `performance.timing.unloadEventEnd`"
+		}, {
+			"name": "PARAMSNTUNLOADST",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTUNLOADST",
+			"table": "beacon",
+			"description": "Unload Event Start: `performance.timing.unloadEventStart`"
+		}, {
+			"name": "PARAMSNU",
+			"friendlytype": "String",
+			"examples": "`https://website.com/nextpage/`",
+			"friendlyname": "PARAMSNU",
+			"table": "beacon",
+			"description": "URL clicked, if this beacon was a result of a click "
+		}, {
+			"name": "PARAMSPGU",
+			"friendlytype": "String",
+			"examples": "`http://website.com/`",
+			"friendlyname": "PARAMSPGU",
+			"table": "beacon",
+			"description": "Page URL if different from `u`"
+		}, {
+			"name": "PARAMSR",
+			"friendlytype": "String",
+			"examples": "`https://referrer.com/`",
+			"friendlyname": "PARAMSR",
+			"table": "beacon",
+			"description": "URL of previous page that Boomerang wrote into a cookie"
+		}, {
+			"name": "PARAMSR2",
+			"friendlytype": "String",
+			"examples": "`https://referrer.com/search/`",
+			"friendlyname": "PARAMSR2",
+			"table": "beacon",
+			"description": "Referrer of current page if different from `r`"
+		}, {
+			"name": "PARAMSRTABLD",
+			"friendlytype": "Number",
+			"examples": "(existence implies true)",
+			"friendlyname": "PARAMSRTABLD",
+			"table": "beacon",
+			"description": "If this parameter exists, then the user left the page before it finished loading"
+		}, {
+			"name": "PARAMSRTBLSTART",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSRTBLSTART",
+			"table": "beacon",
+			"description": "The timestamp when Boomerang was added to the host page"
+		}, {
+			"name": "PARAMSRTBMRCONEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRCONEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRCONST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRCONST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRDOMEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRDOMEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRDOMST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRDOMST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRFETST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRFETST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRREQST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRREQST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRRESEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRRESEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRRESST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRRESST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBMRSECST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTBMRSECST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTBSTART",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSRTBSTART",
+			"table": "beacon",
+			"description": "The timestamp when Boomerang started"
+		}, {
+			"name": "PARAMSRTCNFCONEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFCONEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFCONST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFCONST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFDOMEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFDOMEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFDOMST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFDOMST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFFETST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFFETST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFREQST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFREQST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFRESEN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFRESEN",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFRESST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFRESST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCNFSECST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSRTCNFSECST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSRTCSTART",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSRTCSTART",
+			"table": "beacon",
+			"description": "The value of `t_start` from the cookie, if different from `rt.tstart`"
+		}, {
+			"name": "PARAMSRTEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSRTEND",
+			"table": "beacon",
+			"description": "The timestamp when the `t_done` timer ended"
+		}, {
+			"name": "PARAMSRTNTVU",
+			"friendlytype": "Number",
+			"examples": "(existence implies true)",
+			"friendlyname": "PARAMSRTNTVU",
+			"table": "beacon",
+			"description": "If this parameter exists, then the user left the page without looking at it"
+		}, {
+			"name": "PARAMSRTSTART",
+			"friendlytype": "String",
+			"examples": "`none` `navigation` `cookie` `manual` `csi`",
+			"friendlyname": "PARAMSRTSTART",
+			"table": "beacon",
+			"description": "Specifies the method used to determine the start time"
+		}, {
+			"name": "PARAMSRTSUBRES",
+			"friendlytype": "Number",
+			"examples": "`1`",
+			"friendlyname": "PARAMSRTSUBRES",
+			"table": "beacon",
+			"description": "Set to 1 if this XHR call is a subresource of the parent page and should not be counted towards Session Length"
+		}, {
+			"name": "PARAMSRTTSTART",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSRTTSTART",
+			"table": "beacon",
+			"description": "Timestamp of navigation start using the method specified in `rt.start`"
+		}, {
+			"name": "PARAMSSCRBPP",
+			"friendlytype": "String",
+			"examples": "`24/24`",
+			"friendlyname": "PARAMSSCRBPP",
+			"table": "beacon",
+			"description": "Screen color depth and pixel depth separated by `/`"
+		}, {
+			"name": "PARAMSSCRDPX",
+			"friendlytype": "String",
+			"examples": "`2`",
+			"friendlyname": "PARAMSSCRDPX",
+			"table": "beacon",
+			"description": "Screen device pixel ratio (informs you of details like Retina)"
+		}, {
+			"name": "PARAMSSCRMTP",
+			"friendlytype": "Number",
+			"examples": "`1`",
+			"friendlyname": "PARAMSSCRMTP",
+			"table": "beacon",
+			"description": "Maximum touch points for touchscreens"
+		}, {
+			"name": "PARAMSSCRORN",
+			"friendlytype": "String",
+			"examples": "`0/landscapeprimary`",
+			"friendlyname": "PARAMSSCRORN",
+			"table": "beacon",
+			"description": "Screen orientation angle and type separated by `/`"
+		}, {
+			"name": "PARAMSSCRXY",
+			"friendlytype": "String",
+			"examples": "`1440x900`",
+			"friendlyname": "PARAMSSCRXY",
+			"table": "beacon",
+			"description": "Screen width and height separated with `x`"
+		}, {
+			"name": "PARAMSU",
+			"friendlytype": "String",
+			"examples": "`http://www.example.com/`",
+			"friendlyname": "PARAMSU",
+			"table": "beacon",
+			"description": "The URL of the page that this resource was loaded from"
+		}, {
+			"name": "PARAMSUAPLT",
+			"friendlytype": "String",
+			"examples": "`MacIntel`",
+			"friendlyname": "PARAMSUAPLT",
+			"table": "beacon",
+			"description": "User Agent Platform"
+		}, {
+			"name": "PARAMSUAVND",
+			"friendlytype": "String",
+			"examples": "`Google Inc.`",
+			"friendlyname": "PARAMSUAVND",
+			"table": "beacon",
+			"description": "User Agent Vendor "
+		}, {
+			"name": "PARAMSVISLH",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSVISLH",
+			"table": "beacon",
+			"description": "Timestamp when page was last hidden"
+		}, {
+			"name": "PARAMSVISLV",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSVISLV",
+			"table": "beacon",
+			"description": "Timestamp when page was last visible"
+		}, {
+			"name": "PARAMSVISST",
+			"friendlytype": "String",
+			"examples": "`visible` `hidden`",
+			"friendlyname": "PARAMSVISST",
+			"table": "beacon",
+			"description": "Document's visibility state when beacon was sent"
+		}, {
+			"name": "PARAMSXHRSYNC",
+			"friendlytype": "Number",
+			"examples": "`1`",
+			"friendlyname": "PARAMSXHRSYNC",
+			"table": "beacon",
+			"description": "Set to 1 if the XHR call was synchronous"
+		}, {
+			"name": "PARAMSMEMLIMIT",
+			"friendlytype": "Number",
+			"examples": "`2190000000`",
+			"friendlyname": "PARAMSMEMLIMIT",
+			"table": "beacon",
+			"description": "Limit of the JS Heap size in the browser"
+		}, {
+			"name": "PARAMSSCRSXY",
+			"friendlytype": "String",
+			"examples": "`0x467`",
+			"friendlyname": "PARAMSSCRSXY",
+			"table": "beacon",
+			"description": "X &amp; Y positions of the scroll bar separated with `x`"
+		}, {
+			"name": "PARAMSTPAGEINV",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSTPAGEINV",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM0ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM0ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM1ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM1ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM2ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM2ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM3ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM3ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM4ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM4ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM5ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM5ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM6ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM6ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM7ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM7ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM8ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM8ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMSCUSTOM9ST",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PARAMSCUSTOM9ST",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "USERAGENTMINOR",
+			"friendlytype": "String",
+			"examples": "`0` `5`",
+			"friendlyname": "USERAGENTMINOR",
+			"table": "beacon",
+			"description": "The browser minor version"
+		}, {
+			"name": "USERAGENTMOBILE",
+			"friendlytype": "Number",
+			"examples": "`1` or `0`",
+			"friendlyname": "USERAGENTMOBILE",
+			"table": "beacon",
+			"description": "For mobile apps, this will be `1`. For everything else, this field will be `0`."
+		}, {
+			"name": "USERAGENTRAW",
+			"friendlytype": "String",
+			"examples": "`Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36`",
+			"friendlyname": "USERAGENTRAW",
+			"table": "beacon",
+			"description": "The raw `UserAgent` HTTP header "
+		}, {
+			"name": "GEOCITY",
+			"friendlytype": "String",
+			"examples": "`Washington`",
+			"friendlyname": "GEOCITY",
+			"table": "beacon",
+			"description": "The user's city (L4 geo info)"
+		}, {
+			"name": "GEOPOSTALCODE",
+			"friendlytype": "String",
+			"examples": "`20009`",
+			"friendlyname": "GEOPOSTALCODE",
+			"table": "beacon",
+			"description": "The user's postal/zip code"
+		}, {
+			"name": "GEOLAT",
+			"friendlytype": "Number",
+			"examples": "`38.89791778`",
+			"friendlyname": "GEOLAT",
+			"table": "beacon",
+			"description": "The user's approximate latitude"
+		}, {
+			"name": "GEOLON",
+			"friendlytype": "Number",
+			"examples": "`77.03636593`",
+			"friendlyname": "GEOLON",
+			"table": "beacon",
+			"description": "The user's approximate longitude"
+		}, {
+			"name": "GEOORG",
+			"friendlytype": "String",
+			"examples": "`Comcast Cable` `Verizon Wireless`",
+			"friendlyname": "GEOORG",
+			"table": "beacon",
+			"description": "The user's organization, if connected over a corporate/university network"
+		}, {
+			"name": "PARAMSTPGACLIENTID",
+			"friendlytype": "String",
+			"examples": "`XXXXXXXXXX.YYYYYYYYYY`",
+			"friendlyname": "PARAMSTPGACLIENTID",
+			"table": "beacon",
+			"description": "[clientID](https://developers.google.com/analytics/devguides/collection/analyticsjs/cookiesuserid) (unique id per visitor)"
+		}, {
+			"name": "PARAMSTPGAUTMSOURCE",
+			"friendlytype": "String",
+			"examples": "`google` `newsletter4` `billboard`",
+			"friendlyname": "PARAMSTPGAUTMSOURCE",
+			"table": "beacon",
+			"description": "[Campaign source](https://support.google.com/analytics/answer/1033863?hl=en)"
+		}, {
+			"name": "PARAMSTPGAUTMMEDIUM",
+			"friendlytype": "String",
+			"examples": "`cpc` `banner` `email` `newsletter`",
+			"friendlyname": "PARAMSTPGAUTMMEDIUM",
+			"table": "beacon",
+			"description": "[Campaign medium](https://support.google.com/analytics/answer/1033863?hl=en)"
+		}, {
+			"name": "PARAMSTPGAUTMTERM",
+			"friendlytype": "String",
+			"examples": "`term1`",
+			"friendlyname": "PARAMSTPGAUTMTERM",
+			"table": "beacon",
+			"description": "[Campaign term](https://support.google.com/analytics/answer/1033863?hl=en)"
+		}, {
+			"name": "PARAMSTPGAUTMCONTENT",
+			"friendlytype": "String",
+			"examples": "`content1`",
+			"friendlyname": "PARAMSTPGAUTMCONTENT",
+			"table": "beacon",
+			"description": "[Campaign content](https://support.google.com/analytics/answer/1033863?hl=en)"
+		}, {
+			"name": "PARAMSTPGAUTMCAMPAIGN",
+			"friendlytype": "String",
+			"examples": "`campaign1`",
+			"friendlyname": "PARAMSTPGAUTMCAMPAIGN",
+			"table": "beacon",
+			"description": "[Campaign ID](https://support.google.com/analytics/answer/1033863?hl=en) "
+		}, {
+			"name": "PARAMSTPAAAID",
+			"friendlytype": "String",
+			"examples": "`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`",
+			"friendlyname": "PARAMSTPAAAID",
+			"table": "beacon",
+			"description": "[Analytics ID (AID)](https://marketing.adobe.com/resources/help/en_US/reference/)"
+		}, {
+			"name": "PARAMSTPAAMID",
+			"friendlytype": "String",
+			"examples": "`MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM`",
+			"friendlyname": "PARAMSTPAAMID",
+			"table": "beacon",
+			"description": "[Marketing ID (MID)](https://marketing.adobe.com/resources/help/en_US/reference/)"
+		}, {
+			"name": "PARAMSTPAACAMPAIGN",
+			"friendlytype": "String",
+			"examples": "`campaignid`",
+			"friendlyname": "PARAMSTPAACAMPAIGN",
+			"table": "beacon",
+			"description": "[Campaign ID](https://marketing.adobe.com/resources/help/en_US/reference/)"
+		}, {
+			"name": "PARAMSTPIACOREID",
+			"friendlytype": "String",
+			"examples": "`80031460041999083951624`",
+			"friendlyname": "PARAMSTPIACOREID",
+			"table": "beacon",
+			"description": "[Core ID (unique id per visitor)](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAMMCVENDOR",
+			"friendlytype": "String",
+			"examples": "`Google`",
+			"friendlyname": "PARAMSTPIAMMCVENDOR",
+			"table": "beacon",
+			"description": "[Campaign vendor](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAMMCCATEGORY",
+			"friendlytype": "String",
+			"examples": "`Home & Garden`",
+			"friendlyname": "PARAMSTPIAMMCCATEGORY",
+			"table": "beacon",
+			"description": "[Campaign category](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAMMCPLACEMENT",
+			"friendlytype": "String",
+			"examples": "`keywords`",
+			"friendlyname": "PARAMSTPIAMMCPLACEMENT",
+			"table": "beacon",
+			"description": "[Campaign placement](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAMMCITEM",
+			"friendlytype": "String",
+			"examples": "`sprinkler`",
+			"friendlyname": "PARAMSTPIAMMCITEM",
+			"table": "beacon",
+			"description": "[Campaign item](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIASPTYPE",
+			"friendlytype": "String",
+			"examples": "`fall`",
+			"friendlyname": "PARAMSTPIASPTYPE",
+			"table": "beacon",
+			"description": "[Site promotion type](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIASPPROMOTION",
+			"friendlytype": "String",
+			"examples": "`sale`",
+			"friendlyname": "PARAMSTPIASPPROMOTION",
+			"table": "beacon",
+			"description": "[Site promotion](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIASPLINK",
+			"friendlytype": "String",
+			"examples": "`free shipping?cm_mmc=...`",
+			"friendlyname": "PARAMSTPIASPLINK",
+			"table": "beacon",
+			"description": "[Site promotion link](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAREVERSION",
+			"friendlytype": "String",
+			"examples": "`page A`",
+			"friendlyname": "PARAMSTPIAREVERSION",
+			"table": "beacon",
+			"description": "[Real estate version](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIAREPAGEAREA",
+			"friendlytype": "String",
+			"examples": "`left navbar`",
+			"friendlyname": "PARAMSTPIAREPAGEAREA",
+			"table": "beacon",
+			"description": "[Real estate page area](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSTPIARELINK",
+			"friendlytype": "String",
+			"examples": "`mens shirts`",
+			"friendlyname": "PARAMSTPIARELINK",
+			"table": "beacon",
+			"description": "[Real estate link](https://www.ibm.com/support/knowledgecenter/en/SSPG9M/Analytics/kc_welcome_analytics.html)"
+		}, {
+			"name": "PARAMSRTQUIT",
+			"friendlytype": "Number",
+			"examples": "(existence implies true)",
+			"friendlyname": "PARAMSRTQUIT",
+			"table": "beacon",
+			"description": "If this parameter exists, then this was an unload beacon"
+		}, {
+			"name": "ADDITIONALFIELDSJSON",
+			"friendlytype": "VARIANT",
+			"examples": "",
+			"friendlyname": "ADDITIONALFIELDSJSON",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "SERIALNUMBER",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SERIALNUMBER",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "UTCDATE",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "UTCDATE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "COUNTRYCODE",
+			"friendlytype": "String",
+			"examples": "`US`",
+			"friendlyname": "COUNTRYCODE",
+			"table": "beacon",
+			"description": "The user's country (L1 geo info)"
+		}, {
+			"name": "REGIONCODE",
+			"friendlytype": "String",
+			"examples": "`DC`",
+			"friendlyname": "REGIONCODE",
+			"table": "beacon",
+			"description": "The user's region, state, province, or territory (L2 geo info)"
+		}, {
+			"name": "BANDWIDTHBLOCKCODE",
+			"friendlytype": "String",
+			"examples": "`1` `5`",
+			"friendlyname": "BANDWIDTHBLOCKCODE",
+			"table": "beacon",
+			"description": "Bandwidth block (calculated by the server)"
+		}, {
+			"name": "NETWORKERRORCODECODE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "NETWORKERRORCODECODE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION0VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION0VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION1VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION1VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION2VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION2VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION3VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION3VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION4VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION4VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION5VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION5VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION6VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION6VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION7VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION7VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION8VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION8VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "CUSTOMDIMENSION9VALUE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CUSTOMDIMENSION9VALUE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PAGEGROUPNAME",
+			"friendlytype": "String",
+			"examples": "`Home` `Orders` `PDP` `(No Page Group)`",
+			"friendlyname": "PAGEGROUPNAME",
+			"table": "beacon",
+			"description": "Page Group for the page (Page Groups are defined in the mPulse App Config dialog)"
+		}, {
+			"name": "BEACONTYPENAME",
+			"friendlytype": "String",
+			"examples": "`page view` `xhr` `unload` `spa` `spa_hard` `interaction`<br>`client_batch` `api_custom_metric` `api_custom_timer` `api_network_request`",
+			"friendlyname": "BEACONTYPENAME",
+			"table": "beacon",
+			"description": "Typeof beacon: page view, XHR, SPA hard or soft navigation, etc"
+		}, {
+			"name": "ABTESTNAME",
+			"friendlytype": "String",
+			"examples": "`A` `B`",
+			"friendlyname": "ABTESTNAME",
+			"table": "beacon",
+			"description": "If the site uses A/B Testing, this variable specifies the test bucket the user was in when they sent the beacon"
+		}, {
+			"name": "USERAGENTNAME",
+			"friendlytype": "String",
+			"examples": "`Chrome` `Firefox` `IE` `Safari` `Mobile Safari`",
+			"friendlyname": "USERAGENTNAME",
+			"table": "beacon",
+			"description": "The browser family extracted from the user agent header"
+		}, {
+			"name": "USERAGENTVERSION",
+			"friendlytype": "String",
+			"examples": "`42` `13` `11`",
+			"friendlyname": "USERAGENTVERSION",
+			"table": "beacon",
+			"description": "The browser major version"
+		}, {
+			"name": "OPERATINGSYSTEMNAME",
+			"friendlytype": "String",
+			"examples": "`Windows` `Android OS` `Mac OS X` `iOS`",
+			"friendlyname": "OPERATINGSYSTEMNAME",
+			"table": "beacon",
+			"description": "The Operating System name for the user"
+		}, {
+			"name": "OPERATINGSYSTEMVERSION",
+			"friendlytype": "String",
+			"examples": "`8.1`",
+			"friendlyname": "OPERATINGSYSTEMVERSION",
+			"table": "beacon",
+			"description": "The Operating System version for the user"
+		}, {
+			"name": "DEVICENAME",
+			"friendlytype": "String",
+			"examples": "`iPhone` `iPad`",
+			"friendlyname": "DEVICENAME",
+			"table": "beacon",
+			"description": "Device model for mobile devices"
+		}, {
+			"name": "DEVICETYPENAME",
+			"friendlytype": "String",
+			"examples": "`Desktop` `Mobile` `Tablet`",
+			"friendlyname": "DEVICETYPENAME",
+			"table": "beacon",
+			"description": "Device type"
+		}, {
+			"name": "DEVICEMANUFACTURERNAME",
+			"friendlytype": "String",
+			"examples": "`Apple` `Samsung` `LG`",
+			"friendlyname": "DEVICEMANUFACTURERNAME",
+			"table": "beacon",
+			"description": "Device manufacturer for mobile devices"
+		}, {
+			"name": "CONNTYPENAME",
+			"friendlytype": "String",
+			"examples": "`Cellular``Ethernet` `Cable/DSL`",
+			"friendlyname": "CONNTYPENAME",
+			"table": "beacon",
+			"description": "The advertised network grade of the user's internet connection"
+		}, {
+			"name": "SITEVERSIONNAME",
+			"friendlytype": "String",
+			"examples": "`1.0` `2.5b`",
+			"friendlyname": "SITEVERSIONNAME",
+			"table": "beacon",
+			"description": "For mobile apps, this is the version of the app installed on the user's device.<br>For web apps, site owners may use this to specify a release number for their site."
+		}, {
+			"name": "GEOLATLONOVERRIDE",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "GEOLATLONOVERRIDE",
+			"table": "beacon",
+			"description": ""
+		}, {
+			"name": "PARAMS_U",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "PARAMS_U",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "KEY",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "KEY",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "SESSION_ID",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "SESSION_ID",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "SESSION_START",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SESSION_START",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "TIMESTAMP",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "TIMESTAMP",
+			"table": "resource",
+			"description": "The server timestamp when this beacon got to our collectors"
+		}, {
+			"name": "URL",
+			"friendlytype": "String",
+			"examples": "`http://www.example.com/api/call`",
+			"friendlyname": "URL",
+			"table": "resource",
+			"description": "The URL of the resource"
+		}, {
+			"name": "INITIATOR_TYPE",
+			"friendlytype": "String",
+			"examples": "`img` `image` `css` `script` `link` `other` `xmlhttprequest`",
+			"friendlyname": "INITIATOR_TYPE",
+			"table": "resource",
+			"description": "Initiator Type"
+		}, {
+			"name": "START_TIME",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "START_TIME",
+			"table": "resource",
+			"description": "All these times are milliseconds from the page's navigation start time available in nt_nav_st"
+		}, {
+			"name": "REDIRECT_START",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "REDIRECT_START",
+			"table": "resource",
+			"description": "Redirect Start"
+		}, {
+			"name": "REDIRECT_END",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "REDIRECT_END",
+			"table": "resource",
+			"description": "Redirect End"
+		}, {
+			"name": "FETCH_START",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "FETCH_START",
+			"table": "resource",
+			"description": "Fetch Start"
+		}, {
+			"name": "DNS_START",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "DNS_START",
+			"table": "resource",
+			"description": "DNS Start"
+		}, {
+			"name": "DNS_END",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "DNS_END",
+			"table": "resource",
+			"description": "DNS End"
+		}, {
+			"name": "CONNECT_START",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CONNECT_START",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "SECURE_CONNECT_START",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "SECURE_CONNECT_START",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "CONNECT_END",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CONNECT_END",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "REQUEST_START",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "REQUEST_START",
+			"table": "resource",
+			"description": "Request Start"
+		}, {
+			"name": "RESPONSE_START",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "RESPONSE_START",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "RESPONSE_LAST_BYTE",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "RESPONSE_LAST_BYTE",
+			"table": "resource",
+			"description": "Response End"
+		}, {
+			"name": "WORKER_START",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "WORKER_START",
+			"table": "resource",
+			"description": "The time before the browser invokes a registered service worker on the page"
+		}, {
+			"name": "ENCODED_SIZE",
+			"friendlytype": "Number",
+			"examples": "`1000`",
+			"friendlyname": "ENCODED_SIZE",
+			"table": "resource",
+			"description": "Size of the encoded resource body (i.e., with network compression enabled)"
+		}, {
+			"name": "TRANSFER_SIZE",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "TRANSFER_SIZE",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "DECODED_SIZE",
+			"friendlytype": "Number",
+			"examples": "`1000`",
+			"friendlyname": "DECODED_SIZE",
+			"table": "resource",
+			"description": "Size of the resource body after decompressing/removing content encoding"
+		}, {
+			"name": "HEIGHT",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "HEIGHT",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "WIDTH",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "WIDTH",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "X",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "X",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "Y",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "Y",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "PAGE_GROUP",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "PAGE_GROUP",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "SCHEME",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "SCHEME",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "HOST",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "HOST",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "CAMPAIGN",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "CAMPAIGN",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "ID",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "ID",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "BEACON_TYPE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "BEACON_TYPE",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "PORT",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "PORT",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "HASH",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "HASH",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "SEARCH",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "SEARCH",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "QUERY",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "QUERY",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "PATH",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "PATH",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "TOTAL_LOAD_TIME",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "TOTAL_LOAD_TIME",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "ALTERNATE_ID",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "ALTERNATE_ID",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "TIMESTAMP_MIN",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "TIMESTAMP_MIN",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "TIMESTAMP_HOUR",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "TIMESTAMP_HOUR",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "TIMESTAMP_DAY",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "TIMESTAMP_DAY",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "USER_AGENT_DEVICE_TYPE",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "USER_AGENT_DEVICE_TYPE",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "GEO_CC",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "GEO_CC",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "USER_AGENT_FAMILY",
+			"friendlytype": "String",
+			"examples": "",
+			"friendlyname": "USER_AGENT_FAMILY",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "USER_AGENT_MAJOR",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "USER_AGENT_MAJOR",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "CONTRIBUTION",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "CONTRIBUTION",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "PAGELOADTIME",
+			"friendlytype": "Number",
+			"examples": "`100`",
+			"friendlyname": "PAGELOADTIME",
+			"table": "resource",
+			"description": "Time from navigation start to [onload](https://developer.mozilla.org/enUS/docs/Web/API/GlobalEventHandlers/onload) (or whenever the page is considered ready)"
+		}, {
+			"name": "DOMAINID",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "DOMAINID",
+			"table": "resource",
+			"description": ""
+		}, {
+			"name": "PARAMSNTDOMLOADING",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMLOADING",
+			"table": "resource",
+			"description": "DOM Loading: `performance.timing.domLoading`"
+		}, {
+			"name": "PARAMSNTDOMCONTLOADEDE",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTDOMCONTLOADEDE",
+			"table": "resource",
+			"description": "DOMContentLoaded End: `performance.timing.domContentLoadedEventEnd`"
+		}, {
+			"name": "PARAMSNTLOADEND",
+			"friendlytype": "Number",
+			"examples": "`1512086400000`",
+			"friendlyname": "PARAMSNTLOADEND",
+			"table": "resource",
+			"description": "Load Event End: `performance.timing.loadEventEnd`"
+		}, {
+			"name": "REMAINDERTS",
+			"friendlytype": "Number",
+			"examples": "",
+			"friendlyname": "REMAINDERTS",
+			"table": "resource",
+			"description": ""
+		}]
+	}]
+}

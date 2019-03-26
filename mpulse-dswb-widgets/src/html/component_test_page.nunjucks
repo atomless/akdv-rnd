@@ -1,0 +1,108 @@
+{% extends "base_template.nunjucks" %}
+
+{% block additional_css %}
+    <link href="../css/components/_range_input.css" rel="stylesheet" type="text/css">
+    <link href="../css/components/_option_select_menu.css" rel="stylesheet" type="text/css">
+    <link href="../css/components/_custom_number_input.css" rel="stylesheet" type="text/css">
+    <link href="../css/components/_reorderable_list.css" rel="stylesheet" type="text/css">
+    <link href="../css/components/_switch.css" rel="stylesheet" type="text/css">
+    <link href="../css/components/_percentile_input.css" rel="stylesheet" type="text/css">
+    <link href="../css/charts/single_page_base_template.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        article header {
+            margin-bottom: 5rem;
+            padding: 5rem 0 3rem 0;
+            position: fixed;
+            width: 100%;
+            background: var(--prime_bg_2_overlay);
+            border-bottom: 1px solid var(--prime_shadow_0);
+            z-index: 100;
+        }
+        section:first-of-type {
+            margin-top: 18rem;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        section > div {
+            position: relative;
+            width: 40rem;
+            margin: 0 0 10rem 0;
+        }
+        h3 {
+            margin-bottom: 8rem;
+            text-align: left;
+        }
+        .switch {
+            right: calc(50% - 2rem);
+        }
+    </style>
+{% endblock %}
+
+{% block body_classes %} scrolling{% endblock %}
+
+{% block chart %}
+    <article>
+        <header><h1>Component Test Page</h1></header>
+        <section>
+            <div id="range-input-container1">
+                <h3>★ Range Input (with step labels)</h3>
+            </div>
+            <div id="range-input-container2">
+                <h3>★ Range Input (with min/max labels)</h3>
+            </div>
+            <div id="range-input-container3">
+                <h3>★ Range Input (with step label overrides)</h3>
+            </div>
+            <div id="range-input-container4">
+                <h3>★ Range Input (no labels)</h3>
+            </div>
+            <div id="range-input-container5">
+                <h3>★ Range Input (no labels, step=1)</h3>
+            </div>
+
+            <div id="switch-container-square-chunky">
+                <h3>★ Switch (square & chunky)</h3>
+            </div>
+            <div id="switch-container-square">
+                <h3>★ Switch (square)</h3>
+            </div>
+            <div id="switch-container-round-chunky">
+                <h3>★ Switch (round & chunky)</h3>
+            </div>
+            <div id="switch-container-round">
+                <h3>★ Switch (round)</h3>
+            </div>
+
+            <div id="custom-number-input-container"></div>
+            <div id="percentile-input-container"></div>
+            <div id="reorderable-list-container"></div>
+            <div id="option-select-menu-container1"></div>
+        </section>
+
+    </article>
+{% endblock %}
+
+
+{% block annotation_layer %}{% endblock %}
+{% block additional_vendor_scripts %}{% endblock %}
+
+
+{% block chart_scripts %}
+    <script src="../javascript/components/component_factory.js"></script>
+    <script src="../javascript/components/contextmenu_factory.js"></script>
+    <script src="../javascript/components/custom_number_input_factory.js"></script>
+    <script src="../javascript/components/option_select_menu_factory.js"></script>
+    <script src="../javascript/components/reorderable_list_item_factory.js"></script>
+    <script src="../javascript/components/reorderable_list_factory.js"></script>
+    <script src="../javascript/components/annotation_bubble_factory.js"></script>
+    <script src="../javascript/components/switch_factory.js"></script>
+    <script src="../javascript/components/range_input_factory.js"></script>
+    <script src="../javascript/components/tests.js"></script>
+{% endblock %}

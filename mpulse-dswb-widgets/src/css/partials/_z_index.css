@@ -1,0 +1,55 @@
+.axis-container *,
+.slider-group {
+  z-index: 1;
+}
+
+.range-bar,
+.process-step:nth-child(2)::after,
+.process-step:nth-child(3)::after {
+  z-index: 2;
+}
+
+.range input {
+  z-index: 3;
+}
+
+.ss-wrapper::before {
+  z-index: 49 !important;
+}
+
+.ss-scroll {
+  z-index: 50 !important;
+}
+
+.fixed-header {
+  z-index: 100;
+}
+
+.annotation-layer .component {
+  z-index: 150;
+}
+
+.contextmenu {
+  z-index: 175;
+}
+
+.status-wrapper {
+  z-index: 200;
+}
+
+.status-wrapper > .status-blind {
+  z-index: 250;
+}
+
+.status-history {
+  z-index: 260;
+}
+
+.status-wrapper > .status {
+  z-index: 300;
+}
+
+.annotation-layer,
+.annotation-layer .tooltip {
+  z-index: 320;
+}

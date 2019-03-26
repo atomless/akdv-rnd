@@ -1,0 +1,356 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v4.json",
+  "width": 500,
+  "height": 380,
+  "padding": 20,
+  "autosize": "pad",
+  "config": {
+    "text": {
+      "font": "Ideal Sans, Avenir Next, Helvetica"
+    },
+    "title": {
+      "font": "Ideal Sans, Avenir Next, Helvetica",
+      "fontWeight": 500,
+      "fontSize": 17,
+      "limit": -1
+    },
+    "axis": {
+      "labelFont": "Ideal Sans, Avenir Next, Helvetica",
+      "labelFontSize": 12
+    }
+  },
+  "signals": [
+    {
+      "name": "width",
+      "update": "width - 120"
+    },
+    {
+      "name": "height",
+      "update": "height - 260"
+    },
+    {
+      "name": "size",
+      "value": 8
+    },
+    {
+      "name": "domainMax",
+      "value": 0.1
+    },
+    {
+      "name": "bandwidth",
+      "value": 0.0005
+    },
+    {
+      "name": "device",
+      "value": "desktop",
+      "bind": {
+        "input": "select",
+        "options": [
+          "desktop",
+          "phone",
+          "tablet"
+        ],
+        "name": "Device Type"
+      }
+    },
+    {
+      "name": "timer",
+      "value": "onload",
+      "bind": {
+        "input": "select",
+        "options": [
+          "domcontentloaded",
+          "firstcontentfulpaint",
+          "firstpaint",
+          "onload"
+        ],
+        "name": "Timers"
+      }
+    },
+    {
+      "name": "offsets",
+      "value": {
+        "bubbletea": -1,
+        "chinese": -1.5,
+        "japanese": -2,
+        "korean": -3,
+        "mideastern": -2,
+        "indian": -1,
+        "breakfast": -3.5,
+        "latin": 31
+      }
+    },
+    {
+      "name": "categories",
+      "update": "data('benchmark_domains')[0].domain_keys"
+    }
+  ],
+  "data": [
+    {
+      "name": "benchmark",
+      "url": "../data/crux_benchmark.json",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "!(datum.bin > 10 && datum.density < 0.0025)"
+          }
+        ]
+    },
+    {
+      "name": "target",
+      "url": "../data/crux_target.json"
+    },
+    {
+      "name": "benchmark_domains",
+      "values": [
+        {
+          "domain_keys": [
+            "Ebay",
+            "Etsy",
+            "Amazon",
+            "Target",
+            "Walmart"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "benchmark_domain_keys",
+      "source": "benchmark_domains",
+      "transform": [
+        {
+          "type": "flatten",
+          "fields": [
+            "domain_keys"
+          ],
+          "as": [
+            "domain_key"
+          ]
+        }
+      ]
+    }
+  ],
+  "title": {
+    "text": "CRUX",
+    "orient": "top",
+    "anchor": "start",
+    "frame": "group",
+    "encode": {
+      "update": {
+        "dx": {
+          "value": -1
+        }
+      }
+    }
+  },
+  "scales": [
+    {
+      "name": "x_bin_scale",
+      "type": "linear",
+      "range": "width",
+      "zero": false,
+      "domain": {
+        "fields": [
+          {
+            "data": "benchmark",
+            "field": "bin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "yscale",
+      "type": "band",
+      "range": "height",
+      "round": true,
+      "padding": 0,
+      "domain": {
+        "signal": "categories"
+      }
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": {
+        "scheme": "tableau20"
+      },
+      "domain": {
+        "signal": "categories"
+      }
+    },
+    {
+      "name": "names",
+      "type": "ordinal",
+      "domain": {
+        "signal": "categories"
+      },
+      "range": {
+        "signal": "categories"
+      }
+    }
+  ],
+  "axes": [
+    {
+      "orient": "right",
+      "scale": "yscale",
+      "domain": false,
+      "ticks": false,
+      "encode": {
+        "labels": {
+          "interactive": true,
+          "enter": {
+            "tooltip": [
+              {
+                "signal": "data('benchmark')"
+              }
+            ]
+          },
+          "update": {
+            "dx": {
+              "value": 2
+            },
+            "dy": {
+              "value": 2
+            },
+            "y": {
+              "scale": "yscale",
+              "field": "value",
+              "band": 1
+            },
+            "text": {
+              "scale": "names",
+              "field": "value"
+            },
+            "baseline": {
+              "value": "bottom"
+            }
+          }
+        }
+      }
+    },
+    {
+      "orient": "bottom",
+      "scale": "x_bin_scale",
+      "domain": false,
+      "ticks": false,
+      "labels": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "data": "benchmark",
+          "name": "origin",
+          "groupby": [
+            "origin"
+          ]
+        }
+      },
+      "encode": {
+        "update": {
+          "y": {
+            "scale": "yscale",
+            "field": "origin"
+          },
+          "width": {
+            "signal": "width"
+          },
+          "height": {
+            "scale": "yscale",
+            "band": 1
+          }
+        }
+      },
+      "sort": {
+        "field": "y",
+        "order": "ascending"
+      },
+      "signals": [
+        {
+          "name": "height",
+          "update": "bandwidth('yscale')"
+        }
+      ],
+      "data": [
+        {
+          "name": "density",
+          "source": "origin",
+          "transform": [
+            {
+              "type": "filter",
+              "expr": "datum.device == device && datum.timer == timer"
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "name": "yinner",
+          "type": "linear",
+          "range": [
+            {
+              "signal": "height"
+            },
+            {
+              "signal": "-1 * size * height"
+            }
+          ],
+          "domain": [
+            0,
+            {
+              "signal": "domainMax"
+            }
+          ]
+        }
+      ],
+      "marks": [
+        {
+          "type": "area",
+          "from": {
+            "data": "density"
+          },
+          "encode": {
+            "enter": {
+              "fill": {
+                "scale": "color",
+                "field": {
+                  "parent": "origin"
+                }
+              },
+              "fillOpacity": {
+                "value": 0.7
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 1
+              }
+            },
+            "update": {
+              "x": {
+                "scale": "x_bin_scale",
+                "signal": "datum.bin"
+              },
+              "y": {
+                "scale": "yinner",
+                "signal": "datum.density"
+              },
+              "y2": {
+                "scale": "yinner",
+                "value": 0
+              },
+              "tooltip": [
+                {
+                  "signal": "datum"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

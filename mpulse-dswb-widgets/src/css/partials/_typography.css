@@ -1,0 +1,151 @@
+body {
+  font-family: var(--sans_serif_regular_font_stack);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--prime_txt_body);
+}
+
+.axis,
+.tick {
+  font-family: var(--sans_serif_regular_font_stack) !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p em {
+  font-style: normal;
+}
+
+svg text {
+  paint-order: stroke;
+}
+
+p,
+em,
+time,
+strong {
+  color: var(--prime_txt_body_semi_strong);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+  text-align: center;
+  margin: 0 0 0.25rem 0;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--prime_txt_heading_main);
+}
+
+h2 {
+  color: var(--prime_txt_heading_sub);
+}
+
+h1 + h3,
+h3 + h4,
+dt {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--prime_txt_heading_sub);
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b,
+strong,
+time {
+  font-weight: bolder;
+}
+
+strong,
+time {
+  font-weight: 200;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* 1 */
+  font-size: 1rem;
+}
+
+small {
+  font-size: 80%;
+}
+
+i {
+  color: var(--prime_txt_body);
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+.external-link::after {
+  content: '↗';
+  display: block;
+  margin: 0.7rem 0.25rem;
+  float: right;
+  line-height: 0.3rem;
+  font-family: monospace;
+  font-size: 0.78rem;
+  overflow: visible;
+  height: 0.6rem;
+  width: 0.6rem;
+  border: 1px solid var(--prime_txt_body);
+}
+
+*:hover > .external-link::after {
+  border: 1px solid var(--prime_txt_heading_strong);
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.togglable {
+  user-select: none;
+}
+
+option,
+input[type='search'] {
+  color: var(--prime_txt_body);
+}

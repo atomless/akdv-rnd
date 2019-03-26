@@ -1,0 +1,14 @@
+{% extends "base_template.nunjucks" %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="../css/charts/heatmap.css"/>
+{% endblock %}
+
+{% block additional_vendor_scripts %}
+    <script src="../javascript/vendor/d3.min.js"></script>
+{% endblock %}
+
+{% block chart_scripts %}
+    <script src="../javascript/widgetjs_charts/heatmap.js"></script>
+{% endblock %}
+

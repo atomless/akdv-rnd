@@ -1,0 +1,17 @@
+{
+	"meta": {
+		"duration": 75999,
+		"rowcount": 25,
+		"executed": 1524853228926,
+		"columns": ["pagegroup", "median_firstbytetimer", "percentile_50_domreadytimer", "hits", "gweng", "foo"]
+	},
+	"data": [
+		["product", 973.0, 7025.0, 6689475, 572649, 4453453],
+		["category", 1307.0, 5741.0, 4242262, 572649, 4453453],
+		["search results", 713.0, 6259.0, 2668008, 572649, 4453453],
+		["Home", 931.0, 5432.0, 1601848, 572649, 4453453],
+		["cart", 1017.0, 3773.0, 1084921, 572649, 4453453],
+		["Your Amigo SEO", 1068.0, 5044.0, 572649, 4453453],
+		["registry - view_registry_guest", 768.0, 3279.0, 546146, 572649, 4453453]
+	]
+}

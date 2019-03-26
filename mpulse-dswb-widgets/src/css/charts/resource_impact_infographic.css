@@ -1,0 +1,1699 @@
+/* ===================================== Media Queries ========================================*/
+body {
+  min-width: 800px;
+  min-height: 450px;
+  font-size: 17.28px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: var(--prime_bg_4);
+}
+
+
+
+/** ========= Browser Viewport Zoom ========= */
+/** ---- 1x 100% ----*/  
+@media screen and (min-resolution: 0.1dppx) and (max-resolution: 1dppx) {
+  html,
+  body {
+    font-size: 0.95vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 0.1) and (-webkit-max-device-pixel-ratio: 1) {
+  html,
+  body {
+    font-size: 0.95vw;
+  }
+}
+
+/** ---- 1x 110% ----*/
+@media screen and (min-resolution: 1.1dppx) and (max-resolution: 1.249dppx) {
+  html,
+  body {
+    font-size: 1.045vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 1.249) {
+  html,
+  body {
+    font-size: 1.045vw;
+  }
+}
+
+/** ---- 1x 125% ----*/
+@media screen and (min-resolution: 1.25dppx) and (max-resolution: 1.99dppx) {
+  html,
+  body {
+    font-size: 1.1875vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 1.99) {
+  html,
+  body {
+    font-size: 1.1875vw;
+  }
+}
+
+/** ---- 2x 100% ----*/
+@media screen and (min-resolution: 2dppx) and (max-resolution: 2.199dppx) {
+  html,
+  body {
+    font-size: 0.95vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.199) {
+  html,
+  body {
+    font-size: 0.95vw;
+  }
+}
+
+/** ---- 2x 110% ----*/
+@media screen and (min-resolution: 2.2dppx) and (max-resolution: 2.499dppx) {
+  html,
+  body {
+    font-size: 1.045vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.2) and (-webkit-max-device-pixel-ratio: 2.499) {
+  html,
+  body {
+    font-size: 1.045vw;
+  }
+}
+
+/** ---- 2x 125% ----*/
+@media screen and (min-resolution: 2.5dppx) and (max-resolution: 7dppx) {
+  html,
+  body {
+    font-size: 1.1875vw;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.5) and (-webkit-max-device-pixel-ratio: 7) {
+  html,
+  body {
+    font-size: 1.1875vw;
+  }
+}
+
+
+/** --------------- Localization Debug ------------------ */
+/**
+#optimization-infographic .localization {
+  color: purple !important;
+  fill: purple !important;
+}
+*/
+
+
+/** ------------------- Data Set Picker --------------------- */
+
+/** ---------- Picker Body ----------- */
+#optimization-infographic .result-set-picker {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  background: var(--color_transparent);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0.1rem 1.4rem 0.6rem 0.8rem;
+}
+#optimization-infographic .result-set-picker.displayed {
+  height: auto;
+  background: var(--prime_bg_3);
+  box-shadow: 0 0 1.8rem var(--prime_shadow_4), 0.1rem 0.2rem 0.1rem var(--prime_shadow_4);
+  border-radius: 0.4rem;
+}
+
+
+/** ---------- Selected Item Text ----------- */
+#optimization-infographic .result-set-picker .result-set-selected-item {
+  height: auto;
+  line-height: 1.7rem;
+  background: var(--color_transparent);
+  cursor: pointer;
+  border: 0 solid var(--prime_bg_6);
+  margin: 0;
+}
+#optimization-infographic .result-set-picker.displayed .result-set-selected-item {
+  border-width: 0 0 0.07rem 0;
+  margin-bottom: 0.1rem;
+}
+
+
+/** ---------- Down Arrow ----------- */
+#optimization-infographic .result-set-picker .result-set-down-arrow {
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.6rem;
+  border: solid var(--sec_txt_body);
+  border-width: 0 0.12rem 0.12rem 0;
+  display: inline-block;
+  padding: 0.175rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#optimization-infographic .result-set-picker.displayed .result-set-down-arrow {
+  border-color: var(--sec_txt_body_strong);
+}
+
+
+/** ---------- Set List ----------- */
+#optimization-infographic .result-set-picker ul {
+  height: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#optimization-infographic .result-set-picker.displayed ul {
+  height: auto;
+  max-height: 10rem;
+}
+
+
+/** ---------- Set List Items ----------- */
+#optimization-infographic .result-set-picker li {
+  height: 1.4rem;
+  padding: 0;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#optimization-infographic .result-set-picker.displayed li {
+  opacity: 0.6;
+}
+#optimization-infographic .result-set-picker.displayed li:hover {
+  opacity: 1;
+}
+
+
+/** ---------- UTC Note ----------- */
+#optimization-infographic .result-set-picker .note {
+  font-size: 0.6rem;
+  line-height: 1.7rem;
+  font-style: italic;
+  color: var(--prime_txt_body_faint);
+  display: none;
+}
+#optimization-infographic .result-set-picker.displayed .note {
+  display: inherit;
+}
+
+.text-cell-separator {
+  padding: 0 0.2rem;
+  opacity: 0.6;
+}
+
+.whisker-line {
+  stroke: var(--prime_bg_9);
+  stroke-width: 2;
+  pointer-events: none;
+}
+.center-line.dashed-line {
+  stroke: var(--prime_bg_9);
+  stroke-width: 2;
+}
+
+
+.box-difference {
+  pointer-events: none;
+}
+
+.median-line {
+  stroke: var(--prime_bg_0);
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.axis text,
+.chart text {
+  font-size: 0.6rem;
+}
+
+.axis .non-selectable text {
+  cursor: auto;
+}
+
+#optimization-infographic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.optimization-infographic-rows {
+  height: 1.3rem;/*used by charts to set the BAR and BOX-WHISKER height that in turn determines the chart height */
+  padding: 10%;/* padding for box/bar rows as percentage of height */
+}
+
+.optimization-infographic-box-plots {
+  height: 1.3rem;/*used by charts to set the BOX-WHISKER height that in turn determines the chart height */
+  padding: 10%;/* padding for box/bar rows as percentage of height */
+}
+
+
+
+ 
+
+.axis-labels text.label {
+  font-size: 0.6rem;
+  text-anchor: middle;
+  fill: var(--prime_chart_axis_label);
+}
+
+.axis-labels text.sub-label {
+  font-style: italic;
+  font-size: 0.6rem;
+  text-anchor: middle;
+  fill: var(--prime_chart_axis_sub_label);
+}
+
+
+.axis-container.axis-y-left-container {
+  border-width: 0 0.01rem 0 0;
+  border-style: solid;
+  border-color: var(--prime_chart_axis);
+}
+
+
+/* ============= BANNER =============== */
+
+#optimization-infographic .column-banner {
+  width: 100%;
+  height: 6rem;
+  background: var(--sec_bg_0);
+}
+
+#optimization-infographic .titles-group {
+  width: 43%;
+  height: 100%;
+  float: left;
+  padding: 1rem 0 0 1.9rem;
+}
+
+#optimization-infographic .column-banner .main-title {
+  color: var(--prime_txt_heading_main);
+  height: 2rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.2rem 0;
+}
+#optimization-infographic .column-banner .main-title { /** ALT */
+  color: var(--sec_txt_heading_main);
+}
+
+#optimization-infographic .column-banner .sub-title {
+  color: var(--prime_txt_heading_sub);
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+#optimization-infographic .column-banner .sub-title { /** ALT */
+  color: var(--sec_txt_heading_sub);
+}
+
+#optimization-infographic .column-banner .sub-title .text-semi-highlight {
+  color: var(--prime_txt_heading_sub_semi_strong);
+}
+#optimization-infographic .column-banner .sub-title .text-highlight {
+  color: var(--prime_txt_heading_sub_strong);
+}
+
+#optimization-infographic .column-banner .sub-title .text-semi-highlight { /** ALT */
+  color: var(--sec_txt_heading_sub_semi_strong);
+}
+#optimization-infographic .column-banner .sub-title .text-highlight { /** ALT */
+  color: var(--sec_txt_heading_sub_strong);
+}
+
+
+#optimization-infographic .column-banner .sub-title .postfix {
+  vertical-align: baseline;
+  padding-left: 0.2rem;
+}
+#optimization-infographic .column-banner .sub-title .time-span {
+  font-size: 0.75rem;
+}
+
+#optimization-infographic .column-banner .utc-note {
+  color: var(--sec_txt_body_italic);
+  font-style: italic;
+  font-size: 0.6rem;
+  padding-left: 0.2rem;
+}
+
+
+#optimization-infographic .column-banner .note {
+  color: var(--sec_txt_body_italic);
+  font-style: italic;
+  font-size: 0.6rem;
+  line-height: 1.5rem;
+}
+
+
+#optimization-infographic button {
+  color: var(--prime_button_txt);
+  text-align: center;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border-radius: 0.2rem;
+  border: 0 solid transparent;
+  cursor: pointer;
+  background: var(--prime_button);
+  opacity: 1;
+  transition: opacity 500ms;
+}
+#optimization-infographic button.displayed {
+  opacity: 0.1;
+  transition: opacity 400ms;
+}
+#optimization-infographic button:hover {
+  color: var(--prime_button_txt_hover);
+  background: var(--prime_button_hover);
+}
+#optimization-infographic button:active {
+  color: var(--prime_button_txt_active);
+  background: var(--prime_button_active);
+}
+#optimization-infographic button:focus {
+  outline: none;
+}
+
+
+/* --------------- HOW TO BUTTON ----------------*/
+#optimization-infographic button.how-to {
+  width: 8rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  float: left;
+  padding: 0;
+  margin: 1.4rem 0 0 0;
+}
+
+/* --------------- RESET ASSETS BUTTON ----------------*/
+#optimization-infographic button.reset-all-assets {
+  width: auto;
+  height: auto;
+  font-size: 0.55rem;
+  line-height: 0.55rem;
+  float: right;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  margin: 0.9rem 1.6rem 0 0;
+}
+#optimization-infographic button.reset-all-assets.disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+
+#optimization-infographic .column-banner .explanation {
+  color: var(--prime_txt_body);
+  font-weight: 200;
+  width: 44%;
+  height: 100%;
+  font-size: 0.6rem;
+  line-height: 1.1rem;
+  float: right;
+  padding: 0.8rem 1.3rem 0 0;
+}
+#optimization-infographic .column-banner .explanation p {
+  margin: 0;
+  color: var(--sec_txt_body_semi_strong);
+}
+#optimization-infographic .column-banner .explanation p strong {
+  color: var(--sec_txt_heading_sub_strong);
+  font-weight: 600;
+}
+#optimization-infographic .column-banner .explanation p em {
+  color: var(--sec_txt_heading_sub_semi_strong);
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+#optimization-infographic .chart-sub-heading {
+  color: var(--prime_txt_heading);
+  width: 100%;
+  height: 3rem;
+  font-size: 0.9rem;
+  line-height: 2.8rem;
+  text-align: left;
+  padding-left: 1.3rem;
+}
+#optimization-infographic .chart-sub-heading-metric {
+  color: var(--prime_txt_heading_strong);
+}
+
+#optimization-infographic .chart-sub-heading-note {
+  width: auto;
+  height: 1rem;
+  float: right;
+  color: var(--prime_txt_heading);
+  font-style: italic;
+  font-size: 0.65rem;
+  line-height: 0.7rem;
+  text-align: left;
+  padding-left: 0.8rem;
+  cursor: pointer;
+  background: var(--prime_button);
+  border-radius: 0.2rem;
+}
+#optimization-infographic .chart-sub-heading-note:hover {
+  color: var(--prime_txt_body_semi_strong);
+}
+
+
+/* MAIN PANEL */
+
+#optimization-infographic .four-column-layout {
+  width: 100%;
+  height: calc(100% - 6rem);
+  padding: 0.2rem 0 0 0;
+}
+
+
+/* --------- COLUMN COLOURS -------------*/
+#optimization-infographic .column.pre-opt {
+  background: var(--prime_bg_0);
+}
+#optimization-infographic .column.post-opt {
+  background: var(--prime_bg_0);
+}
+
+
+
+#optimization-infographic .four-column-layout .column:nth-child(1) {
+  width: 28%;
+}
+
+#optimization-infographic .four-column-layout .column:nth-child(2) {
+  width: calc(44% - 0.2rem);
+  margin-left: 0.2rem;
+}
+
+#optimization-infographic .four-column-layout .column:nth-child(3) {
+  width: calc(28% - 0.2rem);
+  margin-left: 0.2rem;
+}
+
+/* GENERIC chart layout */
+
+.optimization-infographic-chart {
+  position: relative;
+}
+
+
+#column-one .optimization-infographic-chart:nth-child(1) {
+  height: 55%;
+}
+
+@media screen and ( max-height: 800px )
+{
+  #optimization-infographic .titles-group {
+    padding-top: 0.5rem;
+  }
+
+  #optimization-infographic .column-banner .main-title {
+    height: 1.7rem;
+    line-height: 1.7rem;
+  }
+
+  #optimization-infographic .column-banner .sub-title {
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+  }
+
+  #optimization-infographic .column-banner {
+      height: 3.9rem;
+  }
+  
+#optimization-infographic button.how-to {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    float: left;
+    padding: 0 0.7rem 0 0.7rem;
+    margin: 0.7rem 0 0 0;
+}
+
+  #optimization-infographic .column-banner .explanation {
+    display: none;
+  }
+
+  #optimization-infographic .four-column-layout {
+      height: calc(100% - 3.9rem);
+  }
+
+  #optimization-infographic .chart-sub-heading {
+      height: 2.2rem;
+      font-size: 0.8rem;
+      line-height: 2.4rem;
+  }
+
+  /** ---- COLUMN ONE ---- */
+  #column-one .optimization-infographic-chart:nth-child(1) {
+    height: 60%;
+  }
+  #ci-vs-lt-wrapper.chart-grid {
+    height: calc(100% - 4rem);
+  }
+
+  #column-one .optimization-infographic-chart:nth-child(2) {
+    height: 40%;
+  }
+  
+  #optimization-infographic #column-one .optimization-infographic-chart:nth-child(2) .chart-sub-heading {
+    height: 1.4rem;
+  }
+
+  #column-one #pg-asset-lt-waterfall-wrapper.chart-grid {
+    height: calc(100% - 4.5rem);
+  }
+
+  /** ---- COLUMN THREE ---- */
+  #column-three .optimization-infographic-chart:nth-child(1) {
+    height: 75% !important;
+  }
+  #column-three .optimization-infographic-chart:nth-child(2) {
+    height: 25% !important;
+  }
+  
+  .perf-breakdown .text-cells .value-group .value {
+      height: 2.8rem !important;
+      font-size: 2.8rem !important;
+      line-height: 2.8rem !important;
+  }
+}
+
+#column-one .optimization-infographic-chart:nth-child(2) {
+  height: 45%;
+  border-width: 0.1rem 0 0 0;
+  border-color: var(--prime_bg_4);
+  border-style: solid;
+}
+
+#column-two .optimization-infographic-chart:nth-child(1) {
+  height: 100%;
+}
+
+/* allow for chart heading */
+.optimization-infographic-chart .chart-grid {
+  height: calc(100% - 3.5rem);
+}
+
+
+/* ============ Slider Groups ============= */
+input[type=range] {
+  -webkit-appearance: none;/* Hides the slider so that custom slider can be made */
+  width: 100%;/* Specific width is required for Firefox. */
+  background: var(--color_transparent);/* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;/* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: var(--color_transparent);
+  border-color: var(--color_transparent);
+  color: var(--color_transparent);
+}
+.axis .slider-group input[type="range"] {
+  position: absolute;
+}
+
+#page-groups-pre-opt-slider-group.slider-group {
+  height: 1.5rem;
+  top: 2.8rem;
+}
+
+#asset-load-times-slider-group.slider-group {
+  height: 1.5rem;
+  top: 3.6rem;
+}
+
+
+/** -------- Style the SLIDER Handle ---------- */
+input[type=range]::-webkit-slider-thumb {
+  border: 0.05rem solid var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+  height: 1.5rem;
+  width: 0.7rem;
+  border-radius: 0.15rem;
+  cursor: ew-resize;
+  margin-top: -0.5rem;/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+input[type=range]:hover::-webkit-slider-thumb {
+  border-color: var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 0.05rem solid var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+  height: 1.5rem;
+  width: 0.7rem;
+  border-radius: 0.15rem;
+  cursor: ew-resize;
+}
+input[type=range]:hover::-moz-range-thumb {
+  border-color: var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+}
+
+input[type=range]::-ms-thumb {
+  border: 0.05rem solid var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+  height: 1.5rem;
+  width: 0.7rem;
+  border-radius: 0.15rem;
+  cursor: ew-resize;
+}
+input[type=range]:hover::-ms-thumb {
+  border-color: var(--prime_input_thumb_border);
+  background: var(--prime_input_thumb);
+}
+
+
+/** -------- Style the SLIDER track ---------- */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.5rem;
+  cursor: ew-resize;
+  box-shadow: 0 0 0.4rem var(--prime_input_shadow) inset, 0.1rem 0.1rem 0.1rem var(--prime_input_shadow) inset;
+  background: var(--prime_input_track);
+  border-radius: 0.3rem;
+  opacity: 0.7;
+}
+input[type=range]:hover::-webkit-slider-runnable-track {
+  opacity: 1;
+}
+
+.slider-group .slider-label {
+  color: var(--prime_txt_body_semi_faint);
+  font-style: italic;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+
+
+
+/* ============ COLUMN ONE specific chart layout ============= */
+
+/** ---- Asset RI vs Load Times - Pre Opt GRID ---- */
+#ci-vs-lt-wrapper.chart-grid {
+  grid-template-columns: 6rem 1fr 1rem;/* NOTE: The first value here, MUST be the same as that of column 1's width */
+  grid-template-rows: 3rem 1fr 5.4rem;/* NOTE: top to bottom = top axis space, chart space, bottom axis space */
+  height: calc(100% - 5rem);
+}
+
+#ci-vs-lt-wrapper .chart-row-flex > div:nth-child(1) {
+  flex: 1 1 6rem;/* The third value here, is Column 1's width */
+}
+
+#ci-vs-lt-wrapper .chart-row-flex > div:nth-child(2) {
+  flex: 1 1 calc(100% - 7rem);/* NOTE: the -xrem value, shown in calc, , MUST be the sum of column 1 and 3s widths */
+}
+
+#ci-vs-lt-wrapper .chart-row-flex > div:nth-child(3) {
+  flex: 1 1 1rem;/* The third value here, is Column 3's width */
+}
+
+
+/** ---- PageGroups Page Load Waterfall - Pre Opt GRID ---- */
+#pg-asset-lt-waterfall-wrapper.chart-grid {
+  grid-template-columns: 7rem 1fr 1rem;
+  grid-template-rows: 1.5rem 1fr 3.5rem;
+  height: calc(100% - 4.25rem);
+  position: relative;
+}
+
+#pg-asset-lt-waterfall-wrapper .chart-row-flex > div:nth-child(1) {
+  flex: 1 1 7rem;
+}
+
+#pg-asset-lt-waterfall-wrapper .chart-row-flex > div:nth-child(2) {
+  flex: 1 1 calc(100% - 8rem);
+}
+
+#pg-asset-lt-waterfall-wrapper .chart-row-flex > div:nth-child(3) {
+  flex: 1 1 1rem;
+}
+
+#pg-asset-lt-waterfall-svg {
+  overflow: hidden;
+}
+
+
+
+/* ---------- Axis Left Label ----------- */
+.chart-and-axis-label-group {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.chart-and-axis-label-group .label-container {
+  width: 0;
+  opacity: 1;
+  transition: opacity 900ms;
+}
+.no-data .chart-and-axis-label-group .label-container {
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.chart-and-axis-label-group .label-container.left {
+  width: 2rem;
+  height: auto;
+  float: left;
+  position: relative;
+  top: 0;
+  padding: 0;
+}
+#page-groups-asset-load-times-left-axis-label-container.label-container.left,
+#ci-vs-lt-left-axis-label-container.label-container.left {
+  top: 3rem;
+  padding: 0.25rem 0 0 0;
+}
+
+#pg-asset-lt-waterfall-left-axis-label-container.label-container.left {
+  top: 1.5rem;
+  padding: 0.25rem 0 0 0;
+}
+
+#individual-asset-lt-left-axis-label-container.label-container.left {
+  top: 0;
+  padding: 0.25rem 0 0 0;
+}
+
+.chart-and-axis-label-group .label-container.right {
+  width: 0;
+  float: right;
+}
+
+.chart-and-axis-label-group .chart-grid {
+  width: calc(100% - 2rem);
+  float: left;
+}
+
+
+
+/** Chart Text Overlay */
+div.chart-call-to-action-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--prime_bg_0_overlay);
+  z-index: 50;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out, left 0ms 0ms linear;
+}
+.no-data div.chart-call-to-action-overlay {
+  left: 0;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out, left 0ms 0ms linear;
+}
+div.chart-call-to-action-overlay {
+  left: -2000px;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out, backdrop-filter 500ms ease-in-out, left 0ms 500ms linear;
+}
+
+div.chart-call-to-action-overlay .text-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: table-cell;
+}
+
+div.chart-call-to-action-overlay .text {
+  width: 18rem;
+  height: 8rem;
+  font-size: 0.7rem;
+  font-weight: 200;
+  line-height: 1.1rem;
+  text-align: center;
+  color: var(--prime_txt_body);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0.7rem 1.2rem 1rem 1.2rem;
+  border-radius: 0.2rem;
+  background: var(--prime_bg_2);
+  display: block;
+}
+div.chart-call-to-action-overlay.overlay-hidden .text {
+  filter: blur(5px);
+  transition: filter 500ms ease-in;
+}
+div.chart-call-to-action-overlay .text strong {
+  font-weight: 500;
+  color: var(--prime_txt_body_strong);
+}
+div.chart-call-to-action-overlay .text em {
+  font-weight: 400;
+  color: var(--prime_txt_body_semi_strong);
+}
+/*--*/
+
+
+
+/* ============ COLUMN TWO specific chart layout ============= */
+
+/** ---- Asset RI vs Load Times - Pre Opt GRID ---- */
+#individual-asset-lt-wrapper.chart-grid {
+  grid-template-columns: 7rem 1fr 1rem;
+  grid-template-rows: 0 1fr 6rem;
+  height: calc(100% - 5rem);
+  position: relative;
+}
+
+.no-data .chart-grid {
+  opacity: 0;
+}
+
+#individual-asset-lt-wrapper .chart-row-flex > div:nth-child(1) {
+  flex: 1 1 7rem;
+}
+
+#individual-asset-lt-wrapper .chart-row-flex > div:nth-child(2) {
+  flex: 1 1 calc(100% - 8.25rem);
+}
+
+#individual-asset-lt-wrapper .chart-row-flex > div:nth-child(3) {
+  flex: 1 1 1.75rem;
+}
+
+#individual-asset-lt-svg {
+  overflow: hidden;
+}
+
+#individual-asset-lt-axis-x-bottom {
+  top: 0.7rem;
+}
+
+
+
+/* ============ COLUMN THREE specific chart layout ============= */
+
+/** ---- Asset RI vs Load Times - Pre Opt GRID ---- */
+#ci-vs-projected-lt-box-difference-wrapper.chart-grid {
+  grid-template-columns: 6rem 1fr 1rem;
+  grid-template-rows: 3rem 1fr 2.4rem;
+  height: calc(100% - 4.5rem);
+}
+
+#ci-vs-projected-lt-box-difference-wrapper .chart-row-flex > div:nth-child(1) {
+  flex: 1 1 6rem;
+}
+
+#ci-vs-projected-lt-box-difference-wrapper .chart-row-flex > div:nth-child(2) {
+  flex: 1 1 calc(100% - 7rem);
+}
+
+#ci-vs-projected-lt-box-difference-wrapper .chart-row-flex > div:nth-child(3) {
+  flex: 1 1 1rem;
+}
+
+
+#individual-asset-lt-bottom-axis-explanation,
+#ci-vs-lt-bottom-axis-explanation {
+  padding: 0 2.5rem 0 6rem;
+}
+
+
+
+/** ---- PageGroups Page Load Waterfall - Pre Opt GRID ---- */
+#ci-vs-lt-box-plot-wrapper.chart-grid {
+  grid-template-columns: 8rem 1fr 1rem;
+  grid-template-rows: 1.5rem 1fr 3.5rem;
+  height: calc(100% - 5rem);
+}
+
+#ci-vs-lt-box-plot-wrapper .chart-row-flex > div:nth-child(1) {
+  flex: 1 1 8rem;
+}
+
+#ci-vs-lt-box-plot-wrapper .chart-row-flex > div:nth-child(2) {
+  flex: 1 1 calc(100% - 9rem);
+}
+
+#ci-vs-lt-box-plot-wrapper .chart-row-flex > div:nth-child(3) {
+  flex: 1 1 1rem;
+}
+/* -- */
+
+
+
+/* ============ COLUMN THREE specific chart layout ============= */
+#column-three .optimization-infographic-chart:nth-child(1) {
+  height: 77%;
+}
+#column-three .optimization-infographic-chart:nth-child(2) {
+  height: 23%;
+}
+
+
+.cr-cmp.optimization-infographic-chart {
+  width: 100%;
+  height: 35%;
+}
+
+.pre-opt-perf-brkdn.optimization-infographic-chart {
+  width: 100%;
+  height: 25%;
+}
+
+.perf-breakdown.optimization-infographic-chart {
+  width: 100%;
+  height: 40%;
+}
+
+
+.cr-cmp.chart-group {
+  height: calc(100% - 3.5rem);
+  width: 100%;
+}
+
+
+.perf-sub-heading {
+  width: 100%;
+  height: 2.2rem;
+  font-size: 0.9rem;
+  line-height: 2.2rem;
+  text-align: left;
+  padding-left: 1.3rem;
+  border-width: 0.1rem 0 0.08rem 0;
+  border-color: var(--prime_bg_4) var(--color_transparent) var(--prime_bg_4) var(--color_transparent);
+  border-style: solid;
+}
+
+
+/** ================ Perfomance Breakdown ================= */
+.text-cells {
+  width: 100%;
+  height: 100%;
+}
+
+.text-cells .top-left,
+.text-cells .top-right,
+.text-cells .bottom-left,
+.text-cells .bottom-right {
+  width: 50%;
+  height: calc(50% - 1.1rem);
+  position: relative;
+  float: left;
+}
+
+#column-three .text-cells .cell.bottom-left,
+#column-three .text-cells .cell.bottom-right {
+  width: 50%;
+  height: calc(100% - 1.1rem);
+  positionx: absolute;
+}
+
+#column-three .text-cells .cell.bottom-left {
+  left: 0;
+  width: 40%;
+  display: table;
+}
+#column-three .text-cells .cell.bottom-right {
+  left: 0%;
+  width: 60%;
+  display: table;
+}
+
+.text-cells .annotation {
+  color: var(--prime_txt_body_faint);
+  font-style: italic;
+  font-size: 0.6rem;
+}
+
+.text-cells .cell {
+  border-color: var(--prime_bg_4);
+  border-style: solid;
+}
+
+.text-cells .cell.bottom-left {
+  border-width: 0 0.08rem 0 0;
+}
+.text-cells .cell.bottom-right {
+  border-width: 0;
+}
+
+
+.text-cells .label {
+  color: var(--prime_txt_heading_item);
+  width: auto;
+  height: 1.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0.6rem 0 0.3rem 1.2rem;
+}
+
+
+.text-cells .value-group {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  display: table;
+}
+
+.pre-opt-perf-brkdn .text-cells .value-group {
+  top: 0.8rem;
+}
+.pre-opt-perf-brkdn .text-cells .bottom-right .value-group {
+  top: -0.4rem;
+}
+
+.perf-breakdown .text-cells .bottom-left .value-group {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  vertical-align: middle;
+  display: table-cell;
+}
+.perf-breakdown .text-cells .bottom-right .value-group {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+
+.text-cells .value-group .value {
+  color: var(--prime_txt_body_semi_faint);
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  text-align: left;
+  width: 0%;
+  height: 1.7rem;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  display: table;
+}
+
+.perf-breakdown .text-cells .value-group .value {
+  height: 2.8rem;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+
+.perf-breakdown .text-cells .bottom-left .value-group .value {
+  height: 2.2rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+}
+.perf-breakdown .text-cells .bottom-right .value-group .value {
+  color: var(--prime_txt_body_strong);
+}
+
+
+
+/** ======= Units Post / Prefixes ====== */
+.super-script,
+.sub-script {
+  opacity: 1;
+  color: var(--prime_txt_body_semi_faint);
+}
+
+.text-cells .super-script {
+  vertical-align: top;
+  position: relative;
+  top: 0;
+}
+
+.text-cells .sub-script {
+  vertical-align: baseline;
+}
+
+.pre-opt-perf-brkdn .text-cells .sub-script,
+.pre-opt-perf-brkdn .text-cells .super-script {
+  font-size: 0.7rem;
+  padding: 0 0.1rem;
+}
+.pre-opt-perf-brkdn .text-cells .super-script {
+  top: -0.3rem;
+}
+
+
+.perf-breakdown.text-cells .sub-script,
+.perf-breakdown.text-cells .super-script {
+  font-size: 1.1rem;
+  padding: 0 0.2rem;
+}
+.perf-breakdown.text-cells .super-script {
+  top: -0.5rem;
+}
+
+
+
+/** ======= Value Breakdown ====== */
+.text-cells .value-breakdown-group {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  bottom: 4.5VH;
+  left: 0;
+  margin: auto;
+  padding: 0;
+  display: table;
+}
+
+.text-cells .value-breakdown-group .value.breakdown {
+  width: 0%;
+  height: 1.3rem;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-weight: 200;
+  text-align: left;
+  color: var(--performance_neutral);
+  padding: 0;
+  display: table;
+  transition: color 500ms ease-in-out;
+}
+
+.text-cells .value-breakdown-group.percent .value.breakdown{
+  left: -2.25rem;
+}
+.text-cells .value-breakdown-group.milliseconds .value.breakdown{
+  left: 2.25rem;
+}
+
+.text-cells .value-breakdown-group .value.breakdown.change-positive {
+  color: var(--color_value_change_positive);
+}
+.text-cells .value-breakdown-group .value.breakdown.change-negative {
+  color: var(--color_value_change_negative);
+}
+
+
+.ris-perfomance-very-good {
+  color: var(--performance_very_good);
+}
+.ris-perfomance-good {
+  color: var(--performance_good);
+}
+.ris-perfomance-neutral {
+  color: var(--performance_neutral);
+}
+.ris-perfomance-poor {
+  color: var(--performance_poor);
+}
+.ris-perfomance-very-poor {
+  color: var(--performance_very_poor);
+}
+
+
+.perf-breakdown.text-cells .value.breakdown .sub-script,
+.perf-breakdown.text-cells .value.breakdown .super-script {
+  font-size: 0.7rem;
+  padding: 0 0.1rem;
+}
+.perf-breakdown.text-cells .value.breakdown .super-script {
+  top: -0.2rem;
+}
+
+
+/* =========== Box Difference =========== */
+.difference-box-a.dashed-line,
+.difference-line.dashed-line {
+  stroke: var(--prime_outline_trans_6);
+  stroke-width: 0.05rem;
+  stroke-dasharray: 0.15rem 0.15rem;
+}
+
+
+/* =========== Box Whisker Drag Handles =========== */
+.box-whisker .center-line.dashed-line {
+  stroke-width: 0.05rem;
+}
+.box-whisker .median-line {
+  stroke-width: 0.15rem;
+}
+.box-whisker .top-whisker.whisker-line,
+.box-whisker .bottom-whisker.whisker-line {
+  stroke-width: 0.1rem;
+}
+
+.box-whisker .center-line,
+.box-whisker .bottom-whisker,
+.box-whisker .top-whisker {
+  opacity: 1;
+}
+
+/** Required to mute appearance of Whisker, when INTERACTABLE is set on the chart **/
+.box-whisker.interactable {
+  opacity: 1;
+}
+.box-whisker.non-interactable {
+  opacity: 0.3;
+  filter: url("#de-saturate");
+}
+
+.box-whisker .quartile-box {
+  cursor: pointer;
+}
+
+.box-whisker .draggable-x {
+  fill: var(--prime_draghandle_alt_field);
+  stroke: var(--prime_draghandle_alt_border);
+  stroke-width: 0.05rem;
+  opacity: 0;
+  transition: opacity 750ms 200ms ease-in;
+}
+.column:hover .box-whisker .draggable-x {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.median-offset-display-group {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+  pointer-events: none;
+}
+
+.median-offset-display-group.changed {
+  opacity: 1;
+}
+
+.muted .median-offset-display-group {
+  opacity: 0.2;
+}
+
+.median-offset-display-bg {
+  transition: fill 100ms ease-out;
+}
+
+text.median-offset-display-text {
+  font-size: 0.5rem;
+  fill: var(--sec_txt_body_strong);
+  text-anchor: start;
+}
+
+/** Required to disable drag handle, when INTERACTABLE is set on the chart **/
+.box-whisker.non-interactable .slider-drag-handle,
+.box-whisker.muted .slider-drag-handle {
+  display: none;
+}
+
+.slider-drag-handle.muted {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.difference-arrow-head {
+  fill: var(--prime_outline_trans_7);
+}
+
+.selected-blink {
+  animation: blinker 200ms ease-in-out infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+
+/** =================== THRESHOLD LINES ==================== **/
+.threshold-line-group .line {
+  stroke: var(--prime_txt_body);
+  stroke-width: 0.05rem;
+  pointer-events: none;
+}
+.threshold-line-group.original .line,
+.threshold-label-group.original .line {
+  stroke: var(--prime_txt_body_semi_faint);
+  stroke-dasharray: 0.2rem 0.15rem;
+  stroke-width: 0.05rem;
+}
+.threshold-line-group.optimized .line,
+.threshold-label-group.optimized .line {
+  stroke: var(--prime_txt_body_semi_strong);
+  stroke-width: 0.05rem;
+}
+
+
+
+.threshold-label-group text {
+  font-size: 0.6rem;
+  fill: var(--prime_txt_body_semi_strong);
+}
+.threshold-label-group.original text {
+  fill: var(--prime_txt_body_semi_faint);
+}
+.threshold-label-group.optimized text {
+  fill: var(--prime_txt_body_semi_strong);
+}
+
+
+
+.chart-grid .vendor-icon-group {
+  pointer-events: all;
+}
+.chart-grid .vendor-icon {
+  stroke-width: 0;
+}
+
+
+g.tick .vendor-info-group {
+  display: none;
+  opacity: 0;
+}
+g.tick .vendor-info-group .akdv-asset-annotation body {
+  width: 0;
+  height: 0;
+}
+
+g.tick:hover .vendor-info-group {
+  display: inherit;
+  opacity: 1;
+}
+g.tick:hover .vendor-info-group .akdv-asset-annotation body {
+  width: auto;
+  height: auto;
+}
+
+
+.akdv-asset-annotation body {
+  width: auto;
+  height: auto;
+  background: var(--color_transparent);
+  opacity: 0;
+}
+g.tick:hover .akdv-asset-annotation body {
+  opacity: 1;
+}
+
+
+.chart-grid .akdv-annotation {
+  width: auto;
+  height: auto;
+  font-size: 0.6rem;
+  color: var(--sec_txt_body);
+  font-weight: 400;
+  padding: 0.2rem 0.8rem 0.4rem 0.6rem;
+  border-radius: 0.2rem;
+  border: 0.05rem solid var(--tooltip_border);
+  background: var(--tooltip_field);
+}
+
+.chart-grid .akdv-annotation .vendor-name {
+  font-weight: 600;
+  color: var(--sec_txt_body_strong);
+}
+
+.chart-grid .akdv-annotation .vendor-url {
+  width: auto;
+  max-width: 35rem;
+  font-size: 0.55rem;
+  font-weight: 400;
+  color: var(--sec_txt_body);
+  overflow-wrap: break-word;
+}
+
+
+#optimization-infographic .tick text {
+  fill: var(--prime_chart_axis_tick_text);
+}
+
+#optimization-infographic .tick text.asset-vendor-match {
+  fill: var(--prime_chart_axis_tick_text_strong);
+}
+
+
+.whisker-annotation {
+  fill: var(--color_transparent);
+}
+
+polygon.annotation-arrow.hidden {
+  display: none;
+}
+
+
+
+/** =================== BROWSER ZOOM - Layout Adjustments =================== */
+
+/** ---- 1x & 2x 110% ----*/
+@media screen and (min-resolution: 1.1dppx) and (max-resolution: 1.2499dppx),
+  screen and (min-resolution: 2.2dppx) and (max-resolution: 2.499dppx) {
+  
+  
+  /** -- Banner Height -- */
+  #optimization-infographic .column-banner {
+    height: 6.25rem;
+  }
+  
+  
+  /** -- Column Widths -- */
+  #optimization-infographic .four-column-layout .column:nth-child(1) {
+    width: 29%;
+  }
+  
+  #optimization-infographic .four-column-layout .column:nth-child(2) {
+    width: calc(42% - 0.2rem);
+    margin-left: 0.2rem;
+  }
+  
+  #optimization-infographic .four-column-layout .column:nth-child(3) {
+    width: calc(29% - 0.2rem);
+    margin-left: 0.2rem;
+  }
+
+
+  /** -- Column 1 -- */
+  #ci-vs-lt-wrapper.chart-grid {
+    height: calc(100% - 3.75rem);
+  }
+
+
+  /** -- Column 3 -- */
+  #column-three .optimization-infographic-chart:nth-child(1) {
+    height: 76%;
+  }
+    
+  #column-three .optimization-infographic-chart:nth-child(2) {
+    height: 24%;
+  }
+  
+  #ci-vs-projected-lt-box-difference-wrapper.chart-grid {
+    height: calc(100% - 3.75rem);
+  }
+
+  #optimization-infographic .chart-sub-heading {
+    height: 2.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+/** ---- 1x & 2x 125% ----*/
+@media screen and (min-resolution: 1.25dppx) and (max-resolution: 1.99dppx),
+  screen and (min-resolution: 2.5dppx) and (max-resolution: 2.99dppx) {
+  
+  
+  /** -- Banner Height -- */
+  #optimization-infographic .column-banner {
+    height: 7rem;
+  }
+  
+  
+  /** -- Column Widths -- */
+  #optimization-infographic .four-column-layout .column:nth-child(1) {
+    width: 31%;
+  }
+  
+  #optimization-infographic .four-column-layout .column:nth-child(2) {
+    width: calc(38% - 0.2rem);
+    margin-left: 0.2rem;
+  }
+  
+  #optimization-infographic .four-column-layout .column:nth-child(3) {
+    width: calc(31% - 0.2rem);
+    margin-left: 0.2rem;
+  }
+
+
+  /** -- Column 1 -- */
+  #ci-vs-lt-wrapper.chart-grid {
+    height: calc(100% - 3.25rem);
+  }
+
+
+  /** -- Column 3 -- */
+  #column-three .optimization-infographic-chart:nth-child(1) {
+    height: 73%;
+  }
+    
+  #column-three .optimization-infographic-chart:nth-child(2) {
+    height: 27%;
+  }
+  
+  #ci-vs-projected-lt-box-difference-wrapper.chart-grid {
+    height: calc(100% - 3.15rem);
+  }
+
+  #optimization-infographic .chart-sub-heading {
+    height: 2rem;
+    line-height: 1.8rem;
+  }
+}
+
+
+/** -------------- Annotation Bubble ------------------ */
+.annotation-layer.ris-annotation div.simple-bubble {
+  width: auto;
+  max-width: initial;
+  background: var(--prime_bg_2) !important;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.4rem var(--prime_shadow_3), 0 0 2.4rem var(--prime_shadow_3), 0.2rem 0.4rem 0.05rem var(--prime_shadow_2);
+}
+
+.annotation-layer.ris-annotation .simple-bubble .title {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  max-width: 33vw;
+}
+.annotation-layer.ris-annotation .simple-bubble .title strong {
+  font-weight: 200;
+  letter-spacing: 0.03rem;
+  padding-left: 0.2rem;
+  white-space: normal;
+  word-wrap: normal;
+}
+
+.annotation-layer.ris-annotation .component ul {
+  background: var(--color_transparent);
+  max-width: initial;
+  padding-bottom: 0.3rem;
+}
+
+.annotation-layer.ris-annotation .component li {
+  height: auto;
+  max-width: initial;
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  text-overflow: initial;
+  white-space: normal;
+}
+.annotation-layer.ris-annotation .component li:nth-child(odd) {
+  background: var(--prime_bg_5_overlay);
+}
+.annotation-layer.ris-annotation .component li:nth-child(even) {
+  background: var(--prime_bg_3_overlay);
+}
+.annotation-layer.ris-annotation .component li:nth-last-child(1) {
+  border-width: 0;
+}
+
+/* List: Labels */
+.annotation-layer.ris-annotation div.simple-bubble ul li span:nth-child(1) {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  min-width: 4rem;
+  flex-grow: 0;
+  flex-basis: 0.1%;
+  word-wrap: normal;
+  font-weight: 500;
+  overflow: hidden;
+}
+.annotation-layer.ris-annotation div.simple-bubble.label-length-medium ul li span:nth-child(1) {
+  min-width: 8rem;
+}
+.annotation-layer.ris-annotation div.simple-bubble ul li span:nth-child(1) span {
+  color: var(--prime_body_text);
+}
+.annotation-layer.ris-annotation div.simple-bubble.label-length-long ul li span:nth-child(1) {
+  min-width: 10rem;
+}
+.annotation-layer.ris-annotation div.simple-bubble.label-length-long ul li span:nth-child(1) span {
+  padding-left: 0.35rem;
+}
+
+.annotation-layer.ris-annotation div.simple-bubble.label-length-very-long ul li span:nth-child(1) {
+  min-width: 16rem;
+}
+.annotation-layer.ris-annotation div.simple-bubble.label-length-very-long ul li span:nth-child(1) span {
+  padding-left: 0.35rem;
+}
+
+.annotation-layer.ris-annotation .component p {
+  background: var(--prime_bg_5_overlay);
+  font-size: 0.6rem;
+  padding: 0 0.35rem;
+}
+
+/* List: Values */
+.annotation-layer.ris-annotation div.simple-bubble ul li span:nth-child(2) {
+  height: auto;
+  flex-grow: 0;
+  flex-basis: 99.9%;
+  max-width: 25vw;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+  font-weight: 200;
+  padding-left: 0.5rem;
+  padding-right: 0.7rem;
+}

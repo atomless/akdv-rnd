@@ -1,0 +1,323 @@
+{
+    "median_color": "#ff9800",
+    "tooltipTuples": [
+        [
+            "Minimum",
+            "min"
+        ],
+        [
+            "Lower Quartile",
+            "lower_quartile"
+        ],
+        [
+            "Median",
+            "median"
+        ],
+        [
+            "Upper Quartile",
+            "upper_quartile"
+        ],
+        [
+            "Max",
+            "max"
+        ],
+        [
+            "IQR",
+            "iqr"
+        ],
+        [
+            "Count",
+            "count"
+        ]
+    ],
+    "legendNums": [
+        222,
+        400
+    ],
+    "yAxisLabel": "Load Time (ms)",
+    "centerline_color": "grey",
+    "maxYValue": -1,
+    "legend_colors": [
+        "#29B6F6",
+        "#2196F3",
+        "#0277BD"
+    ],
+    "boxPlotData": [
+        {
+            "median": 265,
+            "box_name": "https://toyota.jp",
+            "max": 1850,
+            "min": 0,
+            "iqr": 706,
+            "upper_quartile": 791,
+            "count": 83725505,
+            "box_color": "#0277BD",
+            "lower_quartile": 85
+        },
+        {
+            "median": 65,
+            "box_name": "https://www.google-analytics.com",
+            "max": 362.5,
+            "min": 1,
+            "iqr": 135,
+            "upper_quartile": 160,
+            "count": 2312221,
+            "box_color": "#29B6F6",
+            "lower_quartile": 25
+        },
+        {
+            "median": 136,
+            "box_name": "https://googleads.g.doubleclick.net",
+            "max": 495,
+            "min": 1,
+            "iqr": 162,
+            "upper_quartile": 252,
+            "count": 2048587,
+            "box_color": "#29B6F6",
+            "lower_quartile": 90
+        },
+        {
+            "median": 102,
+            "box_name": "https://www.google.com",
+            "max": 321.5,
+            "min": 1,
+            "iqr": 101,
+            "upper_quartile": 170,
+            "count": 1945314,
+            "box_color": "#29B6F6",
+            "lower_quartile": 69
+        },
+        {
+            "median": 103,
+            "box_name": "https://www.google.co.jp",
+            "max": 321.5,
+            "min": 4,
+            "iqr": 101,
+            "upper_quartile": 170,
+            "count": 1872174,
+            "box_color": "#29B6F6",
+            "lower_quartile": 69
+        },
+        {
+            "median": 174,
+            "box_name": "https://onetag.tws.toyota.jp",
+            "max": 655,
+            "min": 1,
+            "iqr": 222,
+            "upper_quartile": 322,
+            "count": 1776564,
+            "box_color": "#29B6F6",
+            "lower_quartile": 100
+        },
+        {
+            "median": 177,
+            "box_name": "https://3ppa.jp.cinarra.com",
+            "max": 1143,
+            "min": 1,
+            "iqr": 440,
+            "upper_quartile": 483,
+            "count": 1484041,
+            "box_color": "#0277BD",
+            "lower_quartile": 43
+        },
+        {
+            "median": 163,
+            "box_name": "https://img.macromill.com",
+            "max": 1146,
+            "min": 1,
+            "iqr": 440,
+            "upper_quartile": 486,
+            "count": 1338031,
+            "box_color": "#0277BD",
+            "lower_quartile": 46
+        },
+        {
+            "median": 157,
+            "box_name": "https://beacon.tws.toyota.jp",
+            "max": 1179.5,
+            "min": 1,
+            "iqr": 455,
+            "upper_quartile": 497,
+            "count": 1209608,
+            "box_color": "#0277BD",
+            "lower_quartile": 42
+        },
+        {
+            "median": 158,
+            "box_name": "https://connect.facebook.net",
+            "max": 1277,
+            "min": 1,
+            "iqr": 500,
+            "upper_quartile": 527,
+            "count": 1172770,
+            "box_color": "#0277BD",
+            "lower_quartile": 27
+        },
+        {
+            "median": 69,
+            "box_name": "https://b92.yahoo.co.jp",
+            "max": 397.5,
+            "min": 1,
+            "iqr": 147,
+            "upper_quartile": 177,
+            "count": 1154478,
+            "box_color": "#29B6F6",
+            "lower_quartile": 30
+        },
+        {
+            "median": 100,
+            "box_name": "https://etoyota.net",
+            "max": 752.5,
+            "min": 1,
+            "iqr": 289,
+            "upper_quartile": 319,
+            "count": 1139443,
+            "box_color": "#2196F3",
+            "lower_quartile": 30
+        },
+        {
+            "median": 153,
+            "box_name": "https://harpoon3.userdive.com",
+            "max": 979.5,
+            "min": 1,
+            "iqr": 369,
+            "upper_quartile": 426,
+            "count": 824051,
+            "box_color": "#2196F3",
+            "lower_quartile": 57
+        },
+        {
+            "median": 76,
+            "box_name": "https://static.karte.io",
+            "max": 1008,
+            "min": 1,
+            "iqr": 400,
+            "upper_quartile": 408,
+            "count": 765742,
+            "box_color": "#2196F3",
+            "lower_quartile": 8
+        },
+        {
+            "median": 159,
+            "box_name": "https://yjtag.yahoo.co.jp",
+            "max": 798,
+            "min": 1,
+            "iqr": 294,
+            "upper_quartile": 357,
+            "count": 731574,
+            "box_color": "#2196F3",
+            "lower_quartile": 63
+        },
+        {
+            "median": 151,
+            "box_name": "https://c.marsflag.com",
+            "max": 880.5,
+            "min": 1,
+            "iqr": 339,
+            "upper_quartile": 372,
+            "count": 707489,
+            "box_color": "#2196F3",
+            "lower_quartile": 33
+        },
+        {
+            "median": 355,
+            "box_name": "https://cdn.userdive.com",
+            "max": 1882.5,
+            "min": 1,
+            "iqr": 733,
+            "upper_quartile": 783,
+            "count": 674262,
+            "box_color": "#0277BD",
+            "lower_quartile": 50
+        },
+        {
+            "median": 116,
+            "box_name": "https://cdn.treasuredata.com",
+            "max": 699,
+            "min": 1,
+            "iqr": 262,
+            "upper_quartile": 306,
+            "count": 659659,
+            "box_color": "#2196F3",
+            "lower_quartile": 44
+        },
+        {
+            "median": 335,
+            "box_name": "https://s.yjtag.jp",
+            "max": 1847,
+            "min": 1,
+            "iqr": 726,
+            "upper_quartile": 758,
+            "count": 650961,
+            "box_color": "#0277BD",
+            "lower_quartile": 32
+        },
+        {
+            "median": 420,
+            "box_name": "https://toyotamotorcorporation.122.2o7.net",
+            "max": 1727.5,
+            "min": 1,
+            "iqr": 605,
+            "upper_quartile": 820,
+            "count": 638178,
+            "box_color": "#0277BD",
+            "lower_quartile": 215
+        },
+        {
+            "median": 332,
+            "box_name": "https://www.googletagmanager.com",
+            "max": 1705,
+            "min": 1,
+            "iqr": 662,
+            "upper_quartile": 712,
+            "count": 611184,
+            "box_color": "#0277BD",
+            "lower_quartile": 50
+        },
+        {
+            "median": 80,
+            "box_name": "https://www.facebook.com",
+            "max": 546.5,
+            "min": 1,
+            "iqr": 205,
+            "upper_quartile": 239,
+            "count": 604541,
+            "box_color": "#29B6F6",
+            "lower_quartile": 34
+        },
+        {
+            "median": 74,
+            "box_name": "https://www.googleadservices.com",
+            "max": 562.5,
+            "min": 1,
+            "iqr": 221,
+            "upper_quartile": 231,
+            "count": 580352,
+            "box_color": "#29B6F6",
+            "lower_quartile": 10
+        },
+        {
+            "median": 291,
+            "box_name": "https://toyotamotorcorporati.tt.omtrdc.net",
+            "max": 1063.5,
+            "min": 1,
+            "iqr": 369,
+            "upper_quartile": 510,
+            "count": 555408,
+            "box_color": "#2196F3",
+            "lower_quartile": 141
+        },
+        {
+            "median": 358,
+            "box_name": "https://t.karte.io",
+            "max": 1058.5,
+            "min": 3,
+            "iqr": 325,
+            "upper_quartile": 571,
+            "count": 441651,
+            "box_color": "#2196F3",
+            "lower_quartile": 246
+        }
+    ],
+    "legend_label": "Inner Quartile Range"
+}

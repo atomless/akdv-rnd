@@ -1,0 +1,604 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v4.json",
+    "width": 1000,
+    "height": 500,
+    "padding": 25,
+    "autosize": "fit",
+    "signals": [
+        {
+            "name": "width",
+          "update": "width - 50"
+        },
+        {
+            "name": "height",
+          "update": "height - 60"
+        },
+        {
+            "name": "lineColor",
+            "value": "var(--prime_chart_axis_tick_text_strong, #006b8f)"
+        },
+        {
+            "name": "interpolate",
+            "value": "basis"
+        },
+        {
+          "name": "circleSize",
+          "value": 200
+        },
+        {
+            "name": "maxSessionsVal",
+            "value": "1000000",
+            "update": "sessions_extent[1]*1.1"
+        },
+        {
+            "name": "maxConversionRateVal",
+            "value": "1",
+            "update": "min(1,conversionRate_extent[1]*1.5)"
+        },
+        {
+            "name": "showConversion",
+            "value": true,
+            "update": "data('state')[0].conversionAvailable"
+        },
+        {
+            "name": "overlayOpacity",
+            "value": 0.5
+        },
+        {
+            "name": "sessionsOverlayYPos",
+            "update": "min(height - 200,height/4)"
+        },
+        {
+            "name": "conversionsOverlayYPos",
+            "update": "height/2"
+        },
+        {
+            "name": "sessionsOverlayXPos",
+            "update": "max(min(width - 275, sessionsMarkerXPos + 250),0)"
+        },
+        {
+            "name": "conversionsOverlayXPos",
+            "update": "max(min(width - 275, conversionsMarkerXPos + 250),0)"
+        },
+        {
+            "name": "sessionsMarkerYPos",
+            "update": "scale('sessionScale',sessions_extent[1]/2)"
+        },
+        {
+            "name": "conversionsMarkerYPos",
+            "update": "scale('conversionScale',data('metrics')[0].conversionRate)"
+        },
+        {
+            "name": "sessionsMarkerXPos",
+            "update": "scale('bucketScale',data('metrics')[0].speed)+(sqrt(circleSize)/2)"
+        },
+        {
+            "name": "conversionsMarkerXPos",
+            "update": "scale('bucketScale',data('metrics')[0].speed)+(sqrt(circleSize)/2)"
+        },
+        {
+            "name": "maxLoadTime",
+            "value": 20000,
+            "update": "data('metrics')[0].loadTime95th"
+        }
+    ],
+    "data": [
+        {
+            "name": "metrics"
+        },
+        {
+            "name": "data",
+            "transform": [
+                {"type": "extent", "field": "sessions", "signal": "sessions_extent"},
+                {"type": "extent", "field": "predicted_sessions", "signal": "predicted_sessions_extent"},
+                {"type": "extent", "field": "conversionRate", "signal": "conversionRate_extent"},
+                {"type": "extent", "field": "predicted_conversionRate", "signal": "predicted_conversionRate_extent"}
+            ]
+        },
+        {
+            "name": "state",
+            "values": [
+                { "conversionAvailable": true },
+                { "revenueAvailable": true }
+            ]
+        }
+    ],
+    "scales": [
+        {
+            "name": "bucketScale",
+            "type": "linear",
+            "range": "width",
+            "domain": {
+                "data": "data",
+                "field": "buckets"
+            },
+            "domainMax": {
+                "signal": "maxLoadTime"
+            },
+            "clamp": true
+        },
+        {
+            "name": "sessionScale",
+            "type": "linear",
+            "range": "height",
+            "domain": {
+                "signal": "[0,maxSessionsVal]"
+            }
+        },
+        {
+            "name": "conversionScale",
+            "type": "linear",
+            "range": "height",
+            "domain": {
+                "signal": "[0,(showConversion ? maxConversionRateVal : 0)]"
+            }
+        },
+        {
+            "name": "color",
+            "type": "ordinal",
+            "range": {
+                "signal": "showConversion ? ['url(#ChartGradient)','hsl(140,100%,45%)'] : ['url(#ChartGradient)']"
+            },
+            "domain": {
+                "signal": "showConversion ? ['Session Count','Conversion Rate'] : ['Session Count']"
+            }
+        }
+    ],
+    "axes": [
+        {
+            "orient": "bottom",
+            "scale": "bucketScale",
+            "title": {
+                "signal": "data('metrics')[0]['timerName']+' (ms)'"
+            },
+            "format": ",.2r",
+            "encode": {
+                "labels": {
+                    "name": "legendLabel"
+                }
+            },
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "scale": "sessionScale",
+            "title": "Sessions",
+            "format": ".0s",
+            "tickCount": 3
+        },
+        {
+            "orient": "right",
+            "scale": "conversionScale",
+            "title": "Conversion Rate",
+            "format": ".1%",
+            "labelBound": true,
+            "tickCount": 3,
+            "domainOpacity": {
+                "signal": "showConversion ? 1 : 0"
+            },
+            "titleOpacity": {
+                "signal": "showConversion ? 1 : 0"
+            },
+            "titlePadding": {
+                "signal": "showConversion ? 10 : 0"
+            },
+            "labelPadding": {
+                "signal": "showConversion ? 5 : 0"
+            }
+        }
+    ],
+    "marks": [
+        {
+            "type": "group",
+            "from": {
+              "data": "metrics"
+            },
+            "encode": {
+              "update": {
+                "x": {
+                  "signal": "sessionsOverlayXPos"
+                },
+                "y": {
+                  "signal": "sessionsOverlayYPos"
+                }
+              }
+            },
+            "marks": [
+                {
+                    "type": "text",
+                    "encode": {
+                        "enter": {
+                            "fill": {
+                              "signal": "lineColor"
+                            },
+                            "text": {
+                                "value": "The median load time for all"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "y": {
+                                "value": -40
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "text",
+                    "encode": {
+                        "enter": {
+                            "fill": {
+                              "signal": "lineColor"
+                            },
+                            "text": {
+                                "value": "the user sessions during this"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "y": {
+                                "value": -22
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "text",
+                    "from": {
+                        "data": "metrics"
+                    },
+                    "encode": {
+                        "enter": {
+                            "fill": {
+                              "signal": "lineColor"
+                            },
+                            "text": {
+                                "signal": "'time period was '+round(datum.speed/10)/100+' seconds'"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "y": {
+                                "value": -6
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "rule",
+                    "encode": {
+                    "enter": {
+                            "stroke": {
+                                "signal": "lineColor"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "x2": {
+                                "value": 230
+                            }
+                        },
+                        "update": {
+                            "height": {
+                                "signal": "height"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "from": {
+              "data": "metrics"
+            },
+            "marks": [
+                {
+                    "type": "rule",
+                    "encode": {
+                    "enter": {
+                            "stroke": {
+                                "signal": "lineColor"
+                            }
+                        },
+                        "update": {
+                            "y": {
+                                "signal": "sessionsMarkerYPos"
+                            },
+                            "y2": {
+                                "signal": "sessionsOverlayYPos"
+                            },
+                            "x": {
+                                "signal": "sessionsMarkerXPos"
+                            },
+                            "x2": {
+                                "signal": "sessionsOverlayXPos"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "symbol",
+                    "encode": {
+                    "enter": {
+                            "fill": {
+                                "signal": "lineColor"
+                            },
+                            "size": {
+                                "signal": "circleSize"
+                            }
+                        },
+                        "update": {
+                            "x": {
+                                "signal": "sessionsMarkerXPos"
+                            },
+                            "y": {
+                                "signal": "sessionsMarkerYPos"
+                            },
+                            "shape": {
+                                "value": "circle"
+                            }
+
+                        }
+                    }
+                }
+            ]
+        },
+            
+        {
+            "type": "group",
+            "zindex": 10,
+            "from": {
+              "data": "metrics"
+            },
+            "encode": {
+              "update": {
+                "x": {
+                  "signal": "conversionsOverlayXPos"
+                },
+                "y": {
+                  "signal": "conversionsOverlayYPos"
+                }
+              }
+            },
+            "marks": [
+                {
+                    "type": "text",
+                    "encode": {
+                        "enter": {
+                            "fill": {
+                              "signal": "lineColor"
+                            },
+                            "text": {
+                                "value": "The conversion rate during"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "y": {
+                                "value": -22
+                            }
+                        },
+                        "update": {
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "text",
+                    "from": {
+                        "data": "metrics"
+                    },
+                    "encode": {
+                        "enter": {
+                            "fill": {
+                              "signal": "lineColor"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "y": {
+                                "value": -6
+                            }
+                        },
+                        "update": {
+                            "text": {
+                                "signal": "'this time period was '+round(datum.conversionRate*10000)/100+'%'"
+                            },
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "rule",
+                    "encode": {
+                    "enter": {
+                            "stroke": {
+                                "signal": "lineColor"
+                            },
+                            "x": {
+                                "value": 0
+                            },
+                            "x2": {
+                                "value": 210
+                            },
+                            "height": {
+                                "signal": "height"
+                            }
+                        },
+                        "update": {
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+
+        {
+            "type":"group",
+            "from": {
+              "data": "metrics"
+            },
+            "marks": [
+                {
+                    "type": "rule",
+                    "encode": {
+                    "enter": {
+                        "stroke": {
+                            "signal": "lineColor"
+                        }
+                    },
+                    "update": {
+                        "opacity": {
+                            "signal": "showConversion ? 1 : 0"
+                        },
+                        "x": {
+                            "signal": "conversionsMarkerXPos"
+                        },
+                        "x2": {
+                            "signal": "conversionsOverlayXPos"
+                        },
+                        "y": {
+                            "signal": "conversionsMarkerYPos"
+                        },
+                        "y2": {
+                            "signal": "conversionsOverlayYPos"
+                        }
+                    }
+                }
+            },
+                {
+                    "type": "symbol",
+                    "encode": {
+                    "enter": {
+                            "fill": {
+                                "signal": "lineColor"
+                            },
+                            "shape": {
+                                "value": "circle"
+                            },
+                            "size": {
+                                "signal": "circleSize"
+                            }
+                        },
+                        "update": {
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            },
+                            "y": {
+                                "signal": "conversionsMarkerYPos"
+                            },
+                            "x": {
+                                "signal": "conversionsMarkerXPos"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+          "type":"group",
+          "marks": [
+                {
+                    "type": "rule",
+                    "from": {
+                        "data": "metrics"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "speed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "area",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "y": {
+                                "scale": "sessionScale",
+                                "field": "sessions"
+                            },
+                            "y2": {
+                                "scale": "sessionScale",
+                                "value": 0
+                            },
+                            "fill": {
+                                "value": "url(#ChartGradient)"
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            },
+                            "fillOpacity": {
+                                "value": 0.7
+                            }
+                        },
+                        "update": {
+                        }
+                    }
+                },
+                {
+                    "type": "line",
+                    "from": {
+                        "data": "data"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "bucketScale",
+                                "field": "buckets"
+                            },
+                            "stroke": {
+                                "value": "hsl(140,100%,45%)"
+                            },
+                            "strokeWidth": {
+                                "value": 1.5
+                            },
+                            "opacity": {
+                                "value": 0.9
+                            },
+                            "interpolate": {
+                                "signal": "interpolate"
+                            }
+                        },
+                        "update": {
+                            "y": {
+                                "signal": "scale('conversionScale', datum.conversionRate)"
+                            },
+                            "opacity": {
+                                "signal": "showConversion ? 1 : 0"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "legends": [
+        {
+            "orient": "top-right",
+            "labelAlign": "right",
+            "labelOffset": -20,
+            "fill": "color",
+            "rowPadding": 10,
+            "columnPadding": 5,
+            "zindex": 1,
+            "labelColor": "var(--prime_chart_axis_tick_text)"
+        }
+    ]
+}

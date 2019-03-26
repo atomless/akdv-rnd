@@ -1,0 +1,76 @@
+{
+    "name": "Cancer rates & survival",
+    "description": "5 year survival rates from 2010 - 2015",
+    "theme": "default",
+    "data_format": "tsv",
+    "stages": [
+        {
+            "id": 1,
+            "anchortext": "start",
+            "description": "shows all available data in a cloud",
+            "displaytext": "This cluster represents all cancer types we have data for in the UK",
+            "dimensions": []
+        },
+        {
+            "id": 2,
+            "anchortext": "devicetypes",
+            "description": "cluster all forms by type",
+            "displaytext": "Sized by incidence",
+            "dimensions": [
+                {
+                    "name": "radius",
+                    "properties": {
+                        "by": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "anchortext": "devicetypes",
+            "description": "cluster all sessions by device type name",
+            "displaytext": "Sized by incidence, x axis by 5 year survival rate",
+            "dimensions": [
+                {
+                    "name": "x",
+                    "properties": {
+                        "by": "survival"
+                    }
+                },
+                {
+                    "name": "radius",
+                    "properties": {
+                        "by": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "anchortext": "devicetypes",
+            "description": "cluster all sessions by device type name",
+            "displaytext": "Sized by incidence, x axis by 5 year survival rate, coloured by gender",
+            "dimensions": [
+                {
+                    "name": "radius",
+                    "properties": {
+                        "by": "number"
+                    }
+                },
+                {
+                    "name": "x",
+                    "properties": {
+                        "by": "survival"
+                    }
+                },
+                {
+                    "name": "color",
+                    "properties": {
+                        "by": "sex",
+                        "palette": ["hsl(240,100%,50%)", "hsl(0,100%,50%)"]
+                    }
+                }
+            ]
+        }
+    ]
+}

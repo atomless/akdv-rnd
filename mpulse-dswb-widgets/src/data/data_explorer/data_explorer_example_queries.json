@@ -1,0 +1,23 @@
+{
+	"examples": [{
+			"title": "Hourly image performance plot for host",
+			"queryString": "FROM resource SELECT percentile(90,total_load_time) WHERE initiator_type = 'img' AND url LIKE 'https://%.akamai.com/%' SINCE one week ago UNTIL today TIMESERIES BY hour",
+			"tooltip": "Hourly image performance plot for host"
+		},
+		{
+			"title": "Top 100 highest impact JS assets",
+			"queryString": "FROM resource SELECT url,sum(decoded_size) as total_bytes,avg(decoded_size) as avg_bytes, avg(start_time) as avg_start, hits WHERE initiator_type = 'script' SINCE yesterday ORDERBY total_bytes DESC LIMIT 100",
+			"tooltip": "Top 100 highest impact JS assets"
+		},
+		{
+			"title": "20 slowest pages by traffic",
+			"queryString": "FROM beacon SELECT url, percentile(75,domready), hits, (hits * percentile(75,domreadytimer)) as impact SINCE yesterday ORDERBY impact DESC LIMIT 25",
+			"tooltip": "Top 100 highest impact JS assets"
+		},
+		{
+			"title": "Performance over time for specified pagegroups",
+			"queryString": "FROM beacon SELECT percentile(75,domready) GROUPBY pagegrouname WHERE pagegroupname IN ('group 1','group 2') SINCE one week ago TIMESERIES BY hour Top 100 resources by bandwidth FROM resource SELECT url, intiator_type, transferred_size, total_load_time, hits,(total_load_time * hits) as bandwidth_used ORDERBY bandwidth_used DESC",
+			"tooltip": "Performance over time for specified pagegroups"
+		}
+	]
+}

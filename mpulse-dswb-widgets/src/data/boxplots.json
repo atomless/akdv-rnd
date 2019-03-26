@@ -1,0 +1,346 @@
+{
+    "median_color": "var(--sec_txt_body_strong)",
+    "centerline_color": "var(--prime_txt_body)",
+    "whisker_color": "var(--prime_txt_body)",
+    "tooltipTuples": [
+        [
+            "Minimum",
+            "min"
+        ],
+        [
+            "Lower Quartile",
+            "lower_quartile"
+        ],
+        [
+            "Median",
+            "median"
+        ],
+        [
+            "Upper Quartile",
+            "upper_quartile"
+        ],
+        [
+            "Max",
+            "max"
+        ],
+        [
+            "IQR",
+            "iqr"
+        ],
+        [
+            "Count",
+            "count"
+        ]
+    ],
+    "legendNums": [
+        401.97,
+        427.042
+    ],
+    "yAxisLabel": "Session Duration (Seconds)",
+    "maxYValue": -1,
+    "legend_colors": [
+        "var(--series_1)",
+        "var(--series_2)",
+        "var(--series_3)"
+    ],
+    "boxPlotData": [
+        {
+            "median": 58.8865,
+            "box_name": "2018-07-24T02:46:00",
+            "max": 2849.418,
+            "min": 3.102,
+            "iqr": 392.48199999999997,
+            "upper_quartile": 399.506,
+            "count": 174,
+            "box_color": "#29B6F6",
+            "lower_quartile": 7.024
+        },
+        {
+            "median": 149.167,
+            "box_name": "2018-07-24T02:47:00",
+            "max": 1966.609,
+            "min": 3.073,
+            "iqr": 789.834,
+            "upper_quartile": 796.334,
+            "count": 183,
+            "box_color": "#0277BD",
+            "lower_quartile": 6.5
+        },
+        {
+            "median": 61.577,
+            "box_name": "2018-07-24T02:48:00",
+            "max": 287.718,
+            "min": 2.724,
+            "iqr": 173.452,
+            "upper_quartile": 180.029,
+            "count": 157,
+            "box_color": "#29B6F6",
+            "lower_quartile": 6.577
+        },
+        {
+            "median": 57.234,
+            "box_name": "2018-07-24T02:49:00",
+            "max": 969.495,
+            "min": 2.82,
+            "iqr": 351.378,
+            "upper_quartile": 356.544,
+            "count": 133,
+            "box_color": "#29B6F6",
+            "lower_quartile": 5.166
+        },
+        {
+            "median": 48.523,
+            "box_name": "2018-07-24T02:50:00",
+            "max": 1046.692,
+            "min": 2.73,
+            "iqr": 322.265,
+            "upper_quartile": 328.149,
+            "count": 167,
+            "box_color": "#29B6F6",
+            "lower_quartile": 5.884
+        },
+        {
+            "median": 222.945,
+            "box_name": "2018-07-24T02:51:00",
+            "max": 1016.799,
+            "min": 3.557,
+            "iqr": 476.607,
+            "upper_quartile": 507.701,
+            "count": 279,
+            "box_color": "#2196F3",
+            "lower_quartile": 31.094
+        },
+        {
+            "median": 148.506,
+            "box_name": "2018-07-24T02:52:00",
+            "max": 598.729,
+            "min": 3.095,
+            "iqr": 371.565,
+            "upper_quartile": 378.248,
+            "count": 212,
+            "box_color": "#29B6F6",
+            "lower_quartile": 6.683
+        },
+        {
+            "median": 107.819,
+            "box_name": "2018-07-24T02:53:00",
+            "max": 1063.577,
+            "min": 2.784,
+            "iqr": 279.28999999999996,
+            "upper_quartile": 289.568,
+            "count": 231,
+            "box_color": "#29B6F6",
+            "lower_quartile": 10.278
+        },
+        {
+            "median": 16.309,
+            "box_name": "2018-07-24T02:54:00",
+            "max": 940.492,
+            "min": 2.785,
+            "iqr": 148.359,
+            "upper_quartile": 153.775,
+            "count": 97,
+            "box_color": "#29B6F6",
+            "lower_quartile": 5.416
+        },
+        {
+            "median": 58.548,
+            "box_name": "2018-07-24T02:55:00",
+            "max": 2053.462,
+            "min": 3.216,
+            "iqr": 669.58,
+            "upper_quartile": 675.408,
+            "count": 120,
+            "box_color": "#0277BD",
+            "lower_quartile": 5.828
+        },
+        {
+            "median": 92.875,
+            "box_name": "2018-07-24T02:56:00",
+            "max": 1437.924,
+            "min": 3.071,
+            "iqr": 319.283,
+            "upper_quartile": 324.505,
+            "count": 168,
+            "box_color": "#29B6F6",
+            "lower_quartile": 5.222
+        },
+        {
+            "median": 11.58,
+            "box_name": "2018-07-24T02:57:00",
+            "max": 5757.754,
+            "min": 2.51,
+            "iqr": 240.784,
+            "upper_quartile": 244.757,
+            "count": 107,
+            "box_color": "#29B6F6",
+            "lower_quartile": 3.973
+        },
+        {
+            "median": 190.304,
+            "box_name": "2018-07-24T02:58:00",
+            "max": 1406.094,
+            "min": 3.473,
+            "iqr": 461.313,
+            "upper_quartile": 482.093,
+            "count": 280,
+            "box_color": "#29B6F6",
+            "lower_quartile": 20.78
+        },
+        {
+            "median": 72.403,
+            "box_name": "2018-07-24T02:59:00",
+            "max": 1827.344,
+            "min": 2.924,
+            "iqr": 720.695,
+            "upper_quartile": 725.835,
+            "count": 159,
+            "box_color": "#0277BD",
+            "lower_quartile": 5.14
+        },
+        {
+            "median": 170.675,
+            "box_name": "2018-07-24T03:00:00",
+            "max": 2324.194,
+            "min": 2.945,
+            "iqr": 686.293,
+            "upper_quartile": 692.302,
+            "count": 147,
+            "box_color": "#0277BD",
+            "lower_quartile": 6.009
+        },
+        {
+            "median": 125.699,
+            "box_name": "2018-07-24T03:01:00",
+            "max": 1325.712,
+            "min": 2.763,
+            "iqr": 566.423,
+            "upper_quartile": 571.666,
+            "count": 119,
+            "box_color": "#2196F3",
+            "lower_quartile": 5.243
+        },
+        {
+            "median": 277.828,
+            "box_name": "2018-07-24T03:02:00",
+            "max": 2112.604,
+            "min": 3.874,
+            "iqr": 476.856,
+            "upper_quartile": 535.553,
+            "count": 493,
+            "box_color": "#2196F3",
+            "lower_quartile": 58.697
+        },
+        {
+            "median": 262.133,
+            "box_name": "2018-07-24T03:03:00",
+            "max": 1919.854,
+            "min": 3.408,
+            "iqr": 1068.906,
+            "upper_quartile": 1077.882,
+            "count": 192,
+            "box_color": "#0277BD",
+            "lower_quartile": 8.976
+        },
+        {
+            "median": 150.7815,
+            "box_name": "2018-07-24T03:04:00",
+            "max": 1281.462,
+            "min": 3.238,
+            "iqr": 522.28,
+            "upper_quartile": 533.495,
+            "count": 198,
+            "box_color": "#2196F3",
+            "lower_quartile": 11.215
+        },
+        {
+            "median": 85.653,
+            "box_name": "2018-07-24T03:05:00",
+            "max": 1089.937,
+            "min": 3.416,
+            "iqr": 405.84,
+            "upper_quartile": 411.779,
+            "count": 148,
+            "box_color": "#29B6F6",
+            "lower_quartile": 5.939
+        },
+        {
+            "median": 63.2295,
+            "box_name": "2018-07-24T03:06:00",
+            "max": 2616.351,
+            "min": 2.564,
+            "iqr": 1159.205,
+            "upper_quartile": 1164.174,
+            "count": 158,
+            "box_color": "#0277BD",
+            "lower_quartile": 4.969
+        },
+        {
+            "median": 57.519,
+            "box_name": "2018-07-24T03:07:00",
+            "max": 4252.462,
+            "min": 2.956,
+            "iqr": 1507.479,
+            "upper_quartile": 1513.377,
+            "count": 171,
+            "box_color": "#0277BD",
+            "lower_quartile": 5.898
+        },
+        {
+            "median": 176.004,
+            "box_name": "2018-07-24T03:08:00",
+            "max": 1087.796,
+            "min": 2.879,
+            "iqr": 426.249,
+            "upper_quartile": 450.625,
+            "count": 218,
+            "box_color": "#29B6F6",
+            "lower_quartile": 24.376
+        },
+        {
+            "median": 6.748,
+            "box_name": "2018-07-24T03:09:00",
+            "max": 234.772,
+            "min": 2.474,
+            "iqr": 39.878,
+            "upper_quartile": 44.356,
+            "count": 85,
+            "box_color": "#29B6F6",
+            "lower_quartile": 4.478
+        },
+        {
+            "median": 123.02,
+            "box_name": "2018-07-24T03:10:00",
+            "max": 1143.813,
+            "min": 3.053,
+            "iqr": 488.475,
+            "upper_quartile": 497.935,
+            "count": 221,
+            "box_color": "#2196F3",
+            "lower_quartile": 9.46
+        },
+        {
+            "median": 112.877,
+            "box_name": "2018-07-24T03:11:00",
+            "max": 2957.072,
+            "min": 3.138,
+            "iqr": 649.057,
+            "upper_quartile": 665.518,
+            "count": 229,
+            "box_color": "#0277BD",
+            "lower_quartile": 16.461
+        },
+        {
+            "median": 176.001,
+            "box_name": "2018-07-24T03:12:00",
+            "max": 758.303,
+            "min": 3.587,
+            "iqr": 366.168,
+            "upper_quartile": 401.51,
+            "count": 285,
+            "box_color": "#29B6F6",
+            "lower_quartile": 35.342
+        }
+    ],
+    "legend_label": "Inner Quartile Range"
+}

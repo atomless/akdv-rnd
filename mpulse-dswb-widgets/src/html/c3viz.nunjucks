@@ -1,0 +1,20 @@
+{% extends "base_template.nunjucks" %}
+
+{% block additional_css %}
+    <link rel="stylesheet" type="text/css" href="../javascript/vendor/c3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/charts/c3viz.css"/>
+{% endblock %}
+
+{% block chart %}
+    <div id="chart" class="dswb-c3Viz"></div>
+{% endblock %}
+
+{% block additional_vendor_scripts %}
+    <script src="../javascript/vendor/d3v3.min.js"></script>
+    <script src="../javascript/vendor/c3.min.js"></script>
+{% endblock %}
+
+{% block chart_scripts %}
+    <script src="../javascript/widgetjs_charts/c3viz.js"></script>
+{% endblock %}
+

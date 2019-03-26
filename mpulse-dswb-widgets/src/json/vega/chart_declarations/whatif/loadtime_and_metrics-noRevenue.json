@@ -1,0 +1,584 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v4.json",
+    "width": 1000,
+    "height": 875,
+    "padding": 25,
+    "config": {
+        "line": {
+            "strokeWidth": 2,
+            "opacity": 1,
+            "stroke": "hsl(195,100%,40%)"
+        },
+        "area": {
+            "fill": "url(#ChartGradient)",
+            "fillOpacity": 0.15
+        }
+    },
+    "autosize": "fit",
+    "signals": [
+        {
+            "name": "width",
+            "update": "width - 50"
+        },
+        {
+            "name": "height",
+            "update": "875"
+        },
+        {
+            "name": "ypad",
+            "value": 20
+        },
+        {
+            "name": "numCharts",
+            "value": 5
+        },
+        {
+            "name": "bandHeight",
+            "value": 0,
+            "update": "height / numCharts"
+        },
+        {
+            "name": "strokeColor",
+            "value": "var(--series_1)"
+        },
+        {
+            "name": "fillColor",
+            "value": "url(#ChartGradient)"
+        },
+        {
+            "name": "fillOpacity",
+            "value": 0.05
+        }
+    ],
+    "data": [
+        {
+            "name": "metrics"
+        },
+        {
+            "name": "recommendations"
+        },
+        {
+            "name": "rateDistributions"
+        },
+        {
+            "name": "state"
+        }
+    
+    ],
+    "scales": [
+        {
+            "name": "loadTimeScale",
+            "type": "linear",
+            "range": "width",
+            "domain": {
+                "data": "rateDistributions",
+                "field": "loadTime"
+            },
+            "zero": false
+        },
+        {
+            "name": "conversionRateScale",
+            "type": "linear",
+            "range": [{"signal":"bandHeight * 1"},{"signal":"bandHeight * 0 + ypad"}],
+            "domain": {
+                "data": "rateDistributions",
+                "field": "conversionRate"
+            },
+            "zero": true
+        },
+        {
+            "name": "bounceRateScale",
+            "type": "linear",
+            "range": [{"signal":"bandHeight * 2"},{"signal":"bandHeight * 1 + ypad"}],
+            "domain": {
+                "data": "rateDistributions",
+                "field": "bounceRate"
+            },
+            "zero": true
+        },
+        {
+            "name": "sessionLengthScale",
+            "type": "linear",
+            "range": [{"signal":"bandHeight * 3"},{"signal":"bandHeight * 2 + ypad"}],
+            "domain": {
+                "data": "rateDistributions",
+                "field": "sessionLength"
+            },
+            "zero": true
+        },
+        {
+            "name": "sessionDurationScale",
+            "type": "linear",
+            "range": [{"signal":"bandHeight * 4"},{"signal":"bandHeight * 3 + ypad"}],
+            "domain": {
+                "data": "rateDistributions",
+                "field": "sessionDuration"
+            },
+            "zero": true
+        },
+        {
+            "name": "lingerTimeScale",
+            "type": "linear",
+            "range": [{"signal":"bandHeight * 5"},{"signal":"bandHeight * 4 + ypad"}],
+            "domain": {
+                "data": "rateDistributions",
+                "field": "lingerTime"
+            },
+            "zero": true
+        }
+    ],
+    "axes": [
+        {
+            "title": {
+                "signal": "data('metrics')[0]['timerName']+' (ms)'"
+            },
+            "titlePadding": 20,
+            "orient": "bottom",
+            "scale": "loadTimeScale",
+            "format": ",.2r"
+        },
+        {
+            "orient": "bottom",
+            "scale": "loadTimeScale",
+            "offset": {
+                "signal": "-1 * bandHeight"
+            },
+            "ticks": false,
+            "labels": false
+        },
+        {
+            "orient": "bottom",
+            "scale": "loadTimeScale",
+            "offset": {
+                "signal": "-2 * bandHeight"
+            },
+            "ticks": false,
+            "labels": false
+        },
+        {
+            "orient": "bottom",
+            "scale": "loadTimeScale",
+            "offset": {
+                "signal": "-3 * bandHeight"
+            },
+            "ticks": false,
+            "labels": false
+        },
+        {
+            "orient": "bottom",
+            "scale": "loadTimeScale",
+            "offset": {
+                "signal": "-4 * bandHeight"
+            },
+            "ticks": false,
+            "labels": false
+        },
+        {
+            "orient": "right",
+            "scale": "conversionRateScale",
+            "format": ".1%",
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "labels": false,
+            "ticks": false,
+            "scale": "conversionRateScale",
+            "title": {
+                "signal": "data('metrics')[0].conversionMetric"
+            }
+        },
+        {
+            "orient": "right",
+            "scale": "bounceRateScale",
+            "format": ".1%",
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "labels": false,
+            "ticks": false,
+            "scale": "bounceRateScale",
+            "title": "Bounce Rate"
+        },
+        {
+            "orient": "right",
+            "scale": "sessionLengthScale",
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "labels": false,
+            "ticks": false,
+            "scale": "sessionLengthScale",
+            "title": "Pages per Session"
+        },
+        {
+            "orient": "right",
+            "scale": "sessionDurationScale",
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "labels": false,
+            "ticks": false,
+            "scale": "sessionDurationScale",
+            "title": "Session Duration"
+        },
+        {
+            "orient": "right",
+            "scale": "lingerTimeScale",
+            "tickCount": 3
+        },
+        {
+            "orient": "left",
+            "labels": false,
+            "ticks": false,
+            "scale": "lingerTimeScale",
+            "title": "Time on Page"
+        }
+    ],
+    
+    "marks": [
+        {
+            "name": "currentSpeedMarker",
+            "type": "rule",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "value": 0 },
+                    "y2": { "signal": "height" },
+                    "stroke": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": { "scale": "loadTimeScale", "field": "speed" }
+                }
+            }
+        },
+        {
+            "name": "currentSpeedText",
+            "type": "text",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "signal": "height - 10" },
+                    "x": { "value": 13},
+                    "baseline": {
+                      "value": "left"
+                    },
+                    "angle": {
+                      "value": 270
+                    },
+                    "text": {
+                      "value": "Current Speed"
+                    },
+                    "fontSize": { "value": 16 },
+                    "fill": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": {
+                        "signal": "scale('loadTimeScale',datum.speed) + (((scale('loadTimeScale',datum.speed) - scale('loadTimeScale',datum.goal_speed)) < 25 && (datum.speed - datum.goal_speed) > 0) ? 15 : -5)"
+                    }
+                }
+            }
+        },
+        {
+            "name": "goalSpeedMarker",
+            "type": "rule",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "value": 0},
+                    "y2": { "signal": "height" },
+                    "stroke": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": { "scale": "loadTimeScale", "field": "goal_speed" }
+                }
+            }
+        },
+        {
+            "name": "goalSpeedText",
+            "type": "text",
+            "from": { "data": "metrics" },
+            "encode": {
+                "enter": {
+                    "y": { "signal": "height - 10" },
+                    "baseline": {
+                      "value": "left"
+                    },
+                    "angle": {
+                      "value": 270
+                    },
+                    "text": {
+                      "value": "Goal Speed"
+                    },
+                    "fontSize": { "value": 16 },
+                    "fill": { "value": "var(--prime_chart_axis_tick_text)"}
+                },
+                "update": {
+                    "x": {
+                        "signal": "scale('loadTimeScale',datum.goal_speed) + (((datum.speed - datum.goal_speed) > -150 && (datum.speed - datum.goal_speed) <= 0) || scale('loadTimeScale',datum.goal_speed) < 35 ? 15 : -5)"
+                    }
+                }
+            }
+        },
+        {
+            "type": "area",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "conversionRateScale",
+                        "field": "conversionRate"
+                    },
+                    "y2": {
+                        "scale": "conversionRateScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "conversionRateScale",
+                        "field": "conversionRate"
+                    },
+                    "y2": {
+                        "scale": "conversionRateScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "area",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "bounceRateScale",
+                        "field": "bounceRate"
+                    },
+                    "y2": {
+                        "scale": "bounceRateScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "bounceRateScale",
+                        "field": "bounceRate"
+                    },
+                    "y2": {
+                        "scale": "bounceRateScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "area",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "sessionLengthScale",
+                        "field": "sessionLength"
+                    },
+                    "y2": {
+                        "scale": "sessionLengthScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "sessionLengthScale",
+                        "field": "sessionLength"
+                    },
+                    "y2": {
+                        "scale": "sessionLengthScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "area",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "sessionDurationScale",
+                        "field": "sessionDuration"
+                    },
+                    "y2": {
+                        "scale": "sessionDurationScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "sessionDurationScale",
+                        "field": "sessionDuration"
+                    },
+                    "y2": {
+                        "scale": "sessionDurationScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "area",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "lingerTimeScale",
+                        "field": "lingerTime"
+                    },
+                    "y2": {
+                        "scale": "lingerTimeScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "line",
+            "from": { "data": "rateDistributions" },
+            "clip": true,
+            "encode": {
+                "enter": {
+                    "x": {
+                        "scale": "loadTimeScale",
+                        "field": "loadTime"
+                    },
+                    "y": {
+                        "scale": "lingerTimeScale",
+                        "field": "lingerTime"
+                    },
+                    "y2": {
+                        "scale": "lingerTimeScale",
+                        "value": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "group",
+            "data": [
+                {
+                    "name": "filteredRecommendations",
+                    "source": "recommendations",
+                    "transform": [
+                        {
+                            "type": "filter",
+                            "expr": "datum.scale !== 'totalRevenue'"
+                        }
+                    ]
+                }
+            ],
+            "marks": [
+                {
+                    "type": "symbol",
+                    "from": {
+                        "data": "filteredRecommendations"
+                    },
+                    "encode": {
+                        "enter": {
+                            "x": {
+                                "scale": "loadTimeScale",
+                                "field": "loadTime"
+                            },
+                            "y": {
+                                "signal": "scale(datum.scale + 'Scale',datum.value)"
+                            },
+                            "size": {
+                                "value": 150
+                            },
+                            "stroke": { "value": "none" },
+                            "fill": { "value": "var(--prime_interactive)" },
+                            "fillOpacity": { "value": 0.8 },
+                            "name": { "signal": "'goalMarker-'+datum.metric"}
+                        },
+                        "update": {
+                            "tooltip":
+                            {
+                                "signal": "{'title': datum.name, 'Goal Speed': (round(datum.loadTime / 10) / 100)+'s', 'Goal Value': datum.friendlyValue }"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

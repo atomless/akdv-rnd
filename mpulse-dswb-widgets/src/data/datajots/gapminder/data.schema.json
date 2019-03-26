@@ -1,0 +1,66 @@
+{
+  "definitions": {}, 
+  "$schema": "http://json-schema.org/draft-06/schema#", 
+  "$id": "http://example.com/example.json", 
+  "type": "array", 
+  "additionalItems": true, 
+  "uniqueItems": true, 
+  "items": {
+    "type": "object", 
+    "additionalProperties": true, 
+    "properties": {
+      "country": {
+        "type": "string", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          "Andorra"
+        ]
+      },
+      "geo4": {
+        "type": "string", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          "americas"
+        ]
+      },
+      "income": {
+        "type": "integer", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          4000
+        ]
+      },
+      "life_expectancy": {
+        "type": "number", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          67.5
+        ]
+      },
+      "population": {
+        "type": "integer", 
+        "title": "The Sessionstart Schema.", 
+        "description": "An explanation about the purpose of this instance.", 
+        "default": "", 
+        "examples": [
+          12345465
+        ]
+      }
+    },
+    "required": [
+      "country",
+      "geo4",
+      "income",
+      "life_expectancy",
+      "population"
+    ]
+  }
+}

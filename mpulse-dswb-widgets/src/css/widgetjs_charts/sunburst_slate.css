@@ -1,0 +1,75 @@
+text {
+  font-size: 0.75em;
+  fill: var(--sec_txt_heading_main);
+}
+
+html {
+  height: 99%;
+}
+
+body {
+  height: 98%;
+}
+
+iframe.sbiframe {
+  background-color: var(--prime_bg_0);
+}
+
+svg#sunburst {
+  display: block;
+  margin: auto;
+}
+
+.sbSidebar {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  color: var(--prime_bg_4);
+}
+
+.sbSequence {
+  text-anchor: middle;
+  display: block;
+  max-height: 130px;
+}
+
+.sbLegend {
+  text-anchor: middle;
+  padding: 10px 0 0 3px;
+}
+
+.sbChart {
+  margin: auto;
+  max-width: 95%;
+  max-height: 70%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.sbChart path {
+  stroke: var(--prime_bg_0);
+  stroke-width: 0.1rem;
+}
+
+.sbExplanation {
+  font-size: 1.3em;
+  fill: var(--prime_txt_body);
+  text-anchor: middle;
+}
+
+.sbPercentage {
+  font-size: 2.5em;
+  fill: var(--prime_txt_heading_sub_very_strong);
+  text-anchor: middle;
+}
+
+.sbTotal {
+  fill: var(--prime_txt_body);
+  position: absolute;
+  text-anchor: middle;
+}
+
+.sbTrail {
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+/*
+ *****************************************************
+ 
+ * Copyright (c) <%= new Date().getFullYear() %> <%= pkg_json.author %>
+ * All rights reserved.
+ * Proprietary and confidential.
+ * <%= pkg_json.name %> - <%= pkg_json.description %>
+ * @version <%= pkg_json.build_version %>
+ * @date <%= pkg_json.build_timestamp %>
+
+ *****************************************************
+ */
+

@@ -1,0 +1,31 @@
+.chart-toggle-checkbox:not([data-disabled="true"]) {
+  cursor: pointer;
+}
+
+.chart-toggle-checkbox .checkbox-area {
+  fill: var(--prime_checkbox_field);
+  stroke: var(--prime_checkbox_border);
+  stroke-width: 0.07rem;
+}
+
+.chart-toggle-checkbox {
+  opacity: 0.5;
+}
+
+.chart-toggle-checkbox[data-disabled="true"] {
+  opacity: 0.2;
+}
+
+.chart-toggle-checkbox:not([data-disabled="true"]):hover {
+  opacity: 1;
+}
+
+.chart-toggle-checkbox .check-tick {
+  stroke: var(--color_transparent);
+  stroke-width: 0.1rem;
+  fill: var(--color_none);
+}
+
+.chart-toggle-checkbox[data-checked="true"] .check-tick {
+  stroke: var(--prime_checkbox_tick);
+}

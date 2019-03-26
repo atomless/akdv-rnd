@@ -1,0 +1,61 @@
+{% extends "datajots_base_template.nunjucks" %}
+
+{% block additional_css %}
+    {% include "partials/font_families/lato_regular.nunjucks" %}
+    <link rel="stylesheet" type="text/css" href="../css/components/_stage_scroller.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../css/charts/datajots.css" media="screen">
+{% endblock %}
+
+
+{% block chart %}
+    <header class="fixed-header">
+        <div id="akamai-logo-container">{% include "partials/akamai_logo_svg.nunjucks" %}</div>
+        <hgroup>
+            <h1>Data Jots</h1>
+        </hgroup>
+    </header>
+    
+    <article id="datajots-chart-container">
+        <div id="datajots-axis-x-container" class="datajots-axis-container"></div>
+        <div id="datajots-axis-y-container" class="datajots-axis-container"></div>
+    </article>
+    <article id="datajots-stages-scroller"></article>
+{% endblock %}
+
+
+{% block additional_vendor_scripts %}
+    <script src="../javascript/vendor/ajv.min.js"></script>
+    <script src="../javascript/vendor/d3.min.js"></script>
+    <script src="../javascript/vendor/d3-annotation.min.js"></script>
+    <script src="../javascript/vendor/crossfilter.min.js"></script>
+    <script src="../javascript/vendor/stats.min.js"></script>
+    <script src="../javascript/vendor/Tween.js"></script>
+    <script src="../javascript/vendor/three.min.js"></script>
+    <script src="../javascript/vendor/FBOHelper.js"></script>
+    <script src="../javascript/vendor/three.renderer.projector.js"></script>
+    <script src="../javascript/vendor/three.renderer.canvas_renderer.js"></script>
+{% endblock %}
+
+
+{% block chart_scripts %}
+    <script src="../javascript/d3_utils/d3_dom_utils.js"></script>
+    <script src="../javascript/d3_utils/d3_scale_utils.js"></script>
+    <script src="../javascript/datajots/force/force_xy.js"></script>
+    <script src="../javascript/datajots/utils_typed_array.js"></script>
+    <script src="../javascript/datajots/utils_axis.js"></script>
+    <script src="../javascript/datajots/utils_three.js"></script>
+    <script src="../javascript/datajots/utils_scene.js"></script>
+    <script src="../javascript/datajots/utils_geometry.js"></script>
+    <script src="../javascript/datajots/utils_datajots_pointcloud.js"></script>
+    <script src="../javascript/components/stage_scroller_factory.js"></script>
+    <script src="../javascript/datajots/render/lib/mixin/rendererMixin.js"></script>
+    <script src="../javascript/datajots/render/lib/mixin/cameraMixin.js"></script>
+    <script src="../javascript/datajots/render/lib/mixin/lightRigMixin.js"></script>
+    <script src="../javascript/datajots/render/lib/simulationFBO.js"></script>
+    <script src="../javascript/datajots/render/lib/particleFBO.js"></script>
+    <script src="../javascript/datajots/render/lib/typedArrayStore.js"></script>
+    <script src="../javascript/datajots/render/manyNodeCanvasRenderer.js"></script>
+    <script src="../javascript/datajots/render/manyNodeGeoInstancingRenderer.js"></script>
+    <script src="../javascript/datajots/render/manyNodeParticleRendererFBO.js"></script>
+    <script src="../javascript/datajots/datajots.js"></script>
+{% endblock %}

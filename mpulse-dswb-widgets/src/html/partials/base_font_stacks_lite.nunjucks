@@ -1,2 +1,0 @@
-    {% include "partials/font_families/lato_regular_latin.nunjucks" %}
-    {% include "partials/font_families/lato_regular.nunjucks" %}

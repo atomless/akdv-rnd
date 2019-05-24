@@ -1,5 +1,0 @@
-{#<!-- SVG SPINNING LOADER TEMPLATE (needs to be included inline otherwise the animation fails to work) -->#}
-<svg id="loading-spinner" class="loading-spinner page-load-spinner" height="50" width="50" viewBox="0 0 50 50">
-    <circle class="loading-spinner-path-bg" cx="25" cy="25" r="20" fill="none"></circle>
-    <circle class="loading-spinner-path" cx="25" cy="25" r="20" fill="none"></circle>
-</svg>

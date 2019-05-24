@@ -1,9 +1,0 @@
-.brush .selection {
-  fill: var(--color_none);
-  stroke: var(--prime_button);
-  stroke-width: 0.2rem;
-}
-
-.brush:hover .selection {
-  stroke: var(--prime_button_hover);
-}
